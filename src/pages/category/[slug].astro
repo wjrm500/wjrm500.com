@@ -15,7 +15,11 @@ export async function getStaticPaths() {
 const { name, posts } = Astro.props;
 ---
 
-<Base title={name} description={`Articles about ${name}.`}>
-  <h1>{name}</h1>
+<Base title={name} description={`Articles about ${name}.`} wide>
+  <header class="page-header">
+    <p class="eyebrow">Category</p>
+    <h1>{name}</h1>
+    <p class="meta">{posts.length} {posts.length === 1 ? 'article' : 'articles'} · <a href="/articles">All categories</a></p>
+  </header>
   <PostList posts={posts} />
 </Base>
