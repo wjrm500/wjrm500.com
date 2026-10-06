@@ -11,7 +11,7 @@ cover: ./soccer_sim_screenshot.png
 
 Good morning ladies and gentlemen! This is my first post from my new home of Singapore, where I am currently holed up for a period of two weeks in a “quarantine hotel”, with **\* only \*** my wife Kate for company. We’ve been fully locked down for four days now, and overall it’s been surprisingly okay, the occasional bout of yearning for fresh air aside. Like animals in a zoo, the scheduled deliveries of food to our room three times a day have become the highlights of our day. Anyway, I’ll stop digressing – there are more pressing matters at hand, because today is the day my Soccer Simulation Heroku app is officially unveiled to the world!
 
-You can access the app via the button below, which I’ve also labelled to avoid any confusion ?
+You can access the app via the button below, which I’ve also labelled to avoid any confusion
 
 [**Go to the app →**](http://soccer-sim.wjrm500.com)
 

@@ -20,13 +20,13 @@ So I’ve built a shiny new app to help me be better. I’ve been developing it 
 It’s called **FantraXpert** (name selected over FannyDash and OnlyFantrax) and it’s a data dashboard, comprising a number of different views onto data harvested from our Fantrax league. These views can be filtered by a variety of dimensions, and include bespoke visualisations and sortable, paginated tables. Below are screenshots taken from the app:
 
 ![](./draft-grid-page.png)
-_Draft grid: A grid showing draft results. Cells are colour- coded according to a selectable metric, allowing you to visualise various measures of draft performance._
+_Draft grid: A grid showing draft results. Cells are colour-coded according to a selectable metric, allowing you to visualise various measures of draft performance._
 
 ![](./players-page-3.png)
-_Players: Compare players by various peformance metrics over any period of time, with interactive filtering and optional performance-over-time visualisation._
+_Players: Compare players by various performance metrics over any period of time, with interactive filtering and optional performance-over-time visualisation._
 
 ![](./standings-all-time-page.png)
-_Standings: The Fantrax league table, with season and gameweek filters. Switch to "All-time" to see The King upon his throne._
+_Standings: The Fantrax league table, with season and gameweek filters. Switch to “All-time” to see The King upon his throne._
 
 ![](./matchups-page.png)
 _Matchups: See the biggest margins of victory ever recorded, along with the highest and lowest individual user gameweek scores._
@@ -38,7 +38,7 @@ _Appearances: A detailed table showing individual player performances, including
 _Waiver scatter: Analyse waiver performance with a plot showing player performance before and after a waiver event (claim or drop)._
 
 ![](./waiver-analysis-page.png)
-_Waiver analysis: Compare users' ability to make savvy waiver decisions, using a system that categorises picks into gems, locks and traps, and drops into dodges, locks and burns._
+_Waiver analysis: Compare users’ ability to make savvy waiver decisions, using a system that categorises picks into gems, locks and traps, and drops into dodges, locks and burns._
 
 ## The development story
 
@@ -101,7 +101,7 @@ There were also a few unexpected issues after deployment. For example, the first
 
 Another issue was that an internal server error was triggered every morning when I first opened the dashboard, before resolving immediately on refresh. This was caused by the fact that MySQL databases automatically close unused connections after eight hours, and was fixed by enabling a setting called `pool_pre_ping` in SQLAlchemy, which ensures connections are tested before use.
 
-Finally, I was forced to take down the broken “WhoScored” page from the live website. This page, which can be used for retrieving data from WhoScored.com and estimating the PPG of given player in any given league in any given season, works fine locally but not when deployed on a DigitalOcean Droplet instance. This is because the WhoScored.com website uses the anti-bot software Cloudflare, which is able to identify and block data centre IP addresses such as that belonging to my web server.
+Finally, I was forced to take down the broken “WhoScored” page from the live website. This page, which can be used for retrieving data from WhoScored.com and estimating the PPG of a given player in any given league in any given season, works fine locally but not when deployed on a DigitalOcean Droplet instance. This is because the WhoScored.com website uses the anti-bot software Cloudflare, which is able to identify and block data centre IP addresses such as that belonging to my web server.
 
 ## Future work
 

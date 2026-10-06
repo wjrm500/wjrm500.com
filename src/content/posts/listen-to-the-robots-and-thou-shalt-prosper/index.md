@@ -2,14 +2,14 @@
 title: Listen to The Robots and Thou Shalt Prosper
 date: '2025-05-04T11:42:25Z'
 updated: '2025-10-26T19:27:12Z'
-description: If, you like me, are tired of listening to Alastair Campbell and Rory Stewart agree agreeably on The Rest is Politics, then I might have something for you… 🥁🥁🥁 It’s an 11-part podcast series on Web Development – planned, researched, scripted and read aloud for your entertainment by ROBOTS!!! Huh? Well, not robots robots; I’ll…
+description: If, like me, you are tired of listening to Alastair Campbell and Rory Stewart agree agreeably on The Rest is Politics, then I might have something for you… 🥁🥁🥁 It’s an 11-part podcast series on Web Development – planned, researched, scripted and read aloud for your entertainment by ROBOTS!!! Huh? Well, not robots robots; I’ll…
 categories:
   - AI
   - Software Development
 cover: ./chatgpt-image-may-4-2025-12_39_08-pm-1.webp
 ---
 
-If, you like me, are tired of listening to Alastair Campbell and Rory Stewart agree agreeably on _The Rest is Politics_, then I might have something for you… 🥁🥁🥁
+If, like me, you are tired of listening to Alastair Campbell and Rory Stewart agree agreeably on _The Rest is Politics_, then I might have something for you… 🥁🥁🥁
 
 **_It’s an 11-part podcast series on Web Development – planned, researched, scripted and read aloud for your entertainment by ROBOTS!!!_**
 

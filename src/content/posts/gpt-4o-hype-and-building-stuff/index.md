@@ -66,7 +66,8 @@ For transparency, the prompts I used were as follows:
     -   Support us button needs to include an arrow icon and button needs to be more curved
     -   Replace The Guardian image with large white text saying “The Guardian” in the relevant font, with “News provider of the year” much smaller in yellow font right underneath
     -   Main nav bar (with News, Opinion, Sport etc.) should have thin white line above it, and buttons should be separated by thin white line. No thin white line on bottom though
-    -   Sub nav bar should have no text wrapping and smaller font – In weather aside, the “Now” bit should include a large icon of rainy cloud, and the forecasts for later should be positioned side-by-side in a table, with icons at the bottom
+    -   Sub nav bar should have no text wrapping and smaller font
+    -   In weather aside, the “Now” bit should include a large icon of rainy cloud, and the forecasts for later should be positioned side-by-side in a table, with icons at the bottom
     -   Better padding / spacing between weather aside and main section with articles
     -   All articles should be in boxes styled with grey background and thin red line just at the top border
     -   For main articles (in main article column), image should be on right hand side of article box, with left hand side consisting of headline in red, subtitle in larger font (e.g., “Weight loss drug…”) and then further description in smaller font (e.g., “Researchers say…”)

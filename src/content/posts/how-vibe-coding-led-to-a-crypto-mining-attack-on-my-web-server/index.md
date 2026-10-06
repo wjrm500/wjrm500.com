@@ -51,4 +51,4 @@ My plan, moving forwards:
 -   Think about real-world applications. If AI really is as powerful as I purport, then why not use it to make something that helps people 👼 or makes a bunch of money 😈?
 -   Remember that AI can be a force for immense good. The world right now is a pretty crap place for a lot of its inhabitant humans and animals, and the outputs of superintelligence could improve billions of lives in ways we can’t even fathom now
 
-This article’s taken a few twists and turns hasn’t it! We’ve gone from a crypto mining malware attack to the my personal coping strategy, via philosophical pontificating on the nature of code. It’s not exactly well-structured stuff, so sorry about that – but I hope you got _something_ from my ramblings.
+This article’s taken a few twists and turns hasn’t it! We’ve gone from a crypto mining malware attack to my personal coping strategy, via philosophical pontificating on the nature of code. It’s not exactly well-structured stuff, so sorry about that – but I hope you got _something_ from my ramblings.

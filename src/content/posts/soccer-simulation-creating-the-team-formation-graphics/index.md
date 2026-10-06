@@ -15,7 +15,7 @@ During the development of the app, I had to overcome a variety of challenges. So
 
 However, there is one aspect of _Soccer Simulation_ that I’ve always wanted to revisit in greater depth, and that aspect is **the graphical interpretation of a club’s first-choice team**, that can be observed on any club page in the app (accessed by clicking on the name of a club in the league table).
 
-And so, to brighten your winter, I have only gone and down a bleedin’ article on it. Enjoy…
+And so, to brighten your winter, I have only gone and done a bleedin’ article on it. Enjoy…
 
 ## General description of problem to be solved
 

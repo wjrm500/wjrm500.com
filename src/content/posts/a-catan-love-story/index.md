@@ -47,7 +47,7 @@ Will (me): “_So I am not Will (me)?_”
 
 Will (me): “_But everything I say is getting prefixed with_ ‘Will (me):’_!_”
 
-\[REDACTED\]: “_A simple artifact of the interview form, I’m afraid to say. Think about it: if our creator hadn’t bestowed names upon us – if everything you said wasn’t prefixed with_ ‘Will (me):’ _and everything I said wasn’t prefixed with_ ‘\[REDACTED\]’ _– then this wouldn’t be an interview at all, really; just the ravings of a madman._”
+\[REDACTED\]: “_A simple artefact of the interview form, I’m afraid to say. Think about it: if our creator hadn’t bestowed names upon us – if everything you said wasn’t prefixed with_ ‘Will (me):’ _and everything I said wasn’t prefixed with_ ‘\[REDACTED\]’ _– then this wouldn’t be an interview at all, really; just the ravings of a madman._”
 
 Will (me): “_I see. Well, this is quite a blow to the ego._” 
 

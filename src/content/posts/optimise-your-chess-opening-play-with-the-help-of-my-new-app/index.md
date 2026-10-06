@@ -15,8 +15,8 @@ I have created a simple new desktop app for memorising chess openings, and calle
 
 For now, please watch the video, download the app and have a play. You can download it here:
 
-[Pawnfork](/wp-content/uploads/2022/08/Pawnfork.zip)[Download](/wp-content/uploads/2022/08/Pawnfork.zip)
+[Download Pawnfork](/wp-content/uploads/2022/08/Pawnfork.zip)
 
 I’d love to hear your thoughts, including any suggestions for improvement or future work. And plaudits of course, let’s get those flooding in!
 
-Also, if anybody fancies producing a logo (really just looking for a stylised version of the title text, the word “Pawnfork”), send it across to me and if I like it, I’ll add it into the app and credit you somehow ?
+Also, if anybody fancies producing a logo (really just looking for a stylised version of the title text, the word “Pawnfork”), send it across to me and if I like it, I’ll add it into the app and credit you somehow

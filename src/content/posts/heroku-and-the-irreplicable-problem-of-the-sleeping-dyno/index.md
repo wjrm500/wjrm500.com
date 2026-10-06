@@ -44,4 +44,4 @@ Below, I’ve given a set of instructions for how to use New Relic to keep your 
 
 Hopefully this article taught you something you didn’t already know, and if not, then I hope the dinosaur-related wordplay at least provided some level of amusement, and if not, then I’m sorry, I suppose.
 
-And now, whenever you visit my [Soccer Simulation](http://soccer-sim.herokuapp.com/) app (come on, don’t pretend like it’s not already set as your homepage!) and it takes ages to load, rest assured that it’s not because the code is hideously optimised – no, it’s because nobody ever uses it. So there!
+And now, whenever you visit my [Soccer Simulation](http://soccer-sim.herokuapp.com/) app (come on, don’t pretend like it’s not already set as your homepage!) and it takes ages to load, rest assured that it’s not because the code is hideously unoptimised – no, it’s because nobody ever uses it. So there!
