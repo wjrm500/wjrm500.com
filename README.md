@@ -53,6 +53,7 @@ npm install
 npm run dev       # http://localhost:4321, live reload
 npm run build     # static site in dist/
 npm run check     # type-check
+npm run check:merge  # everything that should pass before a push: em-dash lint, URL check, type-check, build
 ```
 
 ## Deploying
@@ -73,6 +74,10 @@ The workflow needs these repository secrets: `DOCKERHUB_USERNAME`, `DOCKERHUB_TO
 | `/category/python` etc. | unchanged |
 | `/wp-content/uploads/…` downloads (Catan, Pawnfork, the dissertation PDF, the podcast clip) | unchanged, served from `public/` |
 | `/wp-admin`, `/wp-login.php`, `/xmlrpc.php`, `/wp-json` | 410 Gone |
+
+## Working with an AI assistant
+
+`AGENTS.md` (also `CLAUDE.md`) holds the rules an assistant follows here, `DECISIONS.md` the settled questions, and `.claude/skills/` the routines it can run: setting up a post, editing feedback and a site review.
 
 ## Comments
 
