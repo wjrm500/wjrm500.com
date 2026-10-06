@@ -4,3 +4,6 @@ dist
 *.log
 .DS_Store
 .env
+# Scratch files written to measure or try something; never committed.
+__probe*
+probe*.mjs

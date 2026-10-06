@@ -6,7 +6,10 @@
     "dev": "astro dev",
     "build": "astro build",
     "preview": "astro preview",
-    "check": "astro check"
+    "check": "astro check",
+    "check:urls": "node scripts/check-urls.mjs",
+    "lint:em-dashes": "node scripts/lint-em-dashes.mjs",
+    "check:merge": "bash scripts/check-merge.sh"
   },
   "dependencies": {
     "@astrojs/markdown-remark": "^7.3.2",
