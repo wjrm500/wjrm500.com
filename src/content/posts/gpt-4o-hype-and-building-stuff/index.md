@@ -2,7 +2,7 @@
 title: GPT-4o – Hype and Building Stuff
 date: '2024-05-14T22:47:03Z'
 updated: '2024-05-15T07:34:54Z'
-description: Hype GPT-4o is OpenAI’s latest frontier model, announced by CTO Mia Murati in a livestream yesterday at 18:00 UK time, and at first glance the new capabilities that it promises are extremely exciting. The “o” in GPT-4o stands for “omni”, a reference to the native multimodality of the new model, which was trained end-to-end on…
+description: Hype GPT-4o is OpenAI’s latest frontier model, announced by CTO Mira Murati in a livestream yesterday at 18:00 UK time, and at first glance the new capabilities that it promises are extremely exciting. The “o” in GPT-4o stands for “omni”, a reference to the native multimodality of the new model, which was trained end-to-end on…
 categories:
   - AI
 cover: ./bear.webp
@@ -10,7 +10,7 @@ cover: ./bear.webp
 
 ### Hype
 
-GPT-4o is OpenAI’s latest frontier model, announced by CTO Mia Murati in a livestream yesterday at 18:00 UK time, and at first glance the new capabilities that it promises are extremely exciting. The “o” in GPT-4o stands for “omni”, a reference to the native multimodality of the new model, which was trained end-to-end on not only text but also images and audio. You might be thinking, “this isn’t new, ChatGPT could already handle image and audio data” – the difference is that previously, when you used ChatGPT’s voice mode, the following steps would happen under-the-hood:
+GPT-4o is OpenAI’s latest frontier model, announced by CTO Mira Murati in a livestream yesterday at 18:00 UK time, and at first glance the new capabilities that it promises are extremely exciting. The “o” in GPT-4o stands for “omni”, a reference to the native multimodality of the new model, which was trained end-to-end on not only text but also images and audio. You might be thinking, “this isn’t new, ChatGPT could already handle image and audio data” – the difference is that previously, when you used ChatGPT’s voice mode, the following steps would happen under-the-hood:
 
 -   Your voice audio would be transcribed into text by a model called Whisper
 -   That text would be fed into the GPT model, that great, big transformer neural network that represents the seat of the application’s intelligence
@@ -66,7 +66,8 @@ For transparency, the prompts I used were as follows:
     -   Support us button needs to include an arrow icon and button needs to be more curved
     -   Replace The Guardian image with large white text saying “The Guardian” in the relevant font, with “News provider of the year” much smaller in yellow font right underneath
     -   Main nav bar (with News, Opinion, Sport etc.) should have thin white line above it, and buttons should be separated by thin white line. No thin white line on bottom though
-    -   Sub nav bar should have no text wrapping and smaller font – In weather aside, the “Now” bit should include a large icon of rainy cloud, and the forecasts for later should be positioned side-by-side in a table, with icons at the bottom
+    -   Sub nav bar should have no text wrapping and smaller font
+    -   In weather aside, the “Now” bit should include a large icon of rainy cloud, and the forecasts for later should be positioned side-by-side in a table, with icons at the bottom
     -   Better padding / spacing between weather aside and main section with articles
     -   All articles should be in boxes styled with grey background and thin red line just at the top border
     -   For main articles (in main article column), image should be on right hand side of article box, with left hand side consisting of headline in red, subtitle in larger font (e.g., “Weight loss drug…”) and then further description in smaller font (e.g., “Researchers say…”)

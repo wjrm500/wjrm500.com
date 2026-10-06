@@ -29,7 +29,7 @@ At the core of the software solution was a tool for generating an image from a p
 
 ### **What is it not?**
 
-Streetscape is not a useful standalone tool. As mentioned above, the image generation software that it exposes was specifically designed for generating training data for a highly domain-specific machine learning model_._
+Streetscape is not a useful standalone tool. As mentioned above, the image generation software that it exposes was specifically designed for generating training data for a highly domain-specific machine learning model.
 
 ### **How should you use it?**
 

@@ -10,7 +10,7 @@ This is my website, where I publish articles about the software projects I’ve 
 
 _**Who am I?**_
 
-My name’s Will May, and I’m an English software developer based in Harrogate, where I live with my beautiful wife Kate, our beautiful baby boy Jasper, and our two beautiful cats, the ostentatiously monikered Lysander and Sebastian. I’m an avid programmer, long-time vegetarian-turned-pescetarian, football stats nerd, Radiohead devotee, Spanish language learner, lapsed badminton player, God-awful pianist, PADI-certified scuba diver (with a fear of open water), former care worker and teaching assistant, co-founder of a short-lived app start-up, and ex-expat (Singapore!), among other things. I tend to fall short of excellence and I’ve had my fair share of failures and setbacks over the years, but I like to think I get the important things in life right.
+My name’s Will May, and I’m an English software developer based in Harrogate, where I live with my beautiful wife Kate, our beautiful little boy Jasper, and our two beautiful cats, the ostentatiously monikered Lysander and Sebastian. I’m an avid programmer, long-time vegetarian-turned-pescetarian, football stats nerd, Radiohead devotee, Spanish language learner, lapsed badminton player, God-awful pianist, PADI-certified scuba diver (with a fear of open water), former care worker and teaching assistant, co-founder of a short-lived app start-up, and ex-expat (Singapore!), among other things. I tend to fall short of excellence and I’ve had my fair share of failures and setbacks over the years, but I like to think I get the important things in life right.
 
 **_Why do I have a website?_**
 

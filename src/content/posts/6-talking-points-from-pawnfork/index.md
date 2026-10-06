@@ -9,7 +9,7 @@ categories:
 
 The other day I published my latest app – a little desktop-based number whose aim it is to make memorising chess openings as easy as falling off a log (this is apparently a real idiom). It’s called Pawnfork, and you can download it [here](/wp-content/uploads/2022/08/Pawnfork.zip).
 
-Of course, it’s not every day that I fire out a new app, and so when I do, it is incumbent upon me as a conscientious blogger to milk it for all its worth. That is why I am back today with a new article: _6 Talking Points from Pawnfork_. I’ll make things exciting by giving each “talking point” a clever title, and ending each “talking point” with an exclamation mark (!).
+Of course, it’s not every day that I fire out a new app, and so when I do, it is incumbent upon me as a conscientious blogger to milk it for all it’s worth. That is why I am back today with a new article: _6 Talking Points from Pawnfork_. I’ll make things exciting by giving each “talking point” a clever title, and ending each “talking point” with an exclamation mark (!).
 
 **1\. Once more Tkinter the breach**…
 
@@ -37,13 +37,13 @@ Pretty grim, right? Perhaps I’m just too used to a high level of abstraction w
 
 And then there is the difficulty in implementing something as rudimentary as a scrollable frame – oh my word, don’t get me started on bloody scrollable frames in Tkinter. Actually, too late – I’ve started now! To make a `Frame` widget scrollable, you have to stick a `Canvas` widget inside it, and then inside the `Canvas` widget insert another `Frame` widget, and _then_ create a separate `Scrollbar` widget, and configure it so that it’s hooked up to your `Canvas` widget. So instead of just one, scrollable `Frame` widget, you end up with four widgets in play – an outer `Frame`, a `Canvas`, a `Frame` that goes inside the `Canvas`, and a `Scrollbar`. But alas, for that is not the end of your pain, oh no. Because when you have only the four widgets, but you want your scrollable `Frame` to have a border, what you’ll find is that the `Canvas` overlaps any border you add to the outer `Frame`, and it looks silly. The only solution here is to stick the outermost `Frame` inside _another_ `Frame`, and put the border on that other `Frame` instead. So now, you have FIVE widgets, all for the sake of implementing scrollability!
 
-My last gripe with Tkinter is its API for text manipulation. As an example, if you want to delete everything that’s inside a Tkinter `Entry` (input) widget, the correct command is this: `entry.delete(0, ‘end’)`. Yep, really. The first argument is the integer `0`, and the second argument is the string `‘end’`. I have no idea why; just _reasons_.
+My last gripe with Tkinter is its API for text manipulation. As an example, if you want to delete everything that’s inside a Tkinter `Entry` (input) widget, the correct command is this: `entry.delete(0, 'end')`. Yep, really. The first argument is the integer `0`, and the second argument is the string `‘end’`. I have no idea why; just _reasons_.
 
 So, what are the alternatives?
 
-Well, I could do a Web app and build the frontend with HTML, CSS and JavaScript. As I’m pretty familiar with these technologies from my time in Web development, this seems at first glance like a reasonable option. However, Web apps aren’t always an appropriate design solution, and I feel that that is the case with Pawnfork. Why? Firstly, there’s no good reason for Pawnfork to be a Web app – it’s self-contained, with no internet access required. Secondly, Web apps have some additional, architectural overhead – I’d have had to use a library like Flask to construct a set of endpoints and run an HTTP server in order to access the app via a browser, and live deployment of the product might have meant hosting the code on a remote server, which costs money. I could serve it via a free Heroku dyno (like I do with [Soccer Simulation](http://soccer-sim.herokuapp.com/)), but then the app would suffer from the same boot time lag.
+Well, I could do a Web app and build the frontend with HTML, CSS and JavaScript. As I’m pretty familiar with these technologies from my time in Web development, this seems at first glance like a reasonable option. However, Web apps aren’t always an appropriate design solution, and I feel that that is the case with Pawnfork. Why? Firstly, there’s no good reason for Pawnfork to be a Web app – it’s self-contained, with no internet access required. Secondly, Web apps have some additional, architectural overhead – I’d have had to use a library like Flask to construct a set of endpoints and run an HTTP server in order to access the app via a browser, and live deployment of the product might have meant hosting the code on a remote server, which costs money. I could serve it via a free Heroku dyno (like I do with [Soccer Simulation](https://soccer-sim.wjrm500.com/)), but then the app would suffer from the same boot time lag.
 
-What else could I use? In terms of Python libraries, the most popular outside of Tkinter include Kivy, PyQT and WxPython. I’ve never used any of these, and so can’t really offer much up insight here, but perhaps for my new GUI project I could have a closer look at each and choose the most appealing. Away from Python, Java offers GUI frameworks like JavaFX and Swing, while there are JavaScript-based options like NodeGUI which look quite interesting.
+What else could I use? In terms of Python libraries, the most popular outside of Tkinter include Kivy, PyQt and wxPython. I’ve never used any of these, and so can’t really offer much insight here, but perhaps for my new GUI project I could have a closer look at each and choose the most appealing. Away from Python, Java offers GUI frameworks like JavaFX and Swing, while there are JavaScript-based options like NodeGUI which look quite interesting.
 
 If you have any recommendations when it comes to GUI frameworks, let me know!
 
@@ -59,7 +59,7 @@ This might look like gobbledygook to somebody who’s never played chess before,
 
 The Stockfish API does not provide the means to convert a move from coordinate notation to algebraic notation, which was a bit of a problem for me, as I didn’t really want to display coordinate notation to the end user. Trying hard to avoid hard work, I turned to the [Python chess](https://pypi.org/project/chess/) package, which seemed on the face of it to provide the necessary notation conversion functionality. However, in practice I found the package’s notation conversion to be very patchy, as it seemed to label almost every single move as giving check, regardless of whether or not check was actually given. In hindsight, my problems with this package _may_ have simply resulted from misuse on my part, but either way, at the time I simply binned it off. And thus, the onus fell upon me to encode the chess notation conversion functionality myself.
 
-At its most basic, an algebraically notated move includes the destination square, and if the moving piece is not a pawn, a prefixing letter indicating the type of piece moving (e.g., B for bishop, or N for knight ?).
+At its most basic, an algebraically notated move includes the destination square, and if the moving piece is not a pawn, a prefixing letter indicating the type of piece moving (e.g., B for bishop, or N for knight).
 
 But of course, there’s lots more to it than that. For a start, you need to annotate piece captures with an “x” immediately before the destination square. In the context of this project, this isn’t actually too hard to encode, as the Stockfish API has the awkwardly-named `will_move_be_a_capture` method to help out.
 
@@ -79,7 +79,7 @@ I’m always looking to improve my programming practice, and one of the ways I t
 
 I did this with Pawnfork, but it was all rather academic in the end – 131 of the 151 type-hinted methods in the project indicated a return type of `None`, and no level of static type checking was ever implemented. While a lot of these `None`\-returning methods are constructors (the project includes 79 classes), the apparent reality of a Tkinter application is that data is not often transported between components; rather, most of the code concerns itself with declaratively updating the state of the GUI.
 
-Despite this level of redundancy, for my next Python project I’m going to look into using either of the Python VSCode extensions Pylance or Pyright, which provide static type checking functionality. It’s time to put the Python in a straightjacket!
+Despite this level of redundancy, for my next Python project I’m going to look into using either of the Python VSCode extensions Pylance or Pyright, which provide static type checking functionality. It’s time to put the Python in a straitjacket!
 
 **5\. Hacking the Matrix – sort of**
 
@@ -89,7 +89,7 @@ One of the issues I encountered when packaging up my code into an executable fil
 
 This obviously makes for an atrocious user experience, and so it was of course necessary to find a way to resolve this issue, by hook or by crook.
 
-After a couple of hours’ worth of online research, I managed to affect a solution. And, interestingly, it involved actually going into the Stockfish library and tweaking the source code. I’ve never touched library code before, so this was new territory for me.
+After a couple of hours’ worth of online research, I managed to effect a solution. And, interestingly, it involved actually going into the Stockfish library and tweaking the source code. I’ve never touched library code before, so this was new territory for me.
 
 All it involved in the end was adding the parameter `creationflags=subprocess.CREATE_NO_WINDOW` to the list of parameters passed to the `subprocess.Popen` constructor used to create the internal representation of the main Stockfish class. Adding this one line of code solved the issue completely!
 

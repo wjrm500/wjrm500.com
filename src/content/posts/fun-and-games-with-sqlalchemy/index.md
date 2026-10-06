@@ -45,7 +45,7 @@ Another confusing aspect of the transition to _SQLAlchemy_ came courtesy of conf
 
 Even when working with database abstractions, I’d got used to writing statements like this…
 
-```js
+```php
 $user = User::create([
    'username' => $username,
    'password' => md5($password)

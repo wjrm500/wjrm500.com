@@ -9,13 +9,13 @@ categories:
 cover: ./image-6.png
 ---
 
-Three months ago I released a web app called _Soccer Simulation_, which you can find [here](https://soccer-sim.herokuapp.com/). The app, which in and of itself took around four months in the building, was really the culmination of a lifetime interest in football simulation, which you can read about [here](/2021/08/05/a-history-of-one-mans-inexplicable-obsession-with-football-simulation).
+Three months ago I released a web app called _Soccer Simulation_, which you can find [here](https://soccer-sim.wjrm500.com/). The app, which in and of itself took around four months in the building, was really the culmination of a lifetime interest in football simulation, which you can read about [here](/2021/08/05/a-history-of-one-mans-inexplicable-obsession-with-football-simulation).
 
 During the development of the app, I had to overcome a variety of challenges. Sometimes this meant getting to grips with a new tool or technology, and sometimes it just meant harnessing the limited horsepower my brain has to offer and channelling it into finding a logical solution to a logical problem. At the time the app was released, it was my intention to write a series of supplementary articles discussing some of the challenges I faced, and how I overcame them – but I never got round to it, mostly because I got swept away by new and more enticing projects!
 
 However, there is one aspect of _Soccer Simulation_ that I’ve always wanted to revisit in greater depth, and that aspect is **the graphical interpretation of a club’s first-choice team**, that can be observed on any club page in the app (accessed by clicking on the name of a club in the league table).
 
-And so, to brighten your winter, I have only gone and down a bleedin’ article on it. Enjoy…
+And so, to brighten your winter, I have only gone and done a bleedin’ article on it. Enjoy…
 
 ## General description of problem to be solved
 

@@ -25,7 +25,7 @@ For comparison, the same PR as an unredacted PDF looks like this:
 
 ![](./pr-254-with-no-redaction.png)
 
-The idea is that you can now redact specific pieces of information in such a way that the resultant PDF is compliant with yours or your organisation’s requirements.
+The idea is that you can now redact specific pieces of information in such a way that the resultant PDF is compliant with your or your organisation’s requirements.
 
 ### Code diff visualisation
 
