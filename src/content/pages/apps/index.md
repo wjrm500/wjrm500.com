@@ -86,3 +86,9 @@ Description: A Wordle score tracker. Log your daily scores, form a group with fr
 Direct link: [https://gramlet.co.uk](https://gramlet.co.uk)
 
 Description: A territory-control word game: claim a letter, spell a word, repeat. Modes include Volt, a five-round sprint on an 8x8 grid; Timeless, a daily puzzle with a global leaderboard; VoltArena, real-time head-to-head matches against a friend; and Grambots, a single-player career league against bots. Built with React, Node.js and SQLite.
+
+**_Terraken_**
+
+Direct link: [https://terraken.wjrm500.com](https://terraken.wjrm500.com)
+
+Description: Geography flashcards that grow outward from points you choose on the map. Around ten thousand facts – where places are, what borders what, which rivers flow where, how places stand to each other – each scheduled by spaced repetition, so the ground you know spreads as fast as you learn it. Cards are drawn from real map geometry, and there’s a quick-fire city-tapping game on the side. No account needed, and it works offline.
