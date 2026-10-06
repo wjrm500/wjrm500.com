@@ -29,4 +29,4 @@ And if you don’t, you’ll be consoled by a rainfall animation:
 
 Hopefully the new changes make the app experience slightly more enjoyable.
 
-If you spot any bugs or have any feature requests, please leave a comment or pop me an email at [wjrm500@gmail.com](mailto:wjrm500@gmail.com)!
+If you spot any bugs or have any feature requests, please pop me an email at [wjrm500@gmail.com](mailto:wjrm500@gmail.com)!

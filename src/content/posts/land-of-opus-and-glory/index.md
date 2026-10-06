@@ -2,14 +2,14 @@
 title: Land of Opus and Glory
 date: '2025-12-20T00:27:05Z'
 updated: '2025-12-30T01:57:04Z'
-description: Last month was a pretty exciting one in the world of AI. Google released the long-awaited Gemini 3.0 Pro and a new agentic software development tool called Antigravity on the 18th November, and just six days later Anthropic released Claude Opus 4.5, the most capable LLM I’ve ever seen. AI fanboy that I am, I…
+description: Last month was a pretty exciting one in the world of AI. Google released the long-awaited Gemini 3 Pro and a new agentic software development tool called Antigravity on the 18th November, and just six days later Anthropic released Claude Opus 4.5, the most capable LLM I’ve ever seen. AI fanboy that I am, I…
 categories:
   - AI
   - Software Development
 cover: ./feature.webp
 ---
 
-Last month was a pretty exciting one in the world of AI. Google released the long-awaited Gemini 3.0 Pro and a new agentic software development tool called Antigravity on the 18th November, and just six days later Anthropic released Claude Opus 4.5, the most capable LLM I’ve ever seen. AI fanboy that I am, I started using them in earnest almost immediately, and before long the “let’s write an article about this” neuron patterns started firing in my brain: my commercial self sensing an opportunity to tap into the _zeitgeist_. Alas, I’ve now delayed that article so long that Antigravity and Opus 4.5 are no longer the talk of the town, thanks to GPT-5.2 and its [suspiciously](https://msukhareva.substack.com/p/gpt-52-and-meaningless-benchmarks) excellent benchmark scores. But as David Brent once said, _a good idea is a good idea forever_, and so here I am, baying for your attention.
+Last month was a pretty exciting one in the world of AI. Google released the long-awaited Gemini 3 Pro and a new agentic software development tool called Antigravity on the 18th November, and just six days later Anthropic released Claude Opus 4.5, the most capable LLM I’ve ever seen. AI fanboy that I am, I started using them in earnest almost immediately, and before long the “let’s write an article about this” neuron patterns started firing in my brain: my commercial self sensing an opportunity to tap into the _zeitgeist_. Alas, I’ve now delayed that article so long that Antigravity and Opus 4.5 are no longer the talk of the town, thanks to GPT-5.2 and its [suspiciously](https://msukhareva.substack.com/p/gpt-52-and-meaningless-benchmarks) excellent benchmark scores. But as David Brent once said, _a good idea is a good idea forever_, and so here I am, baying for your attention.
 
 I’m going to structure today’s article into an anthology of three, related sub-articles: firstly, a comparison between Google Antigravity and Claude Code on the web, two new agentic coding tools that I started using for the first time over the last month. Secondly, an homage to Anthropic’s latest, greatest model, Opus 4.5 – it really is a cut above the rest. And thirdly and finally, a bit about one of my old web apps WordleWise, that is for the first time available for public use thanks to a major restructuring powered by Opus 4.5.
 
@@ -64,7 +64,7 @@ On the other hand, for me and I suspect many other developers, [Claude Code on t
 
 ### Sub-Article 2 – An Homage to Opus 4.5
 
-I’m no stranger to shameless fawning: just take a look at [this article I wrote back in 2013](https://escapefromalcaraz.wordpress.com/2014/02/28/cold-night-at-the-britannia/) about Lionel Messi. But to do likewise over Anthropic’s new model Claude Opus 4.5 feels unsatisfactory. So instead, I’ve composed a song! I jest, I _jest_ – no, instead, I want to cut out the middleman somewhat and simply share one of the first conversations I had with Opus 4.5, that I feel really shows its power: [here’s the link](https://claude.ai/share/4677da41-95fd-40b9-be27-2ac7df3ac941). Have a read, and forgive my embarrassing prompts. You can see in the conversation how the model helped me reason through some pretty abstract software design decisions. I also loved that it generated ASCII wireframes to help me visualise its intentions for the user interface.
+I’m no stranger to shameless fawning: just take a look at [this article I wrote back in 2014](https://escapefromalcaraz.wordpress.com/2014/02/28/cold-night-at-the-britannia/) about Lionel Messi. But to do likewise over Anthropic’s new model Claude Opus 4.5 feels unsatisfactory. So instead, I’ve composed a song! I jest, I _jest_ – no, instead, I want to cut out the middleman somewhat and simply share one of the first conversations I had with Opus 4.5, that I feel really shows its power: [here’s the link](https://claude.ai/share/4677da41-95fd-40b9-be27-2ac7df3ac941). Have a read, and forgive my embarrassing prompts. You can see in the conversation how the model helped me reason through some pretty abstract software design decisions. I also loved that it generated ASCII wireframes to help me visualise its intentions for the user interface.
 
 (Not much of a sub-article, sorry!)
 

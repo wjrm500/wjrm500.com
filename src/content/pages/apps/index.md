@@ -12,7 +12,7 @@ Find out more:
 -   [https://wjrm500.com/2021/10/15/updates-to-soccer-simulation](/2021/10/15/updates-to-soccer-simulation)
 -   [https://wjrm500.com/2021/11/26/soccer-simulation-creating-the-team-formation-graphics](/2021/11/26/soccer-simulation-creating-the-team-formation-graphics)
 
-Description: A web app hosted on Heroku, that allows you to run football simulations. It’s very cool but kind of difficult to explain, so probably best to just give it a go. You can read a little more about the app [here](/2021/08/13/soccer-simulation-unveiled), and read more about my lifelong interest in football simulation [here](/2021/08/05/a-history-of-one-mans-inexplicable-obsession-with-football-simulation).
+Description: A web app that allows you to run football simulations. It’s very cool but kind of difficult to explain, so probably best to just give it a go. You can read a little more about the app [here](/2021/08/13/soccer-simulation-unveiled), and read more about my lifelong interest in football simulation [here](/2021/08/05/a-history-of-one-mans-inexplicable-obsession-with-football-simulation).
 
 **_Catan_**
 
