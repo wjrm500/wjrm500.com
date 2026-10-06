@@ -1,0 +1,63 @@
+---
+import { Image, getImage } from 'astro:assets';
+import { render } from 'astro:content';
+import Base from '../../../../layouts/Base.astro';
+import { getPosts, postUrl, formatDate, slugify } from '../../../../lib';
+
+export async function getStaticPaths() {
+  const posts = await getPosts();
+  return posts.map((post, i) => {
+    const [, year, month, day, slug] = postUrl(post).split('/');
+    return { params: { year, month, day, slug }, props: { post, newer: posts[i - 1], older: posts[i + 1] } };
+  });
+}
+
+const { post, newer, older } = Astro.props;
+const { Content } = await render(post);
+const { title, date, updated, description, categories, cover, comments } = post.data;
+// Social cards want a plain JPEG of modest size, not the full original.
+const ogImage = cover ? (await getImage({ src: cover, width: 1200, format: 'jpeg' })).src : undefined;
+---
+
+<Base title={title} description={description} image={ogImage}>
+  <article class="post">
+    <header>
+      <h1>{title}</h1>
+      <p class="meta">
+        <time datetime={date.toISOString()}>{formatDate(date)}</time>
+        {updated && <span> · updated {formatDate(updated)}</span>}
+        {categories.length > 0 && (
+          <span>
+            {' · '}
+            {categories.map((c, i) => (
+              <>{i > 0 && ', '}<a href={`/category/${slugify(c)}`}>{c}</a></>
+            ))}
+          </span>
+        )}
+      </p>
+      {cover && <Image class="cover" src={cover} alt="" width={1200} loading="eager" />}
+    </header>
+    <div class="prose">
+      <Content />
+    </div>
+  </article>
+
+  {comments.length > 0 && (
+    <section class="comments">
+      <h2>Comments</h2>
+      {comments.map((c) => (
+        <div class="comment">
+          <p class="meta"><strong>{c.author}</strong> · {formatDate(c.date)}</p>
+          {c.text.split(/\n\n+/).map((para) => <p>{para}</p>)}
+        </div>
+      ))}
+    </section>
+  )}
+
+  <p class="feedback">Thoughts? Email me at <a href="mailto:wjrm500@gmail.com">wjrm500@gmail.com</a>.</p>
+
+  <nav class="pager" aria-label="More articles">
+    {older ? <a href={postUrl(older)}>← {older.data.title}</a> : <span />}
+    {newer ? <a href={postUrl(newer)}>{newer.data.title} →</a> : <span />}
+  </nav>
+</Base>

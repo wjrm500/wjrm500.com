@@ -1,0 +1,34 @@
+name: Deploy
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+# A second push while one deploy is running waits for it rather than racing it to the server.
+concurrency:
+  group: deploy-production
+  cancel-in-progress: false
+
+jobs:
+  # Type-check before an image is built; the Docker build runs the production build itself.
+  check:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+      - run: npm run check
+
+  deploy:
+    needs: check
+    uses: wjrm500/github-workflows/.github/workflows/docker-deploy.yml@master
+    with:
+      docker_image_tag: wjrm500/wjrm500-com:latest
+      docker_compose_project_name: wjrm500
+      docker_compose_file_path: /home/ServerConfig/wjrm500-com-docker-compose.yml
+    secrets: inherit

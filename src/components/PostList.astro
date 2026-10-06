@@ -1,0 +1,26 @@
+---
+import { Image } from 'astro:assets';
+import { postUrl, formatDate, type Post } from '../lib';
+
+interface Props {
+  posts: Post[];
+}
+const { posts } = Astro.props;
+---
+
+<ul class="post-list">
+  {posts.map((post, i) => (
+    <li>
+      <a class="post-card" href={postUrl(post)}>
+        {post.data.cover && (
+          <Image src={post.data.cover} alt="" width={720} loading={i < 2 ? 'eager' : 'lazy'} />
+        )}
+        <div>
+          <time datetime={post.data.date.toISOString()}>{formatDate(post.data.date)}</time>
+          <h2>{post.data.title}</h2>
+          {post.data.description && <p>{post.data.description}</p>}
+        </div>
+      </a>
+    </li>
+  ))}
+</ul>
