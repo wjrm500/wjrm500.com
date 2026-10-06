@@ -1,24 +1,33 @@
 ---
 import { Image } from 'astro:assets';
-import { postUrl, formatDate, type Post } from '../lib';
+import { postUrl, formatDate, readingTime, type Post } from '../lib';
 
 interface Props {
   posts: Post[];
+  /** Give the first post a wide card of its own. */
+  feature?: boolean;
 }
-const { posts } = Astro.props;
+const { posts, feature = false } = Astro.props;
 ---
 
-<ul class="post-list">
+<ul class:list={['post-grid', { 'has-feature': feature }]}>
   {posts.map((post, i) => (
     <li>
       <a class="post-card" href={postUrl(post)}>
-        {post.data.cover && (
-          <Image src={post.data.cover} alt="" width={720} loading={i < 2 ? 'eager' : 'lazy'} />
-        )}
-        <div>
-          <time datetime={post.data.date.toISOString()}>{formatDate(post.data.date)}</time>
+        <div class="post-card-image">
+          {post.data.cover ? (
+            <Image src={post.data.cover} alt="" width={i === 0 && feature ? 960 : 640} loading={i < 3 ? 'eager' : 'lazy'} />
+          ) : (
+            <span class="placeholder" aria-hidden="true">{post.data.title.charAt(0)}</span>
+          )}
+        </div>
+        <div class="post-card-body">
+          <p class="meta">
+            <time datetime={post.data.date.toISOString()}>{formatDate(post.data.date)}</time>
+            <span> · {readingTime(post)} min read</span>
+          </p>
           <h2>{post.data.title}</h2>
-          {post.data.description && <p>{post.data.description}</p>}
+          {post.data.description && <p class="excerpt">{post.data.description}</p>}
         </div>
       </a>
     </li>

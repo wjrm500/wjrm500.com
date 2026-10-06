@@ -2,7 +2,7 @@
 import { Image, getImage } from 'astro:assets';
 import { render } from 'astro:content';
 import Base from '../../../../layouts/Base.astro';
-import { getPosts, postUrl, formatDate, slugify } from '../../../../lib';
+import { getPosts, postUrl, formatDate, readingTime, slugify } from '../../../../lib';
 
 export async function getStaticPaths() {
   const posts = await getPosts();
@@ -22,18 +22,16 @@ const ogImage = cover ? (await getImage({ src: cover, width: 1200, format: 'jpeg
 <Base title={title} description={description} image={ogImage}>
   <article class="post">
     <header>
+      {categories.length > 0 && (
+        <p class="categories">
+          {categories.map((c) => <a class="tag" href={`/category/${slugify(c)}`}>{c}</a>)}
+        </p>
+      )}
       <h1>{title}</h1>
       <p class="meta">
         <time datetime={date.toISOString()}>{formatDate(date)}</time>
         {updated && <span> · updated {formatDate(updated)}</span>}
-        {categories.length > 0 && (
-          <span>
-            {' · '}
-            {categories.map((c, i) => (
-              <>{i > 0 && ', '}<a href={`/category/${slugify(c)}`}>{c}</a></>
-            ))}
-          </span>
-        )}
+        <span> · {readingTime(post)} min read</span>
       </p>
       {cover && <Image class="cover" src={cover} alt="" width={1200} loading="eager" />}
     </header>
@@ -57,7 +55,7 @@ const ogImage = cover ? (await getImage({ src: cover, width: 1200, format: 'jpeg
   <p class="feedback">Thoughts? Email me at <a href="mailto:wjrm500@gmail.com">wjrm500@gmail.com</a>.</p>
 
   <nav class="pager" aria-label="More articles">
-    {older ? <a href={postUrl(older)}>← {older.data.title}</a> : <span />}
-    {newer ? <a href={postUrl(newer)}>{newer.data.title} →</a> : <span />}
+    {older ? <a href={postUrl(older)}><span>← Older</span>{older.data.title}</a> : <span />}
+    {newer ? <a href={postUrl(newer)}><span>Newer →</span>{newer.data.title}</a> : <span />}
   </nav>
 </Base>
