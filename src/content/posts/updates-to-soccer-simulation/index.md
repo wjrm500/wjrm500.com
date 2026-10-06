@@ -8,7 +8,7 @@ categories:
   - Software Development
 ---
 
-This is just a short post to point out a couple of recent updates to the [Soccer Simulation](https://soccer-sim.herokuapp.com/) app, inspired by recent suggestions by users.
+This is just a short post to point out a couple of recent updates to the [Soccer Simulation](https://soccer-sim.wjrm500.com/) app, inspired by recent suggestions by users.
 
 ### **Add custom club names**
 
