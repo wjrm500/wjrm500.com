@@ -1,13 +1,15 @@
 ---
 title: Anagramageddon – Fight for Territory and Find Anagrams as You Battle Against the Clock!
 date: '2022-12-08T14:43:06Z'
-updated: '2023-11-22T16:52:54Z'
+updated: '2026-10-06T23:37:39Z'
 description: I’ve created a new word game called Anagramageddon, played on a single computer by between two and four players. In a nutshell it involves users taking it in turns to (A) select a letter and (B) enter a word that can be formed from all of their letters. It’s a competitive game, and the time…
 categories:
   - JavaScript
   - Software Development
 cover: ./dall-e-2023-11-22-16.51.24-create-a-vibrant-cartoon-style-wi.webp
 ---
+
+_Update: Anagramageddon is no more! It has grown into [Gramlet](https://gramlet.co.uk), so the play links below no longer work._
 
 I’ve created a new word game called **Anagramageddon**, played on a single computer by between two and four players. In a nutshell it involves users taking it in turns to (A) select a letter and (B) enter a word that can be formed from all of their letters. It’s a competitive game, and the time limit adds an element of excitement (read: stress!), especially once you acquire a solid bank of letters to create anagrams from. You can also steal letters from your opponents, which enhances the strategic aspect of the game: do you go all out and attack your opponent’s territory, at the expense of more promising letters, or do you hunker down in your corner of the board and focus purely on word-finding?
 
