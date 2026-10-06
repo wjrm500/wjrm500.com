@@ -42,7 +42,7 @@ Description: Another Tkinter app, this one rather simpler in conception and exec
 
 **_Anagramageddon_**
 
-Direct link: [https://wjrm500.github.io/AnagramageddonBrowser/](https://wjrm500.github.io/AnagramageddonBrowser/)
+_Update: Anagramageddon is no more! It has grown into [Gramlet](https://gramlet.co.uk), further down this page_
 
 Find out more:
 
