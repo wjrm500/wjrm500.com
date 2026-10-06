@@ -57,3 +57,32 @@ _Update: Planit is no more! The company was closed in December 2022, and resourc
 Direct link: [https://planitapp.co.uk](https://planitapp.co.uk)
 
 Description: A mobile-first app for finding the best place to meet your friends. The app leverages Google APIs and a proprietary algorithm to return lists of venues to the user. Although I was involved in designing the UI through mock-ups and group discussions, the actual frontend implementation was done using React by a Leicester-based agency called Bulb. My primary role in this project was developing the backend, which involved server hosting, creating an API for the frontend, integrating with external APIs, converting the original single-file script containing the core algorithm into robust and maintainable application code, optimising this code for performance, adding support for new features, and integrating the application with a database.
+
+**_Streetscape_**
+
+Direct link: [https://streetscape.wjrm500.com](https://streetscape.wjrm500.com)
+
+Find out more:
+
+-   [https://wjrm500.com/2025/04/19/behold-its-the-road-network-visualisation-tool-youve-been-waiting-for](/2025/04/19/behold-its-the-road-network-visualisation-tool-youve-been-waiting-for)
+-   [https://wjrm500.com/2025/04/29/streetscape-now-does-more-things-than-it-did-previously](/2025/04/29/streetscape-now-does-more-things-than-it-did-previously)
+
+Description: A web app that draws colour-coded images of the road network and terrain around any point in Great Britain. It exposes the image generator I built for my MSc research project, and can also run the crash risk model that project trained on its images.
+
+**_WordleWise_**
+
+Direct link: [https://wordlewise.wjrm500.com](https://wordlewise.wjrm500.com)
+
+Find out more:
+
+-   [https://wjrm500.com/2022/11/04/using-react-to-build-a-wordle-tracker](/2022/11/04/using-react-to-build-a-wordle-tracker)
+-   [https://wjrm500.com/2025/12/20/land-of-opus-and-glory](/2025/12/20/land-of-opus-and-glory)
+-   [https://wjrm500.com/2025/12/23/wordlewise-ui-ux-updates](/2025/12/23/wordlewise-ui-ux-updates)
+
+Description: A Wordle score tracker. Log your daily scores, form a group with friends and compete on leaderboards and records. Built in 2022 for my wife and me, and open to the public since December 2025.
+
+**_Gramlet_**
+
+Direct link: [https://gramlet.co.uk](https://gramlet.co.uk)
+
+Description: A territory-control word game: claim a letter, spell a word, repeat. Modes include Volt, a five-round sprint on an 8x8 grid; Timeless, a daily puzzle with a global leaderboard; VoltArena, real-time head-to-head matches against a friend; and Grambots, a single-player career league against bots. Built with React, Node.js and SQLite.
