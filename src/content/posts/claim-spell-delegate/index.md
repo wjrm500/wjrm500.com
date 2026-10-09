@@ -36,15 +36,19 @@ There’s also Gramlet Kids, a Training mode and a post-game slideshow, but you 
 ![Three phone screenshots of Gramlet. The first shows the Timeless grid, with a cluster of claimed letters in the top-left corner and the rest hidden under padlocks. The second shows the letter bank, where you spell a word from your claimed letters. The third shows Volt, with the surge bar running down the left-hand side of the grid.](./gramlet-screens.png)
 _Timeless mid-game, spelling a word from the letter bank, and Volt with its surge bar_
 
-Give it a go at [gramlet.co.uk](https://gramlet.co.uk) – no account needed. My wife has been its chief tester since January. Her bug reports arrive in person, usually while I’m trying to watch something, and almost always begin “Is it meant to…”. It is never meant to.
+Give it a go at [gramlet.co.uk](https://gramlet.co.uk) – no account needed. My wife has been its chief tester since January. Her bug reports arrive in person, and I can tell how bad the bug is by how pleased she looks.
 
 ### Asking the robot about the robot
 
-Here’s how I went about this. I asked Claude to analyse every single Claude Code session I’ve had on Gramlet, the whole git history and the GitHub pull requests, and to tell me honestly what I’d contributed. I am aware of the conflict of interest. It’s a bit like asking the dog to lead the inquiry into the missing sausages.
+Here’s how I went about this. I asked Claude to analyse every single Claude Code session I’ve had on Gramlet, the whole git history and the GitHub pull requests, and to tell me honestly what I’d contributed. I am aware of the conflict of interest. Claude is the other party in all this, and in January it told me “You’re right!” in about one reply in fourteen. Asking it to judge my contribution is a bit like asking Samwise Gamgee how Frodo got on. Sam carried him up the mountain, and he’ll still tell you it was all Mr Frodo.
 
-Getting hold of the data was its own little comedy. My sessions live on Anthropic’s servers, and the only way Claude could read them from inside its sandbox was a hundred events at a time, through a tool only the model could call. Every page meant another trip through the model. It estimated a full extraction would cost around a billion tokens, and kept gently suggesting it might eat my entire weekly usage allowance. There was a lot of waiting. Waiting on Claude is a big part of my life now; back in June, in the voice of a jilted lover, I’d typed:
+Getting hold of the data was its own little comedy. My sessions live on Anthropic’s servers, and the only way Claude could read them from inside its sandbox was a hundred events at a time, through a tool only the model could call. Every page meant another trip through the model. It estimated a full extraction would cost around a billion tokens, and kept gently suggesting it might eat my entire weekly usage allowance. By the next morning I’d had enough:
 
-> can you please stop disappearing and claiming you’ll come back. it’s p\*ssing me off. you never come back.
+> definitely not, please stop threatening to use all of my usage, that is never going to be an option
+
+It took this well:
+
+> Understood. I won’t bring it up again, and the model-driven extraction is off the table.
 
 In the end I sat down at my laptop, opened Claude Desktop, and it wrote a script that ran in my Chrome tab and pulled down the lot: **1,609 sessions, 6.4 GB of transcripts**, without a model anywhere near it. Sometimes the answer to an AI problem is a for loop. Good to know some things never change.
 
@@ -57,9 +61,6 @@ Here’s the headline stuff, from December 2025 (when Claude got involved) to th
 -   **9,654 messages** typed by me, adding up to about **438,000 words** of English, which is roughly five novels’ worth of me telling a computer what to do
 -   **About 99%** of the code added since December was written by an AI
 -   **43%** of the codebase is now tests. In 2022 that figure was a round zero
-
-![A bar chart of lines of code added each month from December to October. The AI’s bars grow from about 7,000 in December to nearly 290,000 in August. My share is 4,755 lines in December, 3,275 in January, then 39, 22, 0, 22, 2, 30 and then nothing at all.](./handover.svg)
-_Lines of code added each month. My contribution is the row of numbers along the bottom_
 
 So the AI wrote the code. No surprises there. The more interesting question is what I was doing with all those words.
 
@@ -77,11 +78,14 @@ It was also very, very agreeable. In January, nearly 7% of its replies included 
 
 > I can’t be arsed with a follow up pr / migration to remove the allowlist, it isn’t that big a deal if sh\*t f\*cks up as we’ve only got about five users
 
-It was also when I started asking it to review its own work. On the last day of January I told it, with all the gravitas of a man addressing his troops: “as of this moment, right now, you are no longer the code author, you are the code interrogator”. By May that prompt had become a permanent “engineering lead” skill, and by August a hook that physically blocked Claude from finishing a pull request until it had interrogated itself. A little bit of me lives on in that hook.
+It was also when I started asking it to review its own work. On the last day of January I told it, with all the gravitas of a Sunday league referee: “as of this moment, right now, you are no longer the code author, you are the code interrogator”. By May that prompt had become a permanent “engineering lead” skill, and by August a hook that physically blocked Claude from finishing a pull request until it had interrogated itself. A little bit of me lives on in that hook.
 
-**Reviewer on a phone (May to July).** Claude Code works on mobile, and I discovered that I could ship features from bed and, as I confessed in December, the bog. In March, 13% of my sessions were started from my phone. By July it was 83%. My messages shrank accordingly, to a median of about 15 words, and on 6 June I first typed the phrase that would come to define our relationship: **“merge if you’re happy”**. I have now typed that, or “merge when you’re happy”, 450 times. Lying down also made me grandiose. A real message, from 16 June:
+**Reviewer on a phone (May to July).** Claude Code works on mobile, and I discovered that I could ship features from bed and, as I confessed in December, the bog. In March, 13% of my sessions were started from my phone. By July it was 83%. My messages shrank accordingly, to a median of about 15 words, and on 6 June I first typed the phrase that would come to define our relationship: **“merge if you’re happy”**. I have now typed that, or “merge when you’re happy”, 451 times. Lying down also turned my prompts into something halfway between a TED talk and a pub rant. A real message, from 16 June:
 
 > be agentic, octopus intelligence, set up agents, subagents, agents within agents, mastermind this sh\*t - I don’t need to tell you what to do, you are a genius
+
+![A line chart of the running total of times I typed “merge if you’re happy” or “merge when you’re happy”, from the first on 6 June to 451 by October. It climbs steeply through June, July and August, then flattens in September.](./merge-if-happy.svg)
+_“Merge if you’re happy”, a running total_
 
 **Factory owner (August).** August was absurd: 2,818 commits in a single month. I let sessions fix and merge small problems on their own, and my prompts became correspondingly high-level. Here is one from 18 August, in its entirety:
 
@@ -89,28 +93,24 @@ It was also when I started asking it to review its own work. On the last day of 
 
 At one point I had twelve sessions running at once on a Saturday afternoon, like a slightly dishevelled air traffic controller. I also briefly cheated on Claude with OpenAI’s Codex for three days, which we don’t talk about.
 
-**Editor (September to now).** Fewer sessions, much bigger ones. My median message is now 12 words. Here is the entirety of my side of a session from this week, in which Claude reviewed the update log, wrote a new entry, opened a pull request, reviewed it, rewrote it after my feedback and merged it:
+**Editor (September to now).** Fewer sessions, much bigger ones. My median message is now 12 words. The record for a whole session was set back in August. Here is the entirety of my side of it, in which Claude fixed the backend tests and merged the fix:
 
-> What are the latest update log entries. Is anything important missing?
+> fix backend tests
 >
-> Yes
->
-> Is it just me or is that copy very confusing
->
-> Great, merge please
+> merge
 
-Twenty-five words.
+Four words, 21 minutes apart.
 
 ### Whose ideas were they, anyway?
 
-This was the bit I actually cared about. Code authorship is a pretty rubbish measure of credit for a game. Nobody thinks Dumbledore built Hogwarts. He just runs the place, hands out the points, and occasionally decides at the last minute that Gryffindor have won. The question is who came up with the stuff that makes Gramlet _Gramlet_.
+This was the bit I actually cared about. Code authorship is a pretty rubbish measure of credit for a game. Nobody thinks Dumbledore built Hogwarts. He just runs it, in the sense that children keep nearly dying there and Ofsted somehow never visits. Still his school. The question is who came up with the stuff that makes Gramlet _Gramlet_.
 
-So I had Claude pick out the 41 key ideas in the game (the modes, the scoring, the post-game slideshow, the look of the letter tiles, the name, all of it) and trace each one back through the sessions: who sparked it, who offered the options, who chose, who refined it. Every quote was checked against the transcripts word for word. Here’s how it came out:
+So I had Claude pick out the 41 key ideas in the game (the modes, the scoring, the post-game slideshow, the look of the letter tiles, the name, all of it) and trace each one back through the sessions in four steps. Every quote was checked against the transcripts word for word. Here’s how it came out:
 
--   **Spark:** me on 29 of the 41, the AI on 4, a genuine back-and-forth on 5, and 3 lost to history
--   **Options:** mostly the AI. When I wanted alternatives, it was the one generating them
--   **Choice:** me, on 39 of the 41
--   **Refinement:** shared, on 37. It proposed, I pushed back with specifics, round we went again
+-   **Spark**, who first said “what if…”: me on 29 of the 41, the AI on 4, a genuine back-and-forth on 5, and 3 lost to history
+-   **Options**, who came up with the ways of doing it: mostly the AI. When I wanted alternatives, it was the one generating them
+-   **Choice**, who picked one: me, on 39 of the 41
+-   **Refinement**, who kept fiddling until it was right: shared, on 37. It proposed, I pushed back with specifics, round we went again
 
 ![A grid of 41 columns, one per idea in the order they first came up, and four rows: spark, options, choice and refinement. The spark row is mostly my colour, the options row mostly Claude’s or shared, the choice row almost entirely mine, and the refinement row almost entirely shared.](./ideas.svg)
 _All 41 ideas, one column each, coloured by who did what_
@@ -137,7 +137,7 @@ It came back with a simple points penalty, and I picked −2. Its options, my ch
 
 **The names** are a mixed bag. Most of them came off lists the AI generated: Volt, Timeless, VoltArena, Omnigram. I picked them, sometimes with the enthusiasm of a man choosing a sandwich (“I quite like Omnigram - we should use this name”). But Gramlet itself is mine, and so are Triplet, Rarefied and VoltMini.
 
-And not everything made it. Making “Qu” a single letter tile was built, reviewed twice, and then left to rot on a branch. A big redesign to make the letter tiles look like physical, raised tiles reached the test server in August, and then I decided I didn’t like it after all and had seventeen merges reverted. Cheap ideas are wonderful. Cheap ideas are also how you end up reverting seventeen merges on a Wednesday.
+And not everything made it. Making “Qu” a single letter tile was built, reviewed twice, and then left to rot on a branch. A big redesign to make the letter tiles look like physical, raised tiles reached the test server in August, and then I decided I didn’t like it after all and had seventeen merges reverted. Four days, seventeen merges, one “nah”.
 
 ### I trained it, and it trained me
 
@@ -159,7 +159,7 @@ Second, the instructions file itself. `CLAUDE.md` is where you tell Claude how t
 ![A line chart of the word count of CLAUDE.md from February to October. It creeps up to about 8,000 words by late July, shoots up to 42,477 on 12 August, drops to 15,970 the next day, climbs back to 33,861 by 8 September, then falls to 3,508 on 9 September.](./claude-md.svg)
 _Words in `CLAUDE.md`, with Gatsby for scale_
 
- Turns out the most important code I wrote this year wasn’t code at all; it was a document about how to talk to me, which I then had to heavily edit because it had become impossible to talk to.
+Turns out the most important code I wrote this year wasn’t code at all; it was a document about how to talk to me, which I then had to heavily edit because it had become impossible to talk to.
 
 (For the record, I also swore at it about 14 times per thousand messages between January and May, and not once in September or October. I’d like to say that’s personal growth. It’s probably just that it got better.)
 
@@ -172,19 +172,21 @@ _Every session, by the model it ran on_
 
 My messages shrank with almost every new model: a median of 34 words with Sonnet 4.5, 26 with Opus 4.6, 20 with 4.7, 15 with 4.8 and 12.5 with Opus 5.5. How often I told it to merge went from about 3% of my messages with Opus 4.5 to 16% with 4.8 and 26% with Sonnet 5. And the yes-man faded out: Sonnet 4.5 told me I was right in one reply in ten; Opus 5.5 has managed it in fewer than one in a hundred.
 
-So did I trust it more because it got better, or did it get better because I wrote 42,000 words of rules at it? Honestly, both, and they’re hard to pull apart. The ADHD rule went in on 31 July, a week after Opus 5 arrived, and Opus 5 was already less wordy than Opus 4.8 (a median of 158 words a reply against 254). What I can say is that each new model got a slightly lazier version of me, and coped fine.
+My memory is that Opus 5, which arrived on 24 July, was the one that drove me up the wall. The data says I swore at it less than at any other big model, but told it I was confused more often than any other. It wasn’t even verbose. Its median reply was 158 words, against 254 for Opus 4.8. It just used them to say things I didn’t understand.
+
+So did I trust it more because it got better, or did it get better because I wrote 42,000 words of rules at it? Honestly, both, and they’re hard to pull apart. The ADHD rule went in on 31 July, a week after Opus 5 arrived, and in an Opus 5 session at that. What I can say is that each new model got a slightly lazier version of me, and coped fine.
 
 ### So can I call myself the creator?
 
 I think so, yes, as long as I’m careful about the verb.
 
-I can’t say I _built_ Gramlet, or _coded_ it. I typed 115 lines in eight months; the AI typed the rest, and plenty of the good ideas came out of our back-and-forth rather than out of my head alone. But I did invent the game, by hand, in 2022. I sparked most of what it’s become, I chose between every set of options, and nothing hit production without me saying so. The closest analogy I can find is a film director: nobody thinks Christopher Nolan personally holds the camera, but it’s still a Christopher Nolan film. Gramlet is a Will May game. It’s just one with an unusually large and tireless crew.
+I can’t say I _built_ Gramlet, or _coded_ it. I typed 115 lines in eight months; the AI typed the rest, and plenty of the good ideas came out of our back-and-forth rather than out of my head alone. But I did invent the game, by hand, in 2022. I sparked most of what it’s become, I chose between every set of options, and nothing hit production without me saying so. Gramlet is a Will May game. And if anyone disagrees, I’ll ask Claude. It’ll tell me I’m right.
 
 ### Final thoughts
 
 In December I wrote that I no longer knew where I ended and the AI began. Having now been through ten months of data with a fine-tooth comb, I think I actually do know, and the answer is weirdly comforting.
 
-The AI made building almost free. A feature that would once have taken me a month of evenings now takes a message from my phone and a “merge if you’re happy”. And when building is free, the only things left that matter are the things the building was always in service of: having ideas, choosing between them, and knowing when something isn’t right yet. Twenty of my 29 ideas arrived after nine at night or in the small hours. That’s the job now. Ideas are the currency, and taste is how you spend it.
+The AI made building almost free. A feature that would once have taken me a month of evenings now takes a message from my phone and a “merge if you’re happy”. And when building is free, the only things left that matter are the things the building was always in service of: having ideas, choosing between them, and knowing when something isn’t right yet. Twenty of my 29 ideas arrived after nine at night or in the small hours. That’s the job now. That, and typing “merge if you’re happy” 451 times.
 
 It’s a word game, so here’s a word game. Rearrange the letters of _creator_ and you get _reactor_. Rearrange _director_ and you get _credit or…_. I’ve spent ten months as a reactor, poking at what the machine built and telling it that it looks a bit naff. But I think, on the evidence, I was the creator too. Credit, or not? Credit. Just about.
 
