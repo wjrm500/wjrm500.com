@@ -33,6 +33,9 @@ Gramlet is a daily word game. You claim letters on a grid, one at a time, always
 
 There’s also Gramlet Kids, a Training mode and a post-game slideshow, but you get the idea.
 
+![Three phone screenshots of Gramlet. The first shows the Timeless grid, with a cluster of claimed letters in the top-left corner and the rest hidden under padlocks. The second shows the letter bank, where you spell a word from your claimed letters. The third shows Volt, with the surge bar running down the left-hand side of the grid.](./gramlet-screens.png)
+_Timeless mid-game, spelling a word from the letter bank, and Volt with its surge bar_
+
 Give it a go at [gramlet.co.uk](https://gramlet.co.uk) – no account needed. My wife has been its chief tester since January. Her bug reports arrive in person, usually while I’m trying to watch something, and almost always begin “Is it meant to…”. It is never meant to.
 
 ### Asking the robot about the robot
@@ -41,7 +44,7 @@ Here’s how I went about this. I asked Claude to analyse every single Claude Co
 
 Getting hold of the data was its own little comedy. My sessions live on Anthropic’s servers, and the only way Claude could read them from inside its sandbox was a hundred events at a time, through a tool only the model could call. Every page meant another trip through the model. It estimated a full extraction would cost around a billion tokens, and kept gently suggesting it might eat my entire weekly usage allowance. There was a lot of waiting. Waiting on Claude is a big part of my life now; back in June, in the voice of a jilted lover, I’d typed:
 
-> can you please stop disappearing and claiming you’ll come back. it’s pissing me off. you never come back.
+> can you please stop disappearing and claiming you’ll come back. it’s p\*ssing me off. you never come back.
 
 In the end I sat down at my laptop, opened Claude Desktop, and it wrote a script that ran in my Chrome tab and pulled down the lot: **1,609 sessions, 6.4 GB of transcripts**, without a model anywhere near it. Sometimes the answer to an AI problem is a for loop. Good to know some things never change.
 
@@ -66,23 +69,23 @@ Reading back through ten months of my own messages was a strange experience, a b
 
 **Pair programmer (December to January).** I was still a developer, just with a very fast colleague. I ran the app on my Windows laptop, pasted stack traces back into the chat, tweaked CSS by hand and wrote some of the end-to-end tests myself. My prompts were proper specifications, a median of 33 words a message, and the AI was mostly doing what it was told. Not that I was always patient while it did:
 
-> Literally just write the fucking code already there is no way to exit plan mode, so can you just get on with it
+> Literally just write the f\*cking code already there is no way to exit plan mode, so can you just get on with it
 
 It was also very, very agreeable. In January, nearly 7% of its replies included some variation of “You’re right!” or “Good catch!”.
 
 **Product manager (February to April).** I stopped committing code around the middle of February and didn’t really notice. I was too busy arguing. This was the era of me checking every claim it made, and of a fairly relaxed attitude to risk:
 
-> I can’t be arsed with a follow up pr / migration to remove the allowlist, it isn’t that big a deal if shit fucks up as we’ve only got about five users
+> I can’t be arsed with a follow up pr / migration to remove the allowlist, it isn’t that big a deal if sh\*t f\*cks up as we’ve only got about five users
 
 It was also when I started asking it to review its own work. On the last day of January I told it, with all the gravitas of a man addressing his troops: “as of this moment, right now, you are no longer the code author, you are the code interrogator”. By May that prompt had become a permanent “engineering lead” skill, and by August a hook that physically blocked Claude from finishing a pull request until it had interrogated itself. A little bit of me lives on in that hook.
 
 **Reviewer on a phone (May to July).** Claude Code works on mobile, and I discovered that I could ship features from bed and, as I confessed in December, the bog. In March, 13% of my sessions were started from my phone. By July it was 83%. My messages shrank accordingly, to a median of about 15 words, and on 6 June I first typed the phrase that would come to define our relationship: **“merge if you’re happy”**. I have now typed that, or “merge when you’re happy”, 450 times. Lying down also made me grandiose. A real message, from 16 June:
 
-> be agentic, octopus intelligence, set up agents, subagents, agents within agents, mastermind this shit - I don’t need to tell you what to do, you are a genius
+> be agentic, octopus intelligence, set up agents, subagents, agents within agents, mastermind this sh\*t - I don’t need to tell you what to do, you are a genius
 
 **Factory owner (August).** August was absurd: 2,818 commits in a single month. I let sessions fix and merge small problems on their own, and my prompts became correspondingly high-level. Here is one from 18 August, in its entirety:
 
-> fix broken shit
+> fix broken sh\*t
 
 At one point I had twelve sessions running at once on a Saturday afternoon, like a slightly dishevelled air traffic controller. I also briefly cheated on Claude with OpenAI’s Codex for three days, which we don’t talk about.
 
@@ -109,7 +112,7 @@ So I had Claude pick out the 41 key ideas in the game (the modes, the scoring, t
 -   **Choice:** me, on 39 of the 41
 -   **Refinement:** shared, on 37. It proposed, I pushed back with specifics, round we went again
 
-![A grid of 41 columns, one per idea, and four rows: spark, options, choice and refinement. The spark row is mostly my colour, the options row mostly Claude’s or shared, the choice row almost entirely mine, and the refinement row almost entirely shared.](./ideas.svg)
+![A grid of 41 columns, one per idea in the order they first came up, and four rows: spark, options, choice and refinement. The spark row is mostly my colour, the options row mostly Claude’s or shared, the choice row almost entirely mine, and the refinement row almost entirely shared.](./ideas.svg)
 _All 41 ideas, one column each, coloured by who did what_
 
 Some of my favourite lineages:
@@ -164,8 +167,8 @@ _Words in `CLAUDE.md`, with Gatsby for scale_
 
 There’s a complication I’ve been ignoring. I didn’t talk to one AI this year. I talked to ten.
 
-![A timeline of the ten Claude models I used, from Sonnet 4.5 in December to Opus 5.5 in October, with my median words per message beside each: 34 for Sonnet 4.5, falling to 15 for Opus 4.8 and 12.5 for Opus 5.5.](./models.svg)
-_Which model was in the chair, and how many words I gave it_
+![A chart with one row per Claude model, from Sonnet 4.5 in December to Opus 5.5 in October, and one small line for every session I ran on it. Beside each model are my median words per message, falling from 34 to 12.5, and how often I said I was confused, per 100 messages, highest for Opus 5 at 2.1.](./models.svg)
+_Every session, by the model it ran on_
 
 My messages shrank with almost every new model: a median of 34 words with Sonnet 4.5, 26 with Opus 4.6, 20 with 4.7, 15 with 4.8 and 12.5 with Opus 5.5. How often I told it to merge went from about 3% of my messages with Opus 4.5 to 16% with 4.8 and 26% with Sonnet 5. And the yes-man faded out: Sonnet 4.5 told me I was right in one reply in ten; Opus 5.5 has managed it in fewer than one in a hundred.
 
