@@ -823,3 +823,134 @@ h1 {
     background-color: var(--shiki-dark-bg) !important;
   }
 }
+
+/* Feature timelines (the Gramlet post): one step per decision, blue for the author, orange
+   for Claude, grey for the release, matching the post's charts. A filled dot is a turning point. */
+.prose .tl-legend {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem 1.1rem;
+  font-family: var(--font-ui);
+  font-size: 0.85rem;
+  color: var(--muted);
+  margin: 0.5rem 0 0.25rem;
+}
+.prose .tl-legend i {
+  display: inline-block;
+  width: 0.65rem;
+  height: 0.65rem;
+  border-radius: 50%;
+  margin-right: 0.4rem;
+  vertical-align: -0.05rem;
+}
+.prose .tl-strip {
+  display: block;
+  width: 100%;
+  height: auto;
+  margin: 0.25rem 0 1.25rem;
+}
+.prose .tl-strip text {
+  font-family: var(--font-ui);
+  font-size: 16px;
+  fill: var(--muted);
+}
+.prose ol.tl {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 1rem;
+  position: relative;
+}
+.prose ol.tl::before {
+  content: '';
+  position: absolute;
+  left: 0.4rem;
+  top: 0.6rem;
+  bottom: 0.6rem;
+  width: 2px;
+  background: var(--border);
+}
+.prose ol.tl > li {
+  position: relative;
+  margin: 0;
+  padding: 0 0 1.4rem 2rem;
+}
+.prose ol.tl > li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0.35rem;
+  width: 0.95rem;
+  height: 0.95rem;
+  box-sizing: border-box;
+  border-radius: 50%;
+  border: 3px solid var(--accent);
+  background: var(--bg);
+}
+.prose ol.tl > li.claude::before {
+  border-color: var(--warm);
+}
+.prose ol.tl > li.key::before {
+  background: var(--accent);
+}
+.prose ol.tl > li.claude.key::before {
+  background: var(--warm);
+}
+.prose ol.tl > li.release::before {
+  width: 0.65rem;
+  height: 0.65rem;
+  left: 0.15rem;
+  top: 0.5rem;
+  border: 0;
+  background: var(--muted);
+}
+.prose .tl-meta {
+  font-family: var(--font-ui);
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--muted);
+}
+.prose .tl-who {
+  display: inline-block;
+  margin-left: 0.4rem;
+  padding: 0 0.5rem;
+  border-radius: 999px;
+  background: var(--accent-soft);
+  color: var(--accent);
+}
+.prose li.claude .tl-who {
+  background: var(--warm-soft);
+  color: var(--warm);
+}
+.prose li.release .tl-who {
+  background: var(--surface-2);
+  color: var(--muted);
+}
+.prose ol.tl p {
+  margin: 0.2rem 0 0;
+}
+.prose ol.tl .tl-q {
+  padding-left: 0.75rem;
+  border-left: 3px solid var(--accent-soft);
+  font-style: italic;
+}
+.prose li.claude .tl-q {
+  border-left-color: var(--warm-soft);
+}
+.prose li.release .tl-q {
+  border-left-color: var(--border);
+  font-style: normal;
+  color: var(--muted);
+}
+.prose .tl-out {
+  font-family: var(--font-ui);
+  font-size: 0.88rem;
+  font-weight: 600;
+}
+.prose .tl-sum {
+  margin: 0.25rem 0 2rem;
+  padding: 0.75rem 1rem;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  background: var(--surface);
+  font-size: 0.95rem;
+}
