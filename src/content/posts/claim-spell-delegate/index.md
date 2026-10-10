@@ -88,31 +88,31 @@ Four words, 21 minutes apart.
 
 This was the bit I actually cared about. Code authorship is a pretty rubbish measure of credit for a game. Nobody thinks Dumbledore built Hogwarts. He just runs it, in the sense that children keep nearly dying there and Ofsted somehow never visits. Still his school. The question is who came up with the stuff that makes Gramlet _Gramlet_.
 
-So I had Claude pick out the 41 key ideas in the game (the modes, the scoring, the post-game slideshow, the look of the letter tiles, the name, all of it) and trace each one back through the sessions in four steps. Every quote was checked against the transcripts word for word. Here’s how it came out:
+I had Claude pull out the 41 key ideas in the game, and for a while I tried to score each one: who thought of it, who chose it, and so on. The tallies were tidy and told me very little. So instead I went back through the full conversations behind four of them and read them properly, both sides.
 
--   **Spark**, who first said “what if…”: me on 29 of the 41, the AI on 4, a genuine back-and-forth on 5, and 3 lost to history
--   **Options**, who came up with the ways of doing it: mostly the AI. When I wanted alternatives, it was the one generating them
--   **Choice**, who picked one: me, on 39 of the 41
--   **Refinement**, who kept fiddling until it was right: shared, on 37. It proposed, I pushed back with specifics, round we went again
-
-![A grid of 41 columns, one per idea in the order they first came up, and four rows: spark, options, choice and refinement. The spark row is mostly my colour, the options row mostly Claude’s or shared, the choice row almost entirely mine, and the refinement row almost entirely shared.](./ideas.svg)
-_All 41 ideas, one column each, coloured by who did what_
-
-Some of my favourite lineages:
-
-**The surge bar** in Volt, probably the best idea in the game, was mine, and it came to me at ten past midnight on a Wednesday. I’d asked Claude for ideas to make Volt more exciting and it came back with a list of electricity-themed mechanics, none of which grabbed me. So I typed:
+**The surge bar.** One evening in April I asked Claude to “Think of some cool unique improvements for Volt game mode. Think outside the box.” It came back with a page of electricity-themed ideas: chain lightning, a voltage meter, charged letters. None of them grabbed me, and twenty minutes later I typed:
 
 > What about some like multi step discrete bar of charge that reduces over time, it resets to full after every word entry, the more charge you have the more your word score gets multiplied, something like that, riff on that with some ideas
 
-Claude named it the “surge bar”, I set the numbers (three seconds an interval, 2x down to 1x, an invalid word costs you a chunk), and later it did the maths that let Volt top out at a score of 999. That’s the pattern in miniature: my spark, its craft, my calls.
+Its reply opened “Love this. Tempo mechanic transforms Volt from a “short puzzle” into a proper rhythm game.” It named it the surge bar and riffed: freeze the bar while you type, overcharge it on rare letters, and punish an empty bar with a 0.75x multiplier. I kept the name and threw away most of the riffs. The bar would keep draining while you typed, run for “3 seconds per interval (15 total) per turn”, and multiply your score by 2 when full and by 1 when empty. When its plan started adding bonuses for rare letters, I told it: “I have no idea what you’re on about with rarity bonus or reveal bonus, these aren’t things”.
 
-**The stealing penalty** went the other way. I asked whether stealing letters from your opponent was overpowered. Claude gave me a list of clever fixes, and I replied:
+Then came the fiddling. Over one April morning the turn went from 15 seconds to 25, then in the space of two minutes back to 15, back to 25, and finally to 20 (“Sorry to be a pain but 20 seconds actually not 25”).
 
-> Hmm a lot of these sound fancy but I just can’t imagine them working that well in practice.
+The best exchange came in May, when I decided Volt should top out at 999. Claude worked out that this needed word scores adding up to 111, and suggested 2, 3, 5, 8, 13, 19, 26, 35. I was smitten:
 
-It came back with a simple points penalty, and I picked −2. Its options, my choice. (Stealing has since been switched off entirely.)
+> hmm the problem is the steeper one is so damn mathematically pure AND it lands on 111, it’s beautiful
 
-**Near-miss hints**, where the game tells you the longer word you could have played on your last turn, were the AI’s idea from the start. I just said “I kind of like this near miss feature thing” and then spent nine months fiddling with it.
+Two minutes later it came clean: “Honest answer: that “steeper” curve isn’t actually as pure as I made it sound… I hand-tuned the tail to land on 111. Sorry – should have flagged that.” I took it anyway (“ah f\*ck it let’s go for 2 3 5 8 13 19 26 35”), and while I was at it told it to “bump surge min down to 0 (as in, if timer lapses, player scores NOTHING)”. Reading that back, it’s a harsher version of the empty-bar penalty Claude had suggested three weeks earlier, and I’d turned down.
+
+**Fog of war.** In January I asked for some hidden test versions of the daily game to try out with friends, starting with “a variation where letters that aren’t adjacent to a letter you own are hidden”. Claude’s plan called it Fog of War, and the name stuck. The rules were mine: “You’d not be able to see any letters beyond the letters directly adjacent to yours - they’d all just be blank. And you’d not be able to restart the game.” Later I closed the loophole: “There’s no committing/ confirming, no undoing in fog of war, otherwise you could use that to get more info”.
+
+Ten days after that I told it: “I want fog of war to become the main game. it is the best version of the game.” I had a plan for fog to unlock the classic game, and classic to unlock a hard mode, and I asked Claude to “be my sparring partner on this… push back, feed back, whatever”. It did push back, and it asked a question I hadn’t: was fog really easier on new players, or just faster? So I told it the real story. The daily game had been a hit with friends and family, until “a small group of players started scoring 58 every day”, the maximum, by studying the grid for ages and undoing their way to the perfect path. Its reply opened “This context is everything”, and it put the problem better than I had: “So Fog isn’t about difficulty progression. It’s about game health.”
+
+That was the most useful thing it said. The rest of its suggestions were my own plan handed back to me, and I said so: “it sounds like what you’re saying is basically the idea I came to you with, which is fine but doesn’t move the conversation along much.” Its next batch included the grid fighting back, which I liked, and a version where letters next to yours disappeared each turn, which I pointed out would leave you nothing to claim. “You’re right, that was sloppy thinking.” In the end I built my unlock chain anyway, and two weeks later threw it out: “Fog of War will BE the Daily Challenge, it doesn’t even need to be labelled as Fog of War.”
+
+Reading these back, the pattern isn’t neat. The core of each idea came from me or from something that annoyed me, but Claude regularly named things, did the maths and built five versions overnight. Once or twice it saw the problem more clearly than I did. Mostly, though, my job was to say no: to its riffs, to its first designs, and quite often to my own ideas once they were built.
+
+A few shorter ones. **Near-miss hints**, where the game tells you the longer word you could have played on your last turn, were Claude’s idea from the start. I just said “I kind of like this near miss feature thing” and then spent nine months fiddling with it.
 
 **The tagline**, “Claim. Spell. Repeat.”, is one I’m quietly proud of. It started as a line I wrote myself for the About page in May (“Claim a letter; form a word; repeat.”). About six weeks later, Claude’s onboarding designs used “Claim. Spell. Climb.”, and I wasn’t having it:
 
@@ -120,7 +120,7 @@ It came back with a simple points penalty, and I picked −2. Its options, my ch
 
 **The names** are a mixed bag. Most of them came off lists the AI generated: Volt, Timeless, VoltArena, Omnigram. I picked them, sometimes with little ceremony (“I quite like Omnigram - we should use this name”). But Gramlet itself is mine, and so are Triplet, Rarefied and VoltMini.
 
-And not everything made it. Making “Qu” a single letter tile was built, reviewed twice, and then left to rot on a branch. A big redesign to make the letter tiles look like physical, raised tiles reached the test server in August, and then I decided I didn’t like it after all and had seventeen merges reverted.
+And not everything made it. Making “Qu” a single letter tile was built, reviewed twice, and then left to rot on a branch.
 
 ### I trained it, and it trained me
 
