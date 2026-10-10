@@ -16,7 +16,7 @@ Reader, I have forgotten what code looks like.
 
 Between February and October this year, I typed **115 lines of code** into the word game I’ve been working on. Not 115 a day, or 115 a week. 115, total, and most of those were me nudging a margin by a few pixels or fixing a typo in the update log. Over the same period the codebase grew to around **316,000 lines**. You don’t need to be a mathematician to work out that I am not the one doing the typing.
 
-The game is called **[Gramlet](https://gramlet.co.uk)**, and if you’ve been reading this blog for a while (all three of you) you might remember its ancestor: [Anagramageddon](/2022/12/08/anagramageddon-fight-for-territory-and-find-anagrams-as-you-battle-against-the-clock), a scrappy little two-player game I built by hand back in 2022, with a 200-line JavaScript file I described at the time as “something of an abomination”. It then sat more or less untouched for nearly three years. Then Claude Code arrived on the web, and last December I dusted it off, and things got slightly out of hand.
+The game is called **[Gramlet](https://gramlet.co.uk)**, and if you’ve been reading this blog for a while (all three of you) you might remember its ancestor: [Anagramageddon](/2022/12/08/anagramageddon-fight-for-territory-and-find-anagrams-as-you-battle-against-the-clock), a scrappy little two-player game I built by hand back in 2022, with a 200-line JavaScript file I described at the time as “something of an abomination”. It then sat more or less untouched for nearly three years. Then Claude Code arrived on the web, and last December I blew the dust off my little abomination, and things got slightly out of hand.
 
 This article is my attempt to work out what, if anything, I can still take credit for.
 
@@ -36,21 +36,17 @@ There’s also Gramlet Kids, a Training mode and a post-game slideshow, but you 
 ![Three phone screenshots of Gramlet. The first shows the Timeless grid, with a cluster of claimed letters in the top-left corner and the rest hidden under padlocks. The second shows the letter bank, where you spell a word from your claimed letters. The third shows Volt, with the surge bar running down the left-hand side of the grid.](./gramlet-screens.png)
 _Timeless mid-game, spelling a word from the letter bank, and Volt with its surge bar_
 
-Give it a go at [gramlet.co.uk](https://gramlet.co.uk) – no account needed. My wife has been its chief tester since January. Her bug reports arrive in person, and I can tell how bad the bug is by how pleased she looks.
+Give it a go at [gramlet.co.uk](https://gramlet.co.uk) – no account needed. My wife has been its chief tester since January. Her bug reports arrive in person, delivered with a quiet delight that scales precisely with how badly the robot and I have broken things.
 
 ### Asking the robot about the robot
 
-Here’s how I went about this. I asked Claude to analyse every single Claude Code session I’ve had on Gramlet, the whole git history and the GitHub pull requests, and to tell me honestly what I’d contributed. I am aware of the conflict of interest. Claude is the other party in all this, and in January it told me “You’re right!” in about one reply in fourteen. Asking it to judge my contribution is a bit like asking Samwise Gamgee how Frodo got on. Sam carried him up the mountain, and he’ll still tell you it was all Mr Frodo.
+Here’s how I went about this. I asked Claude to analyse every single Claude Code session I’ve had on Gramlet, the whole git history and the GitHub pull requests, and to tell me honestly what I’d contributed. I am aware that AI has a taste for sycophancy, and that asking it to judge my contribution is a bit like asking Keir Starmer to critique Donald Trump’s foreign policy agenda.
 
-Getting hold of the data was its own little comedy. My sessions live on Anthropic’s servers, and the only way Claude could read them from inside its sandbox was a hundred events at a time, through a tool only the model could call. Every page meant another trip through the model. It estimated a full extraction would cost around a billion tokens, and kept gently suggesting it might eat my entire weekly usage allowance. By the next morning I’d had enough:
+Getting hold of the data took a bit of fiddling. My sessions live on Anthropic’s servers, and the only way Claude could read them from inside its sandbox was a hundred events at a time, through a tool only the model could call. Every page meant another trip through the model. It estimated a full extraction would cost around a billion tokens, and kept gently suggesting it might eat my entire weekly usage allowance. By the next morning I’d had enough:
 
 > definitely not, please stop threatening to use all of my usage, that is never going to be an option
 
-It took this well:
-
-> Understood. I won’t bring it up again, and the model-driven extraction is off the table.
-
-In the end I sat down at my laptop, opened Claude Desktop, and it wrote a script that ran in my Chrome tab and pulled down the lot: **1,609 sessions, 6.4 GB of transcripts**, without a model anywhere near it. Sometimes the answer to an AI problem is a for loop. Good to know some things never change.
+In the end I sat down at my laptop, opened Claude Desktop, and it wrote a script that ran in my Chrome tab and pulled down the lot: **1,609 sessions, 6.4 GB of transcripts**, for the grand total of zero tokens, a modest saving on a billion, I thought.
 
 ### The numbers
 
@@ -66,7 +62,7 @@ So the AI wrote the code. No surprises there. The more interesting question is w
 
 ### Five versions of me
 
-Reading back through ten months of my own messages was a strange experience, a bit like finding an old diary, if your diary was mostly you swearing at a word game. But a pretty clear story emerged, in five chapters.
+Reading back through ten months of my own messages was a strange experience, a bit like finding an old diary, if your diary was mostly you swearing at a robot about a word game. But a pretty clear story emerged, in five chapters.
 
 **Pair programmer (December to January).** I was still a developer, just with a very fast colleague. I ran the app on my Windows laptop, pasted stack traces back into the chat, tweaked CSS by hand and wrote some of the end-to-end tests myself. My prompts were proper specifications, a median of 33 words a message, and the AI was mostly doing what it was told. Not that I was always patient while it did:
 
@@ -91,7 +87,7 @@ _“Merge if you’re happy”, a running total_
 
 > fix broken sh\*t
 
-At one point I had twelve sessions running at once on a Saturday afternoon, like a slightly dishevelled air traffic controller. I also briefly cheated on Claude with OpenAI’s Codex for three days, which we don’t talk about.
+At one point I had twelve sessions running at once on a Saturday afternoon, like a bloke in the bookies with a slip on every race and no idea which horse is his. I also briefly cheated on Claude with OpenAI’s Codex for three days, which we don’t talk about.
 
 **Editor (September to now).** Fewer sessions, much bigger ones. My median message is now 12 words. The record for a whole session was set back in August. Here is the entirety of my side of it, in which Claude fixed the backend tests and merged the fix:
 
