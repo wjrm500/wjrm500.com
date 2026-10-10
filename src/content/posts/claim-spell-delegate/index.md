@@ -57,15 +57,13 @@ Reading back through ten months of my own messages was a strange experience, a b
 
 > Literally just write the f\*cking code already there is no way to exit plan mode, so can you just get on with it
 
-It was also very, very agreeable. In January, nearly 7% of its replies included some variation of “You’re right!” or “Good catch!”.
-
 **Product manager (February to April).** I stopped committing code around the middle of February and didn’t really notice. I was too busy arguing. This was the era of me checking every claim it made, and of a fairly relaxed attitude to risk:
 
 > I can’t be arsed with a follow up pr / migration to remove the allowlist, it isn’t that big a deal if sh\*t f\*cks up as we’ve only got about five users
 
 It was also when I started asking it to review its own work. On the last day of January I told it: “as of this moment, right now, you are no longer the code author, you are the code interrogator”. By May that prompt had become a permanent “engineering lead” skill, and by August a hook that physically blocked Claude from finishing a pull request until it had interrogated itself. A little bit of me lives on in that hook.
 
-**Reviewer on a phone (May to July).** Claude Code works on mobile, and I discovered that I could ship features from bed and, as I confessed in December, the bog. In March, 13% of my sessions were started from my phone. By July it was 83%. My messages shrank accordingly, to a median of about 15 words, and on 6 June I first typed the phrase that would come to define our relationship: **“merge if you’re happy”**. I have now typed that, or “merge when you’re happy”, 451 times. My prompts also got stranger. A real message, from 16 June:
+**Reviewer on a phone (May to July).** Claude Code works on mobile, and I discovered that I could ship features from bed. In March, 13% of my sessions were started from my phone. By July it was 83%. My messages shrank accordingly, to a median of about 15 words, and on 6 June I first typed the phrase that would come to define our relationship: **“merge if you’re happy”**. I have now typed that, or “merge when you’re happy”, 451 times. My prompts also got stranger. A real message, from 16 June:
 
 > be agentic, octopus intelligence, set up agents, subagents, agents within agents, mastermind this sh\*t - I don’t need to tell you what to do, you are a genius
 
@@ -76,7 +74,7 @@ _“Merge if you’re happy”, a running total_
 
 > fix broken sh\*t
 
-At one point I had twelve sessions running at once on a Saturday afternoon. I also tried OpenAI’s Codex for three days.
+At one point I had twelve sessions running at once on a Saturday afternoon. I also tried OpenAI’s Codex for three days, having twice threatened Claude with it in the spring, once as a rival that would check its work and once as its replacement.
 
 **Editor (September to now).** Fewer sessions, much bigger ones. My median message is now 12 words. The record for a whole session was set back in August. Here is the entirety of my side of it, in which Claude fixed the backend tests and merged the fix:
 
@@ -88,7 +86,7 @@ Four words, 21 minutes apart.
 
 ### Whose ideas were they, anyway?
 
-This was the bit I actually cared about. Code authorship is a pretty rubbish measure of credit for a game. Nobody thinks Dumbledore built Hogwarts, but it’s still his school. The question is who came up with the stuff that makes Gramlet _Gramlet_.
+This was the bit I actually cared about. Code authorship is a pretty rubbish measure of credit for a game. Nobody thinks Dumbledore built Hogwarts. He just runs it, in the sense that children keep nearly dying there and Ofsted somehow never visits. Still his school. The question is who came up with the stuff that makes Gramlet _Gramlet_.
 
 So I had Claude pick out the 41 key ideas in the game (the modes, the scoring, the post-game slideshow, the look of the letter tiles, the name, all of it) and trace each one back through the sessions in four steps. Every quote was checked against the transcripts word for word. Here’s how it came out:
 
