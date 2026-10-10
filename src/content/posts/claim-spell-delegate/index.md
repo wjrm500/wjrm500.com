@@ -51,7 +51,7 @@ So the AI wrote the code. The more interesting question is what I was doing with
 
 ### Five versions of me
 
-Reading back through ten months of my own messages was a strange experience. But a pretty clear story emerged, in five chapters.
+Reading back through ten months of my own messages was a strange experience, a bit like finding an old diary, if your diary was mostly you swearing at a robot about a word game. But a pretty clear story emerged, in five chapters.
 
 **Pair programmer (December to January).** I was still a developer, just with a very fast colleague. I ran the app on my Windows laptop, pasted stack traces back into the chat, tweaked CSS by hand and wrote some of the end-to-end tests myself. My prompts were proper specifications, a median of 33 words a message, and the AI was mostly doing what it was told. Not that I was always patient while it did:
 
