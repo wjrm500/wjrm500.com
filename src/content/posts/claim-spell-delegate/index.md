@@ -14,7 +14,7 @@ Reader, I have forgotten what code looks like.
 
 Between February and October this year, I typed **115 lines of code** for the word game I’ve been working on. Not 115 a day, or 115 a week. 115, total, and most of those were me nudging a margin by a few pixels or fixing a typo in the update log. Over the same period the codebase grew to around **316,000 lines**.
 
-The game is called **[Gramlet](https://gramlet.co.uk)**, and if you’ve been reading this blog for a while you might remember its ancestor: [Anagramageddon](/2022/12/08/anagramageddon-fight-for-territory-and-find-anagrams-as-you-battle-against-the-clock), a scrappy little two-player game I built by hand back in 2022, with a 200-line JavaScript file I described at the time as “something of an abomination”. It then sat more or less untouched for nearly three years. Then Claude Code on the web arrived, and last December I picked it back up, and things got slightly out of hand.
+The game is called **[Gramlet](https://gramlet.co.uk)**, and if you’ve been reading this blog for a while you might remember its ancestor: [Anagramageddon](/2022/12/08/anagramageddon-fight-for-territory-and-find-anagrams-as-you-battle-against-the-clock), a scrappy little two-player game I built by hand back in 2022, with a 200-line JavaScript file I described at the time as “something of an abomination”. It sat more or less untouched for nearly three years. Then Claude Code on the web arrived, and last December I picked it back up, and things got slightly out of hand.
 
 This article is my attempt to work out what, if anything, I can still take credit for.
 
