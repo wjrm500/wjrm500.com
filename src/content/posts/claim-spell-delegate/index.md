@@ -22,16 +22,7 @@ This article is my attempt to work out what, if anything, I can still take credi
 
 ### What even is Gramlet?
 
-Gramlet is a daily word game. You claim letters on a grid, one at a time, always next to one you already own, and after each claim you spell a word from your growing bank of letters. That’s the core of it, and it’s the bit I came up with in 2022. Everything else has grown around it since, mostly by asking “what if?”:
-
--   **What if the clock was ticking?** In Volt, your word score is multiplied by a surge bar that drains while you think, over five rounds a day. VoltMini does the same on a 5x5 grid, and the music speeds up as the timer runs down
--   **What if you couldn’t see the whole board?** Timeless, the classic daily, hides most of the grid under a fog of war
--   **What if some letters were worth more?** In Rarefied, rare letters score higher, and a solver bot called Omnigram works out the best possible score for each day’s board
--   **What if there were extra rules?** Triplet adds three daily challenges (“cross the board”, “no plurals”, that sort of thing). Free Play takes the pressure off and gives you undo
--   **What if you weren’t alone?** Duels with friends, VoltArena for head-to-head in real time, and Grambots, a league of bots to fight instead
--   **Why come back tomorrow?** A new board every day, streaks, a Hall of Fame, holiday themes, and a charity pot that grows a little every time somebody finishes a game
-
-There’s also Gramlet Kids, a Training mode and a post-game slideshow.
+Gramlet is a daily word game. You claim letters on a grid, one at a time, always next to one you already own, and after each claim you spell a word from your growing bank of letters. That’s the core of it, and it’s the bit I came up with in 2022. Everything else has grown around it since, mostly by asking “what if?”. What if the clock was ticking? What if you couldn’t see the whole board? What if some letters were worth more than others? What if you were playing a friend, or a bot? Most of those questions turned into a game mode of their own. The one to start with is Volt, where your score is multiplied by a bar that drains while you think.
 
 ![Three phone screenshots of Gramlet. The first shows the Timeless grid, with a cluster of claimed letters in the top-left corner and the rest hidden under padlocks. The second shows the letter bank, where you spell a word from your claimed letters. The third shows Volt, with the surge bar running down the left-hand side of the grid.](./gramlet-screens.png)
 _Timeless mid-game, spelling a word from the letter bank, and Volt with its surge bar_
