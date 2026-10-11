@@ -954,3 +954,15 @@ h1 {
   background: var(--surface);
   font-size: 0.95rem;
 }
+
+/* Opening the full timeline hides the turning-points list, since the full one repeats it. */
+.prose .tl-wrap:has(details.tl-more[open]) > ol.tl-keys { display: none; }
+.prose details.tl-more { margin: 0 0 1em; }
+.prose details.tl-more > summary {
+  cursor: pointer;
+  font-family: var(--font-ui);
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--accent);
+  margin-bottom: 0.8em;
+}
