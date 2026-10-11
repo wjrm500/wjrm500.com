@@ -88,9 +88,9 @@ Four words, 21 minutes apart.
 
 This was the bit I actually cared about. Code authorship is a pretty rubbish measure of credit for a game. Nobody thinks Dumbledore built Hogwarts. He just runs it, in the sense that children keep nearly dying there and Ofsted somehow never visits. Still his school. The question is who came up with the stuff that makes Gramlet _Gramlet_.
 
-So I went back through all 1,609 sessions, area by area – the rules, the play screen, the look of the app, and everything around the game – and traced how each part came to be what it is today. Below are nine of the biggest features, showing where each began and its turning points; each one opens out into its full timeline. The timelines below only include moments that changed what got built: my decisions, Claude’s ideas that were adopted, things it built that shaped the result, and the mistakes it found. A grey dot marks the change reaching players, quoted from the game’s update log. Every quote is word for word.
+So I went back through all 1,609 sessions, area by area – the rules, the play screen, the look of the app, and everything around the game – and traced where the ideas behind nine of the biggest features came from. Each timeline below shows only the ideas that shaped what the feature is today, who had them and when. Every quote is word for word.
 
-<div class="tl-legend"><span><i style="background:var(--accent)"></i>Me</span><span><i style="background:var(--warm)"></i>Claude</span><span><i style="background:var(--muted)"></i>Released</span><span>Filled dot = turning point</span></div>
+<div class="tl-legend"><span><i style="background:var(--accent)"></i>Me</span><span><i style="background:var(--warm)"></i>Claude</span></div>
 
 ### The rules
 
