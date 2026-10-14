@@ -976,9 +976,12 @@ h1 {
 }
 .prose .ic-hero {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(4, 1fr);
   gap: 0.75rem;
   margin-bottom: 1rem;
+}
+@media (max-width: 34rem) {
+  .prose .ic-hero { grid-template-columns: repeat(2, 1fr); }
 }
 .prose .ic-num {
   display: flex;
@@ -992,6 +995,7 @@ h1 {
 .prose .ic-num.ic-will { --c: var(--who-will); }
 .prose .ic-num.ic-claude { --c: var(--who-claude); }
 .prose .ic-num.ic-other { --c: var(--who-other); }
+.prose .ic-num.ic-unknown { --c: var(--who-unknown); }
 .prose .ic-big {
   font-family: var(--font-display);
   font-size: clamp(1.8rem, 7vw, 2.6rem);
