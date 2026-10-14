@@ -7,6 +7,8 @@ title: Apps
 <details class="app">
 <summary>
 
+![Terraken](./terraken.png)
+
 **Terraken**
 
 Geography flashcards that grow outward from points you choose on the map.
@@ -21,6 +23,8 @@ Around ten thousand facts – where places are, what borders what, which rivers 
 
 <details class="app">
 <summary>
+
+![Gramlet](./gramlet.png)
 
 **Gramlet**
 
