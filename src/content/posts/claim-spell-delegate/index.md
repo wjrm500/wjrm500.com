@@ -267,6 +267,11 @@ Second, the instructions file itself. `CLAUDE.md` is where you tell Claude how t
 ![A line chart of the word count of CLAUDE.md from February to October. It creeps up to about 8,000 words by late July, shoots up to 42,477 on 12 August, drops to 15,970 the next day, climbs back to 33,861 by 8 September, then falls to 3,508 on 9 September.](./claude-md.svg)
 _Words in `CLAUDE.md`, with Gatsby for scale_
 
+What didn’t change was who decided. Month after month, Claude’s share of the credit in the census above sat at about a fifth, even as my messages shrank to a dozen words. What did change was how well its suggestions landed: in January, 13 of the 32 it made shipped as it proposed them; from June to August, 80 of 130 did. Only in September and October, with just 11 changes between them, does its share start to climb.
+
+![A stacked column chart of who gets the credit for the changes shipped each month. My share sits between 73% and 80% from January to August, and Claude’s between 13% and 24%. September and October, drawn paler because they hold only 3 and 8 changes, show Claude at 35% and 47%.](./credit-by-month.svg)
+_Who gets the credit for each month’s changes_
+
 Turns out the most important code I wrote this year wasn’t code at all; it was a document about how to talk to me, which I then had to heavily edit because it had become impossible to talk to.
 
 (For the record, I also swore at it about 12 times per thousand messages between January and May, and not once in September or October. I’d like to say that’s personal growth. It’s probably just that it got better.)
@@ -275,10 +280,12 @@ Turns out the most important code I wrote this year wasn’t code at all; it was
 
 There’s a complication I’ve been ignoring. I didn’t talk to one AI this year. I talked to ten.
 
-![A chart with one row per Claude model, from Sonnet 4.5 in December to Opus 5.5 in October, and one small line for every session I ran on it. Beside each model are my median words per message, falling from 34 to 11, and how often I said I was confused, per 100 messages, highest for Opus 5 at 2.1.](./models.svg)
+![A chart with one row per Claude model, from Sonnet 4.5 in December to Opus 5.5 in October, and one small line for every session I ran on it. Beside each model are my median words per message, falling from 34 to 11, how often I said I was confused, per 100 messages, highest for Opus 5 at 2.1, Claude’s share of the credit in that model’s sessions, from 23% for Opus 4.7 to 42% for Fable 5, and how often its suggestions shipped as it proposed them, highest for Opus 4.8 at 70%.](./models.svg)
 _Every session, by the model it ran on_
 
 My messages shrank with almost every new model: a median of 34 words with Sonnet 4.5, 26 with Opus 4.6, 20 with 4.7, 15 with 4.8 and 11 with Opus 5.5. How often I told it to merge went from about 3% of my messages with Opus 4.5 to 16% with 4.8 and 26% with Sonnet 5. And the flattery faded: Sonnet 4.5 told me I was right in one reply in ten; Opus 5.5 has managed it in about one in seventy.
+
+The last two columns come from the census. Claude’s share of the credit moved around more than my words did, from 23% in Opus 4.7’s sessions to 42% in Fable 5’s, and Opus 4.8’s suggestions were the ones I kept most often, seven times in ten. Opus 5.5 is on 51%, but from only two changes so far.
 
 My memory is that Opus 5, which arrived on 24 July, was the one that drove me up the wall. The data says I swore at it less than at any other big model, but told it I was confused more often than any other. It wasn’t even verbose. Its median reply was 158 words, against 254 for Opus 4.8. It just used them to say things I didn’t understand.
 
