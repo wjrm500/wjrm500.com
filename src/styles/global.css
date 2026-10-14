@@ -1042,7 +1042,7 @@ h1 {
 .prose .ic-sq.ic-will { background: var(--who-will); }
 .prose .ic-sq.ic-claude { background: var(--who-claude); }
 .prose .ic-sq.ic-other { background: var(--who-other); }
-.prose .ic-sq.is-dim { background: var(--border); }
+.prose .ic-sq.is-dim { background: var(--border) !important; }
 .prose .ic-sq { position: relative; }
 .prose .ic-sq.ic-major::after, .prose .ic-legend .ic-dotkey::after {
   content: '';
@@ -1101,6 +1101,23 @@ h1 {
 }
 .prose .ic-src { display: block; color: var(--muted); font-size: 0.8rem; }
 .prose .ic-basis { color: var(--text); }
+.prose .ic-split { font-weight: 600; font-variant-numeric: tabular-nums; }
+.prose .ic-dots { display: flex; flex-wrap: wrap; align-items: center; gap: 4px; }
+.prose .ic-dot {
+  width: var(--s);
+  height: var(--s);
+  border-radius: 50%;
+  background: var(--who-unknown);
+}
+.prose .ic-dot.ic-will { background: var(--who-will); }
+.prose .ic-dot.ic-claude { background: var(--who-claude); }
+.prose .ic-dot.ic-other { background: var(--who-other); }
+.prose .ic-ev li.ic-will { border-left-color: var(--who-will); }
+.prose .ic-ev li.ic-claude { border-left-color: var(--who-claude); }
+.prose .ic-ev li.ic-other { border-left-color: var(--who-other); }
+.prose .ic-sum { display: block; font-weight: 600; }
+.prose .ic-dim { color: var(--muted); font-weight: 400; }
+.prose .ic-detail { max-height: 34rem; overflow-y: auto; }
 .prose .ic-ev { margin: 0.5rem 0 0.3rem; padding: 0; list-style: none; }
 .prose .ic-ev li { margin: 0 0 0.6rem; padding-left: 0.75rem; border-left: 3px solid var(--border); }
 .prose .ic-role {
@@ -1186,3 +1203,21 @@ h1 {
 }
 .prose details.st .tl-strip { grid-column: 1 / -1; margin: 0.2rem 0 0; }
 .prose details.st > ol.tl, .prose details.st > .tl-sum { margin-left: 1rem; margin-right: 1rem; }
+.prose .ic-find {
+  margin: 1rem 0 2rem;
+  padding: 0;
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(14rem, 1fr));
+  gap: 0.6rem;
+  font-family: var(--font-ui);
+  font-size: 0.9rem;
+}
+.prose .ic-find li {
+  margin: 0;
+  padding: 0.7rem 0.9rem;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  background: var(--surface);
+}
+.prose .ic-find b { font-family: var(--font-display); font-size: 1.3rem; }
