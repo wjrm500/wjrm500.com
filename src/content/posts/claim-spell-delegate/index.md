@@ -1,7 +1,7 @@
 ---
 title: 'Claim. Spell. Delegate.'
 date: '2026-10-09T12:00:00Z'
-description: In ten months I turned a forgotten 2022 word game into Gramlet, with 316,000 lines of code, eight game modes and a charity pot. I wrote 115 of those lines myself. So what exactly did I do? I got Claude to go through all 1,619 of our conversations and find out.
+description: In ten months I turned a forgotten 2022 word game into Gramlet, with 334,000 lines of code, eight game modes and a charity pot. I wrote 115 of those lines myself. So what exactly did I do? I got Claude to go through all 1,619 of our conversations and find out.
 categories:
   - AI
   - Software Development
@@ -12,7 +12,7 @@ Last December, in a [rambling ode to Claude Opus 4.5](/2025/12/20/land-of-opus-a
 
 Reader, I have forgotten what code looks like.
 
-Between February and October this year, I typed **115 lines of code** for the word game I’ve been working on. Not 115 a day, or 115 a week. 115, total, and most of those were me nudging a margin by a few pixels or fixing a typo in the update log. Over the same period the codebase grew to around **316,000 lines**.
+Between February and October this year, I typed **115 lines of code** for the word game I’ve been working on. Not 115 a day, or 115 a week. 115, total, and most of those were me nudging a margin by a few pixels or fixing a typo in the update log. Over the same period the codebase grew to around **334,000 lines**.
 
 The game is called **[Gramlet](https://gramlet.co.uk)**, and if you’ve been reading this blog for a while you might remember its ancestor: [Anagramageddon](/2022/12/08/anagramageddon-fight-for-territory-and-find-anagrams-as-you-battle-against-the-clock), a scrappy little two-player game I built by hand back in 2022, with a 200-line JavaScript file I described at the time as “something of an abomination”. It sat more or less untouched for nearly three years. Then Claude Code on the web arrived, and last December I picked it back up, and things got slightly out of hand.
 
@@ -41,11 +41,11 @@ In the end I sat down at my laptop, opened Claude Desktop, and it wrote a script
 
 Here’s the headline stuff, from December 2025 (when Claude got involved) to 12 October 2026:
 
--   **9,538 commits** to master, about 2,190 pull requests and 948 GitHub issues
+-   **9,918 commits** to master, about 2,230 pull requests and about 950 GitHub issues
 -   **1,619 Claude Code sessions**, on 271 of 314 days
 -   **9,767 messages** typed by me, adding up to about **441,000 words**, roughly five novels’ worth
 -   **About 99%** of the code added since December was written by an AI
--   **43%** of the codebase is now tests. In 2022 it was zero
+-   **42%** of the codebase is now tests. In 2022 it was zero
 
 So the AI wrote the code. The more interesting question is what I was doing with all those words.
 
