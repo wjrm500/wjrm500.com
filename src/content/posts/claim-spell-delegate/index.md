@@ -90,6 +90,8 @@ This was the bit I actually cared about. Code authorship is a pretty rubbish mea
 
 #### The name
 
+The most obvious place to start is the name on the box.
+
 Over two days in a Claude chat, Claude offered around 500 names; I sent 37 messages, had 14 checked for clashes, and settled it with mock logos in Gemini.
 
 <div class="tl-legend"><span><i style="background:var(--accent)"></i>Me</span><span><i style="background:var(--warm)"></i>Claude</span></div>
@@ -98,6 +100,8 @@ Over two days in a Claude chat, Claude offered around 500 names; I sent 37 messa
 <p class="tl-sum"><strong>Claude’s part:</strong> Claude coined Gramlet, number 41 in a list of 50, and found it the cleanest of my shortlist; the brief, the shortlist and the final pick were mine.</p>
 
 #### Every change, traced
+
+The name came out of one chat over two days. The rest of the game arrived in smaller pieces over ten months, which takes a different approach.
 
 Gramlet’s update log lists every change players have been told about: 217 of them, from January to October. Asking who had each idea first turned out to be too blunt, because most ideas went back and forth between us before they shipped. So for the 111 bigger changes, I traced the whole conversation behind each one: every message that shaped what shipped, 806 of them. Two separate Claude instances, not told who had said what, then rated how much each message mattered, from a detail to the move that defined the change. A change’s credit is split by those ratings. The 106 minor changes go whole to whoever raised them, and a friend, a player or my wife counts as someone else. A few ideas predate the log altogether: claiming a letter and then spelling a word was already the turn in my 2022 code, the letter bank came out of a Claude chat on 23 December, and Gemini drew the logo to my brief.
 
