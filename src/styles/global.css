@@ -1009,7 +1009,7 @@ h1 {
   margin-bottom: 0.75rem;
 }
 .prose .ic-seg, .prose .ic-chips { display: flex; flex-wrap: wrap; gap: 0.35rem; }
-.prose .ic-sort, .prose .ic-chip {
+.prose .ic-sort, .prose .ic-chip, .prose .ic-mode {
   font: inherit;
   font-size: 0.8rem;
   padding: 0.3rem 0.65rem;
@@ -1019,7 +1019,7 @@ h1 {
   color: var(--text);
   cursor: pointer;
 }
-.prose .ic-sort[aria-pressed='true'], .prose .ic-chip[aria-pressed='true'] {
+.prose .ic-sort[aria-pressed='true'], .prose .ic-chip[aria-pressed='true'], .prose .ic-mode[aria-pressed='true'] {
   background: var(--text);
   border-color: var(--text);
   color: var(--bg);
@@ -1043,6 +1043,15 @@ h1 {
 .prose .ic-sq.ic-claude { background: var(--who-claude); }
 .prose .ic-sq.ic-other { background: var(--who-other); }
 .prose .ic-sq.is-dim { background: var(--border); }
+.prose .ic-sq { position: relative; }
+.prose .ic-sq.ic-major::after, .prose .ic-legend .ic-dotkey::after {
+  content: '';
+  position: absolute;
+  inset: 32%;
+  border-radius: 50%;
+  background: var(--surface);
+}
+.prose .ic-sq.is-dim.ic-major::after { background: var(--muted); }
 .prose .ic-sq.is-on, .prose .ic-sq:focus-visible { outline: 2px solid var(--text); outline-offset: 1px; }
 .prose .ic-legend {
   display: flex;
@@ -1064,6 +1073,7 @@ h1 {
 .prose .ic-legend .ic-claude { background: var(--who-claude); }
 .prose .ic-legend .ic-other { background: var(--who-other); }
 .prose .ic-legend .ic-unknown { background: var(--who-unknown); }
+.prose .ic-legend .ic-dotkey { position: relative; background: var(--text); }
 .prose .ic-detail {
   min-height: 9.5rem;
   padding: 0.75rem 1rem;
@@ -1085,12 +1095,22 @@ h1 {
 }
 .prose .ic-text { font-weight: 600; }
 .prose .ic-q {
-  padding-left: 0.75rem;
-  border-left: 3px solid var(--border);
+  display: block;
   font-family: var(--font-body);
   font-style: italic;
 }
-.prose .ic-src { color: var(--muted); font-size: 0.8rem; }
+.prose .ic-src { display: block; color: var(--muted); font-size: 0.8rem; }
+.prose .ic-basis { color: var(--text); }
+.prose .ic-ev { margin: 0.5rem 0 0.3rem; padding: 0; list-style: none; }
+.prose .ic-ev li { margin: 0 0 0.6rem; padding-left: 0.75rem; border-left: 3px solid var(--border); }
+.prose .ic-role {
+  display: block;
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
 .prose .ic-bars { margin-top: 1.5rem; }
 .prose .ic-bars-head {
   display: flex;
