@@ -1157,52 +1157,6 @@ h1 {
   .prose .ic-bar-lab { grid-column: 1 / -1; margin-bottom: -0.2rem; }
 }
 
-/* Feature stories (the Gramlet post): each timeline folded behind its title and dot strip. */
-.prose details.st {
-  margin: 0 0 0.75rem;
-  border: 1px solid var(--border);
-  border-radius: 10px;
-  background: var(--surface);
-}
-.prose details.st > summary {
-  display: grid;
-  grid-template-columns: 1fr auto;
-  gap: 0.15rem 1rem;
-  padding: 0.8rem 1rem 0.2rem;
-  cursor: pointer;
-  list-style: none;
-}
-.prose details.st > summary::-webkit-details-marker { display: none; }
-.prose .st-title {
-  font-family: var(--font-display);
-  font-size: 1.15rem;
-  font-weight: 600;
-}
-.prose .st-title::after {
-  content: '▸';
-  margin-left: 0.4rem;
-  color: var(--muted);
-  font-family: var(--font-ui);
-  font-size: 0.8em;
-}
-.prose details.st[open] .st-title::after { content: '▾'; }
-.prose .st-tally {
-  align-self: center;
-  font-family: var(--font-ui);
-  font-size: 0.8rem;
-  color: var(--muted);
-  white-space: nowrap;
-}
-.prose .st-tally b { font-weight: 600; }
-.prose .st-me { color: var(--accent); }
-.prose .st-cl { color: var(--warm); }
-.prose .st-lede {
-  grid-column: 1 / -1;
-  font-size: 0.95rem;
-  color: var(--muted);
-}
-.prose details.st .tl-strip { grid-column: 1 / -1; margin: 0.2rem 0 0; }
-.prose details.st > ol.tl, .prose details.st > .tl-sum { margin-left: 1rem; margin-right: 1rem; }
 .prose .ic-find {
   margin: 1rem 0 2rem;
   padding: 0;
