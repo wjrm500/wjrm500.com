@@ -1,7 +1,7 @@
 ---
 title: 'Claim. Spell. Delegate.'
 date: '2026-10-09T12:00:00Z'
-description: In ten months I turned a forgotten 2022 word game into Gramlet, with 316,000 lines of code, eight game modes and a charity pot. I wrote 115 of those lines myself. So what exactly did I do? I got Claude to go through all 1,609 of our conversations and find out.
+description: In ten months I turned a forgotten 2022 word game into Gramlet, with 316,000 lines of code, eight game modes and a charity pot. I wrote 115 of those lines myself. So what exactly did I do? I got Claude to go through all 1,619 of our conversations and find out.
 categories:
   - AI
   - Software Development
@@ -35,15 +35,15 @@ Getting hold of the data took a bit of fiddling. My sessions live on Anthropic�
 
 > definitely not, please stop threatening to use all of my usage, that is never going to be an option
 
-In the end I sat down at my laptop, opened Claude Desktop, and it wrote a script that ran in my Chrome tab and pulled down the lot: **1,609 sessions, 6.4 GB of transcripts**, and the download itself used no tokens at all.
+In the end I sat down at my laptop, opened Claude Desktop, and it wrote a script that ran in my Chrome tab and pulled down the lot: **1,619 sessions, 6.4 GB of transcripts**, and the download itself used no tokens at all.
 
 ### The numbers
 
-Here’s the headline stuff, from December 2025 (when Claude got involved) to the start of October 2026:
+Here’s the headline stuff, from December 2025 (when Claude got involved) to 12 October 2026:
 
 -   **9,538 commits** to master, about 2,190 pull requests and 948 GitHub issues
--   **1,609 Claude Code sessions**, on 267 of roughly 290 days
--   **9,654 messages** typed by me, adding up to about **438,000 words**, roughly five novels’ worth
+-   **1,619 Claude Code sessions**, on 271 of 314 days
+-   **9,767 messages** typed by me, adding up to about **441,000 words**, roughly five novels’ worth
 -   **About 99%** of the code added since December was written by an AI
 -   **43%** of the codebase is now tests. In 2022 it was zero
 
@@ -63,11 +63,11 @@ Reading back through ten months of my own messages was a strange experience, a b
 
 It was also when I started asking it to review its own work. On the last day of January I told it: “as of this moment, right now, you are no longer the code author, you are the code interrogator”. By May that prompt had become a permanent “engineering lead” skill, and by August a hook that physically blocked Claude from finishing a pull request until it had interrogated itself. A little bit of me lives on in that hook.
 
-**Reviewer on a phone (May to July).** Claude Code works on mobile, and I discovered that I could ship features from bed. In March, 13% of my sessions were started from my phone. By July it was 83%. My messages shrank accordingly, to a median of about 15 words, and on 6 June I first typed the phrase that would come to define our relationship: **“merge if you’re happy”**. I have now typed that, or “merge when you’re happy”, 451 times. My prompts also got stranger. A real message, from 16 June:
+**Reviewer on a phone (May to July).** Claude Code works on mobile, and I discovered that I could ship features from bed. In March, 13% of my sessions were started from my phone. By July it was 84%. My messages shrank accordingly, to a median of about 15 words, and on 6 June I first typed the phrase that would come to define our relationship: **“merge if you’re happy”**. I have now typed that, or “merge when you’re happy”, 462 times. My prompts also got stranger. A real message, from 16 June:
 
 > be agentic, octopus intelligence, set up agents, subagents, agents within agents, mastermind this sh\*t - I don’t need to tell you what to do, you are a genius
 
-![A line chart of the running total of times I typed “merge if you’re happy” or “merge when you’re happy”, from the first on 6 June to 451 by October. It climbs steeply through June, July and August, then flattens in September.](./merge-if-happy.svg)
+![A line chart of the running total of times I typed “merge if you’re happy” or “merge when you’re happy”, from the first on 6 June to 462 by October. It climbs steeply through June, July and August, then flattens in September.](./merge-if-happy.svg)
 _“Merge if you’re happy”, a running total_
 
 **Factory owner (August).** August was absurd: 2,818 commits in a single month. I let sessions fix and merge small problems on their own, and my prompts became correspondingly high-level. Here is one from 18 August, in its entirety:
@@ -76,7 +76,7 @@ _“Merge if you’re happy”, a running total_
 
 At one point I had twelve sessions running at once on a Saturday afternoon. I also tried OpenAI’s Codex for three days, having twice threatened Claude with it in the spring, once as a rival that would check its work and once as its replacement.
 
-**Editor (September to now).** Fewer sessions, much bigger ones. My median message is now 12 words. The record for a whole session was set back in August. Here is the entirety of my side of it, in which Claude fixed the backend tests and merged the fix:
+**Editor (September to now).** Fewer sessions, much bigger ones. My median message is now 11 words. The record for a whole session was set back in August. Here is the entirety of my side of it, in which Claude fixed the backend tests and merged the fix:
 
 > fix backend tests
 >
@@ -255,11 +255,11 @@ First, the AI’s personality. Back in January I was already asking it to say le
 
 > That’s a lot of text, please summarise questions you actually need answering succinctly
 
-It didn’t, really. By June and July its replies were averaging 260 to 280 words, about 20 words of Claude for every word of mine. So on 31 July I added a section to the project’s instructions file, `CLAUDE.md`, on how to talk to me, including the line: “The maintainer has ADHD. A dense reply gets abandoned, not skimmed.” Within three weeks its replies had halved. By September they were down to around 95 words. Meanwhile the “You’re right!”s dropped from 7% of its replies to under 1%, and it started disagreeing with me more often. When it did push back, I accepted its argument about two times in three. When I didn’t, I wasn’t subtle about it:
+It didn’t, really. By June and July its replies were averaging 260 to 280 words, about 20 words of Claude for every word of mine. So on 31 July I added a section to the project’s instructions file, `CLAUDE.md`, on how to talk to me, including the line: “The maintainer has ADHD. A dense reply gets abandoned, not skimmed.” Within three weeks its replies had halved. By September they were down to around 95 words. Meanwhile the “You’re right!”s dropped from 7% of its replies to under 2%, and it started disagreeing with me more often. When it did push back, I accepted its argument about two times in three. When I didn’t, I wasn’t subtle about it:
 
 > surge doesn’t “build” - please go away and actually learn how the game works before you try to write content
 
-![A line chart of median words per message from December to October. Claude’s replies climb from about 120 words to 279 in July, then fall to about 95 after the 31 July rule. My messages fall steadily from 57 words to 12.](./words.svg)
+![A line chart of median words per message from December to October. Claude’s replies climb from about 120 words to 279 in July, then fall to about 95 after the 31 July rule. My messages fall steadily from 57 words to 11.](./words.svg)
 _Median words per message: mine, and Claude’s replies_
 
 Second, the instructions file itself. `CLAUDE.md` is where you tell Claude how to behave in your project, and I kept adding to it every time it did something annoying. By 12 August it was **42,000 words long**, which is nearly as long as _The Great Gatsby_. It contained rules about rules. The next day I had it cut to 16,000 words, and within four weeks it had grown back to 34,000. There was a whole separate file, `DECISIONS.md`, because AI review passes kept re-raising questions I’d already settled; one issue was re-filed nineteen hours after I closed it. On 9 September we cut it down to about 3,500 words, and this time it stayed cut.
@@ -269,16 +269,16 @@ _Words in `CLAUDE.md`, with Gatsby for scale_
 
 Turns out the most important code I wrote this year wasn’t code at all; it was a document about how to talk to me, which I then had to heavily edit because it had become impossible to talk to.
 
-(For the record, I also swore at it about 14 times per thousand messages between January and May, and not once in September or October. I’d like to say that’s personal growth. It’s probably just that it got better.)
+(For the record, I also swore at it about 12 times per thousand messages between January and May, and not once in September or October. I’d like to say that’s personal growth. It’s probably just that it got better.)
 
 ### Was it me, or the models?
 
 There’s a complication I’ve been ignoring. I didn’t talk to one AI this year. I talked to ten.
 
-![A chart with one row per Claude model, from Sonnet 4.5 in December to Opus 5.5 in October, and one small line for every session I ran on it. Beside each model are my median words per message, falling from 34 to 12.5, and how often I said I was confused, per 100 messages, highest for Opus 5 at 2.1.](./models.svg)
+![A chart with one row per Claude model, from Sonnet 4.5 in December to Opus 5.5 in October, and one small line for every session I ran on it. Beside each model are my median words per message, falling from 34 to 11, and how often I said I was confused, per 100 messages, highest for Opus 5 at 2.1.](./models.svg)
 _Every session, by the model it ran on_
 
-My messages shrank with almost every new model: a median of 34 words with Sonnet 4.5, 26 with Opus 4.6, 20 with 4.7, 15 with 4.8 and 12.5 with Opus 5.5. How often I told it to merge went from about 3% of my messages with Opus 4.5 to 16% with 4.8 and 26% with Sonnet 5. And the flattery faded: Sonnet 4.5 told me I was right in one reply in ten; Opus 5.5 has managed it in fewer than one in a hundred.
+My messages shrank with almost every new model: a median of 34 words with Sonnet 4.5, 26 with Opus 4.6, 20 with 4.7, 15 with 4.8 and 11 with Opus 5.5. How often I told it to merge went from about 3% of my messages with Opus 4.5 to 16% with 4.8 and 26% with Sonnet 5. And the flattery faded: Sonnet 4.5 told me I was right in one reply in ten; Opus 5.5 has managed it in about one in seventy.
 
 My memory is that Opus 5, which arrived on 24 July, was the one that drove me up the wall. The data says I swore at it less than at any other big model, but told it I was confused more often than any other. It wasn’t even verbose. Its median reply was 158 words, against 254 for Opus 4.8. It just used them to say things I didn’t understand.
 
