@@ -955,14 +955,214 @@ h1 {
   font-size: 0.95rem;
 }
 
-/* Opening the full timeline hides the turning-points list, since the full one repeats it. */
-.prose .tl-wrap:has(details.tl-more[open]) > ol.tl-keys { display: none; }
-.prose details.tl-more { margin: 0 0 1em; }
-.prose details.tl-more > summary {
-  cursor: pointer;
+/* Idea census (the Gramlet post): one square per change in Gramlet's update log, coloured by
+   whose idea it was. These three hues passed a colour-blind separation check on both surfaces,
+   which the site's own accent and warm tokens do not. */
+.prose .ic {
+  --who-will: #2266a6;
+  --who-claude: #d9692c;
+  --who-other: #9a4fb5;
+  --who-unknown: #c9c1b4;
+  margin: 1.5rem 0 2.5rem;
   font-family: var(--font-ui);
-  font-size: 0.9rem;
-  font-weight: 600;
-  color: var(--accent);
-  margin-bottom: 0.8em;
 }
+@media (prefers-color-scheme: dark) {
+  .prose .ic {
+    --who-will: #4b8ed4;
+    --who-claude: #d9763a;
+    --who-other: #ad74c8;
+    --who-unknown: #4a4d54;
+  }
+}
+.prose .ic-hero {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.75rem;
+  margin-bottom: 1rem;
+}
+.prose .ic-num {
+  display: flex;
+  flex-direction: column;
+  padding: 0.75rem 0.9rem;
+  border: 1px solid var(--border);
+  border-top: 4px solid var(--c);
+  border-radius: 10px;
+  background: var(--surface);
+}
+.prose .ic-num.ic-will { --c: var(--who-will); }
+.prose .ic-num.ic-claude { --c: var(--who-claude); }
+.prose .ic-num.ic-other { --c: var(--who-other); }
+.prose .ic-big {
+  font-family: var(--font-display);
+  font-size: clamp(1.8rem, 7vw, 2.6rem);
+  font-weight: 600;
+  line-height: 1.1;
+  font-variant-numeric: tabular-nums;
+}
+.prose .ic-lab { font-weight: 600; font-size: 0.95rem; }
+.prose .ic-n { color: var(--muted); font-size: 0.8rem; font-variant-numeric: tabular-nums; }
+.prose .ic-controls {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem 1rem;
+  align-items: center;
+  margin-bottom: 0.75rem;
+}
+.prose .ic-seg, .prose .ic-chips { display: flex; flex-wrap: wrap; gap: 0.35rem; }
+.prose .ic-sort, .prose .ic-chip {
+  font: inherit;
+  font-size: 0.8rem;
+  padding: 0.3rem 0.65rem;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  background: var(--surface);
+  color: var(--text);
+  cursor: pointer;
+}
+.prose .ic-sort[aria-pressed='true'], .prose .ic-chip[aria-pressed='true'] {
+  background: var(--text);
+  border-color: var(--text);
+  color: var(--bg);
+}
+.prose .ic-waffle {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(14px, 1fr));
+  gap: 3px;
+}
+.prose .ic-sq {
+  aspect-ratio: 1;
+  min-width: 0;
+  padding: 0;
+  border: 0;
+  border-radius: 3px;
+  background: var(--who-unknown);
+  cursor: pointer;
+  transition: opacity 0.2s;
+}
+.prose .ic-sq.ic-will { background: var(--who-will); }
+.prose .ic-sq.ic-claude { background: var(--who-claude); }
+.prose .ic-sq.ic-other { background: var(--who-other); }
+.prose .ic-sq.is-dim { background: var(--border); }
+.prose .ic-sq.is-on, .prose .ic-sq:focus-visible { outline: 2px solid var(--text); outline-offset: 1px; }
+.prose .ic-legend {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem 1rem;
+  margin: 0.6rem 0;
+  font-size: 0.8rem;
+  color: var(--muted);
+}
+.prose .ic-legend i {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  margin-right: 0.35rem;
+  border-radius: 2px;
+  vertical-align: -1px;
+}
+.prose .ic-legend .ic-will { background: var(--who-will); }
+.prose .ic-legend .ic-claude { background: var(--who-claude); }
+.prose .ic-legend .ic-other { background: var(--who-other); }
+.prose .ic-legend .ic-unknown { background: var(--who-unknown); }
+.prose .ic-detail {
+  min-height: 9.5rem;
+  padding: 0.75rem 1rem;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  background: var(--surface);
+  font-size: 0.9rem;
+}
+.prose .ic-detail p { margin: 0 0 0.4rem; }
+.prose .ic-hint { color: var(--muted); }
+.prose .ic-meta { color: var(--muted); font-size: 0.8rem; }
+.prose .ic-tag {
+  margin-left: 0.4rem;
+  padding: 0.05rem 0.5rem;
+  border-radius: 999px;
+  border: 1px solid currentColor;
+  color: var(--text);
+  font-weight: 600;
+}
+.prose .ic-text { font-weight: 600; }
+.prose .ic-q {
+  padding-left: 0.75rem;
+  border-left: 3px solid var(--border);
+  font-family: var(--font-body);
+  font-style: italic;
+}
+.prose .ic-src { color: var(--muted); font-size: 0.8rem; }
+.prose .ic-bars { margin-top: 1.5rem; }
+.prose .ic-bars-head {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 0 0.4rem;
+  font-size: 0.8rem;
+  color: var(--muted);
+}
+.prose .ic-bar {
+  display: grid;
+  grid-template-columns: minmax(7rem, 13rem) 1fr 2.6rem;
+  gap: 0.6rem;
+  align-items: center;
+  margin-bottom: 0.4rem;
+  font-size: 0.85rem;
+}
+.prose .ic-bar-track { display: flex; gap: 2px; height: 14px; }
+.prose .ic-bar-track span:first-child { border-radius: 4px 0 0 4px; }
+.prose .ic-bar-track span:last-child { border-radius: 0 4px 4px 0; }
+.prose .ic-seg-will { background: var(--who-will); }
+.prose .ic-seg-claude { background: var(--who-claude); }
+.prose .ic-seg-other { background: var(--who-other); }
+.prose .ic-seg-unknown { background: var(--who-unknown); }
+.prose .ic-bar-val { text-align: right; font-variant-numeric: tabular-nums; }
+@media (max-width: 34rem) {
+  .prose .ic-bar { grid-template-columns: 1fr 2.6rem; }
+  .prose .ic-bar-lab { grid-column: 1 / -1; margin-bottom: -0.2rem; }
+}
+
+/* Feature stories (the Gramlet post): each timeline folded behind its title and dot strip. */
+.prose details.st {
+  margin: 0 0 0.75rem;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  background: var(--surface);
+}
+.prose details.st > summary {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 0.15rem 1rem;
+  padding: 0.8rem 1rem 0.2rem;
+  cursor: pointer;
+  list-style: none;
+}
+.prose details.st > summary::-webkit-details-marker { display: none; }
+.prose .st-title {
+  font-family: var(--font-display);
+  font-size: 1.15rem;
+  font-weight: 600;
+}
+.prose .st-title::after {
+  content: '▸';
+  margin-left: 0.4rem;
+  color: var(--muted);
+  font-family: var(--font-ui);
+  font-size: 0.8em;
+}
+.prose details.st[open] .st-title::after { content: '▾'; }
+.prose .st-tally {
+  align-self: center;
+  font-family: var(--font-ui);
+  font-size: 0.8rem;
+  color: var(--muted);
+  white-space: nowrap;
+}
+.prose .st-tally b { font-weight: 600; }
+.prose .st-me { color: var(--accent); }
+.prose .st-cl { color: var(--warm); }
+.prose .st-lede {
+  grid-column: 1 / -1;
+  font-size: 0.95rem;
+  color: var(--muted);
+}
+.prose details.st .tl-strip { grid-column: 1 / -1; margin: 0.2rem 0 0; }
+.prose details.st > ol.tl, .prose details.st > .tl-sum { margin-left: 1rem; margin-right: 1rem; }
