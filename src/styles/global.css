@@ -807,6 +807,102 @@ h1 {
   }
 }
 
+/* Apps page: each app is a <details> whose summary is a thumbnail, name and one-liner. */
+.apps {
+  display: grid;
+  gap: 0.75rem;
+  margin: 2rem 0;
+}
+.apps h2 {
+  margin-bottom: 0.25rem;
+}
+.app {
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  background: var(--surface);
+  box-shadow: var(--shadow);
+}
+.app summary {
+  display: grid;
+  grid-template-columns: 10rem 1fr auto;
+  grid-template-areas: 'img name chevron' 'img line chevron';
+  align-content: center;
+  column-gap: 1.25rem;
+  padding: 0.75rem;
+  cursor: pointer;
+  list-style: none;
+}
+.app summary::-webkit-details-marker {
+  display: none;
+}
+.app summary > figure,
+.app summary:not(:has(figure))::before {
+  grid-area: img;
+  margin: 0;
+  aspect-ratio: 16 / 10;
+  overflow: hidden;
+  border-radius: 8px;
+  background: var(--surface-2);
+}
+/* Apps without a screenshot get an empty tile so the names still line up. */
+.app summary:not(:has(figure))::before {
+  content: '';
+}
+.app summary > figure img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top;
+  border-radius: 0;
+}
+.app summary > p {
+  grid-area: name;
+  margin: 0;
+  align-self: end;
+}
+.app summary > p + p {
+  grid-area: line;
+  align-self: start;
+  margin-top: 0.25rem;
+  font-size: 0.95rem;
+  color: var(--muted);
+}
+.app summary > p strong {
+  font-family: var(--font-display);
+  font-size: 1.25rem;
+}
+.app summary::after {
+  content: '';
+  grid-area: chevron;
+  align-self: center;
+  width: 0.55rem;
+  height: 0.55rem;
+  margin: 0 0.5rem;
+  border-right: 2px solid var(--muted);
+  border-bottom: 2px solid var(--muted);
+  transform: rotate(45deg);
+  transition: transform 0.2s;
+}
+.app[open] summary::after {
+  transform: rotate(-135deg);
+}
+.app summary:hover strong {
+  color: var(--accent);
+}
+.app > :not(summary) {
+  margin-left: 1.25rem;
+  margin-right: 1.25rem;
+}
+.app > :last-child {
+  margin-bottom: 1.25rem;
+}
+@media (max-width: 600px) {
+  .app summary {
+    grid-template-columns: 5.5rem 1fr auto;
+    column-gap: 0.85rem;
+  }
+}
+
 @media (prefers-reduced-motion: reduce) {
   *,
   *::before,
