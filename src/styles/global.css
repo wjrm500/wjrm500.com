@@ -1247,3 +1247,66 @@ h1 {
   cursor: pointer;
 }
 .prose .evo-bar input[type='range'] { flex: 1; accent-color: var(--accent); }
+
+/* Every screen, month by month (the Gramlet post): one tile per screen, sized by the code changed
+   in it that month and laid out so neighbours stay put. Without JavaScript only October's sheet
+   shows. */
+.prose .sv { margin: 1.5rem 0 0.5rem; }
+.prose .sv figure { display: none; margin: 0; }
+.prose .sv figure:last-of-type { display: block; }
+.prose .sv.is-live figure { display: none; }
+.prose .sv-stage {
+  position: relative;
+  aspect-ratio: 4 / 3;
+  border-radius: 12px;
+  overflow: hidden;
+  background: #121316;
+}
+@media (max-width: 34rem) {
+  .prose .sv-stage { aspect-ratio: 3 / 4; }
+}
+.prose .sv-tile {
+  position: absolute;
+  padding: 0;
+  border: 1px solid #121316;
+  border-radius: 6px;
+  overflow: hidden;
+  background: #22252a;
+  cursor: pointer;
+  transition: left 0.7s ease, top 0.7s ease, width 0.7s ease, height 0.7s ease, opacity 0.7s ease;
+}
+.prose .sv-tile[data-p='2'] { filter: brightness(0.8); }
+.prose .sv-tile[data-p='1'] { filter: brightness(0.6) saturate(0.7); }
+@media (prefers-reduced-motion: reduce) {
+  .prose .sv-tile { transition: none; }
+}
+.prose .sv-shot {
+  position: absolute;
+  inset: 0 0 auto 0;
+  aspect-ratio: 200 / 433;
+  background-repeat: no-repeat;
+}
+.prose .sv-name {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: 0.6rem 0.35rem 0.25rem;
+  background: linear-gradient(transparent, rgb(0 0 0 / 0.75));
+  color: #fff;
+  font-family: var(--font-ui);
+  font-size: 0.68rem;
+  line-height: 1.2;
+  text-align: left;
+}
+.prose .sv-tile.is-small .sv-name { display: none; }
+.prose .sv-tile.is-blank .sv-name { display: block; background: none; top: 0; }
+.prose .sv-month { min-width: 8.5rem; font-family: var(--font-ui); font-size: 0.9rem; font-weight: 600; }
+.prose .sv-tip {
+  margin: 0 0 2rem;
+  font-family: var(--font-ui);
+  font-size: 0.85rem;
+  color: var(--muted);
+  text-align: center;
+}
+.prose .sv-bar { max-width: 30rem; margin-bottom: 0.5rem; }

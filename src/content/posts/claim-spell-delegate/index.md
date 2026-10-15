@@ -106,6 +106,163 @@ _31 October 2026 (preview) · Holiday skins: Halloween, as the home page will lo
 })();
 </script>
 
+And here’s the whole app, a month at a time. Every screen gets a tile, sized by how much of its code changed that month; screens appear when they were built and fade when they were retired, and the ones you can reach from the home page are brightest.
+
+<div class="sv">
+
+![Every screen of Gramlet at the end of January 2026, 16 in all, as small phone screenshots in a grid](./screens-2026-01.jpg)
+_Every screen at the end of January 2026: 16 of them_
+
+![Every screen of Gramlet at the end of February 2026, 21 in all, as small phone screenshots in a grid](./screens-2026-02.jpg)
+_Every screen at the end of February 2026: 21 of them_
+
+![Every screen of Gramlet at the end of March 2026, 25 in all, as small phone screenshots in a grid](./screens-2026-03.jpg)
+_Every screen at the end of March 2026: 25 of them_
+
+![Every screen of Gramlet at the end of April 2026, 25 in all, as small phone screenshots in a grid](./screens-2026-04.jpg)
+_Every screen at the end of April 2026: 25 of them_
+
+![Every screen of Gramlet at the end of May 2026, 28 in all, as small phone screenshots in a grid](./screens-2026-05.jpg)
+_Every screen at the end of May 2026: 28 of them_
+
+![Every screen of Gramlet at the end of June 2026, 43 in all, as small phone screenshots in a grid](./screens-2026-06.jpg)
+_Every screen at the end of June 2026: 43 of them_
+
+![Every screen of Gramlet at the end of July 2026, 47 in all, as small phone screenshots in a grid](./screens-2026-07.jpg)
+_Every screen at the end of July 2026: 47 of them_
+
+![Every screen of Gramlet at the end of August 2026, 48 in all, as small phone screenshots in a grid](./screens-2026-08.jpg)
+_Every screen at the end of August 2026: 48 of them_
+
+![Every screen of Gramlet at the end of September 2026, 49 in all, as small phone screenshots in a grid](./screens-2026-09.jpg)
+_Every screen at the end of September 2026: 49 of them_
+
+![Every screen of Gramlet at the end of October 2026, 50 in all, as small phone screenshots in a grid](./screens-2026-10.jpg)
+_Every screen at the end of October 2026: 50 of them_
+
+</div>
+<script type="application/json" class="sv-data">{"months":[{"m":"2026-01","rows":2,"cols":10,"s":{"home":{"e":69,"p":3,"c":0},"help":{"e":163,"p":3,"c":1},"sign-in":{"e":311,"p":3,"c":2},"password-reset":{"e":247,"p":1,"c":3},"oauth-registration":{"e":23,"p":1,"c":-1},"profile":{"e":646,"p":3,"c":4},"solo-hub":{"e":1382,"p":3,"c":5},"solo-play":{"e":1253,"p":3,"c":6},"solo-end":{"e":1163,"p":3,"c":7},"solo-replay":{"e":572,"p":2,"c":8},"near-miss-options":{"e":93,"p":1,"c":-1},"voltarena-setup":{"e":170,"p":3,"c":9},"voltarena-lobby":{"e":78,"p":3,"c":10},"voltarena-select":{"e":22,"p":3,"c":11},"voltarena-play":{"e":473,"p":3,"c":12},"voltarena-end":{"e":491,"p":3,"c":13}}},{"m":"2026-02","rows":2,"cols":10,"s":{"home":{"e":42,"p":3,"c":0},"help":{"e":138,"p":3,"c":1},"update-log":{"e":358,"p":2,"c":2},"contact":{"e":655,"p":2,"c":3},"privacy":{"e":189,"p":2,"c":4},"other-modes":{"e":1951,"p":2,"c":5},"word-detail":{"e":568,"p":1,"c":6},"sign-in":{"e":23,"p":3,"c":7},"password-reset":{"e":7,"p":1,"c":8},"oauth-registration":{"e":23,"p":1,"c":-1},"profile":{"e":568,"p":3,"c":9},"solo-hub":{"e":932,"p":3,"c":10},"solo-play":{"e":2028,"p":3,"c":11},"solo-end":{"e":246,"p":3,"c":12},"solo-replay":{"e":350,"p":2,"c":13},"near-miss-options":{"e":154,"p":1,"c":-1},"voltarena-setup":{"e":13,"p":3,"c":14},"voltarena-lobby":{"e":17,"p":3,"c":15},"voltarena-select":{"e":0,"p":3,"c":16},"voltarena-play":{"e":4,"p":3,"c":17},"voltarena-end":{"e":33,"p":3,"c":18}}},{"m":"2026-03","rows":2,"cols":10,"s":{"home":{"e":289,"p":3,"c":0},"help":{"e":13,"p":3,"c":1},"update-log":{"e":186,"p":2,"c":2},"contact":{"e":266,"p":2,"c":3},"privacy":{"e":37,"p":2,"c":4},"terms":{"e":62,"p":2,"c":5},"not-found":{"e":73,"p":1,"c":6},"other-modes":{"e":377,"p":2,"c":7},"word-detail":{"e":170,"p":1,"c":8},"sign-in":{"e":6,"p":3,"c":9},"password-reset":{"e":0,"p":1,"c":10},"oauth-registration":{"e":5,"p":1,"c":-1},"profile":{"e":601,"p":3,"c":11},"profile-games":{"e":280,"p":1,"c":12},"solo-hub":{"e":4113,"p":3,"c":13},"solo-play":{"e":1357,"p":3,"c":14},"solo-end":{"e":41,"p":3,"c":15},"solo-replay":{"e":586,"p":2,"c":16},"near-miss-options":{"e":5,"p":1,"c":-1},"all-challenges":{"e":394,"p":2,"c":17},"voltarena-setup":{"e":10,"p":3,"c":18},"voltarena-lobby":{"e":14,"p":3,"c":-1},"voltarena-select":{"e":5,"p":3,"c":-1},"voltarena-play":{"e":176,"p":3,"c":-1},"voltarena-end":{"e":28,"p":3,"c":-1}}},{"m":"2026-04","rows":2,"cols":10,"s":{"home":{"e":73,"p":3,"c":0},"help":{"e":39,"p":3,"c":1},"update-log":{"e":293,"p":2,"c":2},"contact":{"e":342,"p":2,"c":3},"privacy":{"e":0,"p":2,"c":4},"terms":{"e":0,"p":2,"c":5},"not-found":{"e":0,"p":1,"c":6},"other-modes":{"e":292,"p":2,"c":7},"word-detail":{"e":54,"p":1,"c":8},"sign-in":{"e":29,"p":3,"c":9},"password-reset":{"e":0,"p":1,"c":10},"oauth-registration":{"e":27,"p":1,"c":-1},"profile":{"e":2137,"p":3,"c":11},"profile-games":{"e":135,"p":1,"c":12},"solo-hub":{"e":5369,"p":3,"c":13},"solo-play":{"e":5286,"p":3,"c":14},"solo-end":{"e":2,"p":3,"c":15},"solo-replay":{"e":1705,"p":2,"c":16},"near-miss-options":{"e":129,"p":1,"c":-1},"all-challenges":{"e":106,"p":2,"c":17},"voltarena-setup":{"e":0,"p":3,"c":18},"voltarena-lobby":{"e":0,"p":3,"c":-1},"voltarena-select":{"e":0,"p":3,"c":-1},"voltarena-play":{"e":91,"p":3,"c":-1},"voltarena-end":{"e":2,"p":3,"c":-1}}},{"m":"2026-05","rows":3,"cols":10,"s":{"home":{"e":1117,"p":3,"c":0},"help":{"e":147,"p":2,"c":1},"about":{"e":156,"p":2,"c":2},"update-log":{"e":300,"p":2,"c":3},"contact":{"e":50,"p":2,"c":4},"privacy":{"e":0,"p":2,"c":5},"terms":{"e":11,"p":2,"c":6},"not-found":{"e":0,"p":1,"c":7},"other-modes":{"e":64,"p":2,"c":8},"giving":{"e":1302,"p":3,"c":9},"word-detail":{"e":74,"p":1,"c":10},"sign-in":{"e":130,"p":2,"c":11},"password-reset":{"e":6,"p":1,"c":12},"oauth-registration":{"e":7,"p":1,"c":-1},"profile":{"e":1654,"p":2,"c":13},"profile-games":{"e":145,"p":1,"c":14},"solo-hub":{"e":8074,"p":3,"c":15},"solo-play":{"e":3010,"p":3,"c":16},"solo-end":{"e":45,"p":3,"c":17},"solo-replay":{"e":508,"p":2,"c":18},"near-miss-options":{"e":15,"p":1,"c":-1},"all-challenges":{"e":22,"p":2,"c":19},"hall-of-fame":{"e":352,"p":2,"c":20},"voltarena-select":{"e":92,"p":3,"c":21},"voltarena-play":{"e":2599,"p":3,"c":22},"voltarena-end":{"e":2207,"p":3,"c":23},"voltarena-hub":{"e":2176,"p":3,"c":24},"voltarena-match":{"e":33,"p":2,"c":25}}},{"m":"2026-06","rows":4,"cols":10,"s":{"home":{"e":978,"p":3,"c":0},"help":{"e":113,"p":2,"c":1},"about":{"e":28,"p":3,"c":2},"update-log":{"e":1133,"p":2,"c":3},"contact":{"e":2,"p":2,"c":4},"privacy":{"e":31,"p":2,"c":5},"terms":{"e":0,"p":2,"c":6},"not-found":{"e":0,"p":1,"c":7},"other-modes":{"e":187,"p":2,"c":8},"giving":{"e":263,"p":3,"c":9},"word-detail":{"e":130,"p":1,"c":10},"sign-in":{"e":31,"p":2,"c":11},"password-reset":{"e":8,"p":1,"c":12},"oauth-registration":{"e":16,"p":1,"c":-1},"profile":{"e":1956,"p":2,"c":13},"profile-games":{"e":30,"p":1,"c":14},"solo-hub":{"e":7033,"p":3,"c":15},"solo-play":{"e":2880,"p":3,"c":16},"solo-end":{"e":75,"p":3,"c":17},"solo-replay":{"e":322,"p":2,"c":18},"near-miss-options":{"e":37,"p":1,"c":-1},"all-challenges":{"e":298,"p":2,"c":19},"hall-of-fame":{"e":26,"p":2,"c":20},"voltarena-select":{"e":187,"p":3,"c":21},"voltarena-play":{"e":1653,"p":3,"c":22},"voltarena-end":{"e":463,"p":3,"c":23},"voltarena-hub":{"e":2540,"p":3,"c":24},"voltarena-match":{"e":1856,"p":2,"c":25},"grambots-landing":{"e":1148,"p":2,"c":26},"grambots-info":{"e":117,"p":1,"c":27},"grambots-home":{"e":513,"p":1,"c":28},"grambots-career":{"e":1333,"p":1,"c":29},"grambots-bot":{"e":832,"p":1,"c":30},"kids-hub":{"e":1587,"p":2,"c":31},"kids-play":{"e":272,"p":2,"c":32},"kids-end":{"e":610,"p":2,"c":-1},"kids-history":{"e":175,"p":1,"c":33},"kids-teacher":{"e":266,"p":1,"c":34},"kids-about":{"e":105,"p":1,"c":35},"kids-privacy":{"e":100,"p":1,"c":36},"kids-class-join":{"e":225,"p":1,"c":37},"kids-dashboard":{"e":996,"p":1,"c":38},"kids-control-panel":{"e":389,"p":1,"c":39}}},{"m":"2026-07","rows":5,"cols":10,"s":{"home":{"e":1773,"p":3,"c":0},"welcome":{"e":4169,"p":2,"c":1},"help":{"e":221,"p":2,"c":2},"about":{"e":2,"p":3,"c":3},"update-log":{"e":11,"p":2,"c":4},"contact":{"e":0,"p":2,"c":5},"privacy":{"e":0,"p":2,"c":6},"terms":{"e":0,"p":2,"c":7},"not-found":{"e":0,"p":1,"c":8},"other-modes":{"e":77,"p":2,"c":9},"giving":{"e":17,"p":3,"c":10},"word-detail":{"e":474,"p":1,"c":11},"sign-in":{"e":120,"p":2,"c":12},"password-reset":{"e":0,"p":1,"c":13},"oauth-registration":{"e":33,"p":1,"c":-1},"account-benefits":{"e":532,"p":1,"c":14},"profile":{"e":2004,"p":2,"c":15},"profile-games":{"e":160,"p":1,"c":16},"gramdex":{"e":2203,"p":1,"c":17},"solo-hub":{"e":6601,"p":3,"c":18},"solo-play":{"e":4545,"p":3,"c":19},"solo-end":{"e":169,"p":3,"c":20},"solo-replay":{"e":379,"p":2,"c":21},"near-miss-options":{"e":38,"p":1,"c":-1},"best-line":{"e":399,"p":2,"c":22},"all-challenges":{"e":6,"p":2,"c":23},"hall-of-fame":{"e":83,"p":2,"c":24},"voltarena-select":{"e":42,"p":3,"c":25},"voltarena-play":{"e":262,"p":3,"c":26},"voltarena-end":{"e":63,"p":3,"c":27},"voltarena-hub":{"e":511,"p":3,"c":28},"voltarena-match":{"e":306,"p":2,"c":29},"grambots-landing":{"e":304,"p":1,"c":30},"grambots-info":{"e":106,"p":1,"c":31},"grambots-home":{"e":38,"p":1,"c":32},"grambots-career":{"e":47,"p":1,"c":33},"grambots-bot":{"e":14,"p":1,"c":34},"kids-hub":{"e":23,"p":2,"c":35},"kids-play":{"e":20,"p":2,"c":36},"kids-end":{"e":4,"p":2,"c":-1},"kids-history":{"e":2,"p":1,"c":37},"kids-teacher":{"e":3,"p":1,"c":38},"kids-about":{"e":10,"p":1,"c":39},"kids-privacy":{"e":16,"p":1,"c":40},"kids-class-join":{"e":29,"p":1,"c":41},"kids-dashboard":{"e":11,"p":1,"c":42},"kids-control-panel":{"e":3,"p":1,"c":43}}},{"m":"2026-08","rows":5,"cols":10,"s":{"home":{"e":2045,"p":3,"c":0},"welcome":{"e":970,"p":2,"c":1},"help":{"e":277,"p":2,"c":2},"about":{"e":91,"p":3,"c":3},"update-log":{"e":117,"p":2,"c":4},"contact":{"e":151,"p":2,"c":5},"privacy":{"e":147,"p":2,"c":6},"terms":{"e":109,"p":2,"c":7},"not-found":{"e":67,"p":1,"c":8},"other-modes":{"e":73,"p":2,"c":9},"giving":{"e":45,"p":3,"c":10},"word-detail":{"e":377,"p":1,"c":11},"settings":{"e":670,"p":2,"c":12},"training":{"e":11244,"p":2,"c":13},"sign-in":{"e":282,"p":2,"c":14},"password-reset":{"e":243,"p":1,"c":15},"oauth-registration":{"e":180,"p":1,"c":-1},"account-benefits":{"e":63,"p":1,"c":16},"profile":{"e":4081,"p":2,"c":17},"profile-games":{"e":134,"p":1,"c":18},"gramdex":{"e":500,"p":1,"c":19},"solo-hub":{"e":37537,"p":3,"c":20},"solo-play":{"e":12108,"p":3,"c":21},"solo-end":{"e":243,"p":3,"c":22},"solo-replay":{"e":436,"p":2,"c":23},"near-miss-options":{"e":47,"p":1,"c":-1},"best-line":{"e":84,"p":2,"c":24},"all-challenges":{"e":120,"p":2,"c":25},"voltarena-select":{"e":209,"p":3,"c":26},"voltarena-play":{"e":3145,"p":3,"c":27},"voltarena-end":{"e":42,"p":3,"c":28},"voltarena-hub":{"e":181,"p":3,"c":29},"voltarena-match":{"e":69,"p":2,"c":30},"grambots-landing":{"e":0,"p":1,"c":31},"grambots-info":{"e":46,"p":1,"c":32},"grambots-home":{"e":2,"p":1,"c":33},"grambots-career":{"e":25,"p":1,"c":34},"grambots-bot":{"e":19,"p":1,"c":35},"kids-hub":{"e":209,"p":2,"c":36},"kids-play":{"e":188,"p":2,"c":37},"kids-end":{"e":45,"p":2,"c":-1},"kids-history":{"e":22,"p":1,"c":38},"kids-teacher":{"e":27,"p":1,"c":39},"kids-about":{"e":110,"p":1,"c":40},"kids-privacy":{"e":128,"p":1,"c":41},"kids-class-join":{"e":11,"p":1,"c":42},"kids-dashboard":{"e":209,"p":1,"c":43},"kids-control-panel":{"e":29,"p":1,"c":44}}},{"m":"2026-09","rows":5,"cols":10,"s":{"home":{"e":498,"p":3,"c":0},"welcome":{"e":1225,"p":2,"c":1},"help":{"e":10,"p":2,"c":2},"about":{"e":2,"p":3,"c":3},"update-log":{"e":5,"p":2,"c":4},"contact":{"e":0,"p":2,"c":5},"privacy":{"e":0,"p":2,"c":6},"terms":{"e":2,"p":2,"c":7},"not-found":{"e":2,"p":1,"c":8},"other-modes":{"e":0,"p":2,"c":9},"giving":{"e":41,"p":3,"c":10},"word-detail":{"e":263,"p":1,"c":11},"settings":{"e":240,"p":2,"c":12},"training":{"e":2680,"p":2,"c":13},"sign-in":{"e":40,"p":2,"c":14},"password-reset":{"e":7,"p":1,"c":15},"oauth-registration":{"e":17,"p":1,"c":-1},"account-benefits":{"e":101,"p":1,"c":16},"profile":{"e":789,"p":2,"c":17},"profile-games":{"e":6,"p":1,"c":18},"gramdex":{"e":56,"p":1,"c":19},"friend-invite":{"e":261,"p":1,"c":20},"solo-hub":{"e":17262,"p":3,"c":21},"solo-play":{"e":7056,"p":3,"c":22},"solo-end":{"e":253,"p":3,"c":23},"solo-replay":{"e":393,"p":2,"c":24},"near-miss-options":{"e":25,"p":1,"c":-1},"best-line":{"e":102,"p":2,"c":25},"all-challenges":{"e":0,"p":2,"c":26},"voltarena-select":{"e":192,"p":3,"c":27},"voltarena-play":{"e":1149,"p":3,"c":28},"voltarena-end":{"e":343,"p":3,"c":29},"voltarena-hub":{"e":358,"p":3,"c":30},"voltarena-match":{"e":423,"p":2,"c":31},"grambots-landing":{"e":42,"p":1,"c":32},"grambots-info":{"e":10,"p":1,"c":33},"grambots-home":{"e":48,"p":1,"c":34},"grambots-career":{"e":91,"p":1,"c":35},"grambots-bot":{"e":35,"p":1,"c":36},"kids-hub":{"e":477,"p":2,"c":37},"kids-play":{"e":66,"p":2,"c":38},"kids-end":{"e":57,"p":2,"c":-1},"kids-history":{"e":9,"p":1,"c":39},"kids-teacher":{"e":20,"p":1,"c":40},"kids-about":{"e":2,"p":1,"c":41},"kids-privacy":{"e":17,"p":1,"c":42},"kids-class-join":{"e":13,"p":1,"c":43},"kids-dashboard":{"e":83,"p":1,"c":44},"kids-control-panel":{"e":18,"p":1,"c":45}}},{"m":"2026-10","rows":5,"cols":10,"s":{"home":{"e":2814,"p":3,"c":0},"welcome":{"e":0,"p":2,"c":1},"help":{"e":0,"p":2,"c":2},"about":{"e":0,"p":3,"c":3},"update-log":{"e":0,"p":2,"c":4},"contact":{"e":0,"p":2,"c":5},"privacy":{"e":0,"p":2,"c":6},"terms":{"e":5,"p":2,"c":7},"not-found":{"e":0,"p":1,"c":8},"other-modes":{"e":0,"p":2,"c":9},"giving":{"e":0,"p":3,"c":10},"word-detail":{"e":4,"p":1,"c":11},"settings":{"e":25,"p":2,"c":12},"training":{"e":89,"p":2,"c":13},"sign-in":{"e":2,"p":2,"c":14},"password-reset":{"e":4,"p":1,"c":15},"oauth-registration":{"e":2,"p":1,"c":-1},"account-benefits":{"e":0,"p":1,"c":16},"profile":{"e":222,"p":2,"c":17},"profile-games":{"e":0,"p":1,"c":18},"gramdex":{"e":8,"p":1,"c":19},"gramboard":{"e":805,"p":1,"c":20},"friend-invite":{"e":0,"p":1,"c":21},"solo-hub":{"e":9765,"p":3,"c":22},"solo-play":{"e":798,"p":3,"c":23},"solo-end":{"e":26,"p":3,"c":24},"solo-replay":{"e":87,"p":2,"c":25},"near-miss-options":{"e":14,"p":1,"c":-1},"best-line":{"e":0,"p":2,"c":26},"all-challenges":{"e":0,"p":2,"c":27},"voltarena-select":{"e":0,"p":3,"c":28},"voltarena-play":{"e":0,"p":3,"c":29},"voltarena-end":{"e":0,"p":3,"c":30},"voltarena-hub":{"e":0,"p":3,"c":31},"voltarena-match":{"e":0,"p":2,"c":32},"grambots-landing":{"e":0,"p":1,"c":33},"grambots-info":{"e":0,"p":1,"c":34},"grambots-home":{"e":0,"p":1,"c":35},"grambots-career":{"e":0,"p":1,"c":36},"grambots-bot":{"e":0,"p":1,"c":37},"kids-hub":{"e":19,"p":2,"c":38},"kids-play":{"e":1,"p":2,"c":39},"kids-end":{"e":5,"p":2,"c":-1},"kids-history":{"e":0,"p":1,"c":40},"kids-teacher":{"e":0,"p":1,"c":41},"kids-about":{"e":0,"p":1,"c":42},"kids-privacy":{"e":0,"p":1,"c":43},"kids-class-join":{"e":0,"p":1,"c":44},"kids-dashboard":{"e":2,"p":1,"c":45},"kids-control-panel":{"e":0,"p":1,"c":46}}}],"names":{"home":"Home","welcome":"Welcome (onboarding)","help":"How to play","about":"About Gramlet","update-log":"Update log","contact":"Contact us","privacy":"Privacy policy","terms":"Terms of service","not-found":"Not found (404)","other-modes":"Other game modes (Beta)","giving":"Giving","word-detail":"Word detail","settings":"Settings","training":"Training","sign-in":"Sign in / sign up","password-reset":"Forgot / reset password","oauth-registration":"Complete OAuth registration","account-benefits":"Account benefits","profile":"Profile","profile-games":"Profile: games","gramdex":"Gramdex (word collection)","gramboard":"Gramboard","friend-invite":"Friend invite","solo-hub":"Mode hub (solo modes)","solo-play":"Play screen (solo modes)","solo-end":"Scorecard / end (solo modes)","solo-replay":"Game replay","near-miss-options":"Near-miss options","best-line":"Best line","all-challenges":"All challenges (Triplet)","hall-of-fame":"Hall of Fame page","voltarena-setup":"VoltArena: game setup","voltarena-lobby":"VoltArena: lobby","voltarena-select":"VoltArena: starting-box selection","voltarena-play":"VoltArena: battle","voltarena-end":"VoltArena: end screen","voltarena-hub":"VoltArena hub","voltarena-match":"VoltArena: match view","reflex":"Reflex (beta)","grambots-landing":"Grambots landing","grambots-info":"Grambots info","grambots-home":"Grambots career home","grambots-career":"Grambots career history","grambots-bot":"Grambots bot profile","kids-hub":"Kids hub","kids-play":"Kids play screen","kids-end":"Kids end screen","kids-history":"Kids history","kids-teacher":"Kids teacher","kids-about":"Kids about","kids-privacy":"Kids privacy","kids-class-join":"Kids class join","kids-dashboard":"Kids class dashboard","kids-control-panel":"Kids class control panel"},"groups":{"home":"Front door and info","welcome":"Front door and info","help":"Front door and info","about":"Front door and info","update-log":"Front door and info","contact":"Front door and info","privacy":"Front door and info","terms":"Front door and info","not-found":"Front door and info","other-modes":"Solo game","giving":"Front door and info","word-detail":"Solo game","settings":"Account and friends","training":"Solo game","sign-in":"Account and friends","password-reset":"Account and friends","oauth-registration":"Account and friends","account-benefits":"Account and friends","profile":"Account and friends","profile-games":"Account and friends","gramdex":"Account and friends","gramboard":"Account and friends","friend-invite":"Account and friends","solo-hub":"Solo game","solo-play":"Solo game","solo-end":"Solo game","solo-replay":"Solo game","near-miss-options":"Solo game","best-line":"Solo game","all-challenges":"Solo game","hall-of-fame":"Solo game","voltarena-setup":"Head-to-head","voltarena-lobby":"Head-to-head","voltarena-select":"Head-to-head","voltarena-play":"Head-to-head","voltarena-end":"Head-to-head","voltarena-hub":"Head-to-head","voltarena-match":"Head-to-head","reflex":"Head-to-head","grambots-landing":"Head-to-head","grambots-info":"Head-to-head","grambots-home":"Head-to-head","grambots-career":"Head-to-head","grambots-bot":"Head-to-head","kids-hub":"Gramlet Kids","kids-play":"Gramlet Kids","kids-end":"Gramlet Kids","kids-history":"Gramlet Kids","kids-teacher":"Gramlet Kids","kids-about":"Gramlet Kids","kids-privacy":"Gramlet Kids","kids-class-join":"Gramlet Kids","kids-dashboard":"Gramlet Kids","kids-control-panel":"Gramlet Kids"},"order":["Front door and info","Solo game","Head-to-head","Account and friends","Gramlet Kids"]}</script>
+<script>
+(() => {
+  const root = document.querySelector('.sv');
+  const raw = document.querySelector('.sv-data');
+  if (!root || !raw) return;
+  const D = JSON.parse(raw.textContent);
+  const imgs = [...root.querySelectorAll('img')];
+  if (imgs.length !== D.months.length) return;
+  // Astro gives each sprite a srcset; take its widest candidate for crisp tiles.
+  const urls = imgs.map((im) => {
+    const set = (im.getAttribute('srcset') || '').split(',').map((s) => s.trim().split(/\s+/)).filter((p) => p[0]);
+    set.sort((a, b) => parseInt(b[1]) - parseInt(a[1]));
+    return set.length ? set[0][0] : im.getAttribute('src');
+  });
+  const MON = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
+  const still = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  root.classList.add('is-live');
+  const stage = document.createElement('div');
+  stage.className = 'sv-stage';
+  const tip = document.createElement('p');
+  tip.className = 'sv-tip';
+  tip.textContent = 'Tap or hover a screen to see what it is.';
+  const bar = document.createElement('div');
+  bar.className = 'evo-bar sv-bar';
+  const mk = (label, text) => { const b = document.createElement('button'); b.type = 'button'; b.setAttribute('aria-label', label); b.textContent = text; return b; };
+  const play = mk('Play', '▶');
+  const range = document.createElement('input');
+  range.type = 'range'; range.min = 0; range.max = D.months.length - 1; range.value = 0;
+  range.setAttribute('aria-label', 'Choose a month');
+  const label = document.createElement('span');
+  label.className = 'sv-month';
+  bar.append(play, range, label);
+  root.prepend(stage);
+  stage.after(bar, tip);
+  const tiles = new Map();
+  let cur = 0, timer = null;
+  const weight = (e) => 12 + Math.sqrt(e);
+  // Order-preserving split treemap: halves the list by weight and cuts along the longer side,
+  // so a screen keeps its neighbours from month to month instead of jumping about.
+  const split = (items, x, y, w, h, out) => {
+    if (!items.length) return;
+    if (items.length === 1) { out.push([items[0][0], x, y, w, h]); return; }
+    const tot = items.reduce((s, it) => s + it[1], 0);
+    let acc = 0, k = 0;
+    while (k < items.length - 1 && acc + items[k][1] < tot / 2) acc += items[k++][1];
+    if (k === 0) { acc = items[0][1]; k = 1; }
+    const f = acc / tot;
+    if (w >= h) { split(items.slice(0, k), x, y, w * f, h, out); split(items.slice(k), x + w * f, y, w * (1 - f), h, out); }
+    else { split(items.slice(0, k), x, y, w, h * f, out); split(items.slice(k), x, y + h * f, w, h * (1 - f), out); }
+  };
+  const show = (n) => {
+    cur = n;
+    const M = D.months[n];
+    const ids = Object.keys(M.s);
+    const groups = D.order.map((g) => [g, ids.filter((id) => D.groups[id] === g)]).filter((g) => g[1].length);
+    const gitems = groups.map(([g, list]) => [g, list.reduce((s, id) => s + weight(M.s[id].e), 0)]);
+    const W = stage.clientWidth, H = stage.clientHeight;
+    const gboxes = [];
+    split(gitems, 0, 0, W, H, gboxes);
+    const boxes = [];
+    for (const [g, gx, gy, gw, gh] of gboxes) {
+      const list = groups.find((x) => x[0] === g)[1].map((id) => [id, weight(M.s[id].e)]);
+      split(list, gx, gy, gw, gh, boxes);
+    }
+    const seen = new Set();
+    for (const [id, x, y, w, h] of boxes) {
+      seen.add(id);
+      let t = tiles.get(id);
+      const s = M.s[id];
+      if (!t) {
+        t = document.createElement('button');
+        t.type = 'button';
+        t.className = 'sv-tile';
+        t.innerHTML = '<span class="sv-shot"></span><span class="sv-name"></span>';
+        t.querySelector('.sv-name').textContent = D.names[id];
+        t.style.opacity = 0;
+        t.addEventListener('pointerenter', () => describe(id));
+        t.addEventListener('focus', () => describe(id));
+        t.addEventListener('click', () => describe(id));
+        stage.append(t);
+        tiles.set(id, t);
+      }
+      Object.assign(t.style, { left: x + 'px', top: y + 'px', width: w + 'px', height: h + 'px' });
+      t.dataset.p = s.p;
+      t.classList.toggle('is-small', w < 70 || h < 40);
+      t.setAttribute('aria-label', `${D.names[id]}, ${s.e.toLocaleString()} lines changed in ${MON[+M.m.slice(5) - 1]}`);
+      const shot = t.querySelector('.sv-shot');
+      if (s.c >= 0) {
+        const col = s.c % M.cols, row = Math.floor(s.c / M.cols);
+        Object.assign(shot.style, {
+          backgroundImage: `url("${urls[n]}")`,
+          backgroundSize: `${M.cols * 100}% ${M.rows * 100}%`,
+          backgroundPosition: `${M.cols > 1 ? (col / (M.cols - 1)) * 100 : 0}% ${M.rows > 1 ? (row / (M.rows - 1)) * 100 : 0}%`,
+        });
+        t.classList.remove('is-blank');
+      } else t.classList.add('is-blank');
+      requestAnimationFrame(() => { t.style.opacity = ''; });
+    }
+    for (const [id, t] of tiles) if (!seen.has(id)) { t.style.opacity = 0; tiles.delete(id); setTimeout(() => t.remove(), 700); }
+    range.value = n;
+    label.textContent = `${MON[+M.m.slice(5) - 1]} ${M.m.slice(0, 4)}`;
+    if (urls[n + 1]) new Image().src = urls[n + 1];
+  };
+  const describe = (id) => {
+    const s = D.months[cur].s[id];
+    if (!s) return;
+    tip.textContent = `${D.names[id]} · ${D.groups[id]} · ${s.e.toLocaleString()} lines of code changed this month`;
+  };
+  const stop = () => { clearInterval(timer); timer = null; play.textContent = '▶'; play.setAttribute('aria-label', 'Play'); };
+  const start = () => { timer = setInterval(() => { if (cur === D.months.length - 1) stop(); else show(cur + 1); }, 1800); play.textContent = '❚❚'; play.setAttribute('aria-label', 'Pause'); };
+  play.onclick = () => { if (timer) stop(); else { if (cur === D.months.length - 1) show(0); start(); } };
+  range.oninput = () => { stop(); show(+range.value); };
+  window.addEventListener('resize', () => show(cur));
+  show(0);
+  if (!still && 'IntersectionObserver' in window) {
+    const io = new IntersectionObserver((es) => { if (es.some((e) => e.isIntersecting)) { io.disconnect(); start(); } }, { threshold: 0.5 });
+    io.observe(stage);
+  }
+})();
+</script>
+
 ### Asking the robot about the robot
 
 Here’s how I went about this. I asked Claude to analyse every single Claude Code session I’ve had on Gramlet, the whole git history and the GitHub pull requests, and to tell me honestly what I’d contributed. I am aware that AI has a taste for sycophancy, so I asked it to back every claim with evidence from the data.
