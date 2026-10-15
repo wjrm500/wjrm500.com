@@ -27,6 +27,85 @@ _Timeless mid-game, spelling a word from the letter bank, and Volt with its surg
 
 Give it a go at [gramlet.co.uk](https://gramlet.co.uk) – no account needed. My wife has been its chief tester since January. She finds a lot of the bugs that only show up on an iPhone.
 
+Here’s how its home page changed along the way.
+
+<div class="evo" aria-label="The Gramlet home page, from 2023 to today">
+
+![The Gramlet home page on a phone, 16 January 2023: anagramageddon begins: a plain title and two grey buttons](./home-01.png)
+_16 January 2023 · Anagramageddon begins: a plain title and two grey buttons_
+
+![The Gramlet home page on a phone, 26 December 2025: the restart: a mobile-first dark theme with teal buttons](./home-02.png)
+_26 December 2025 · The restart: a mobile-first dark theme with teal buttons_
+
+![The Gramlet home page on a phone, 30 December 2025: a comic-book Anagramageddon logo replaces the plain title](./home-03.png)
+_30 December 2025 · A comic-book Anagramageddon logo replaces the plain title_
+
+![The Gramlet home page on a phone, 10 January 2026: daily challenge arrives as the headline teal button](./home-04.png)
+_10 January 2026 · Daily challenge arrives as the headline teal button_
+
+![The Gramlet home page on a phone, 21 January 2026: renamed Gramlet, with the new g logo](./home-05.png)
+_21 January 2026 · Renamed Gramlet, with the new g logo_
+
+![The Gramlet home page on a phone, 24 March 2026: a hero grid and tagline show a game in progress](./home-06.png)
+_24 March 2026 · A hero grid and tagline show a game in progress_
+
+![The Gramlet home page on a phone, 7 May 2026: modes reshuffled: Voltage leads, each button gets an icon](./home-07.png)
+_7 May 2026 · Modes reshuffled: Voltage leads, each button gets an icon_
+
+![The Gramlet home page on a phone, 17 May 2026: mode cards with their own colour and font; new top bar](./home-08.png)
+_17 May 2026 · Mode cards with their own colour and font; new top bar_
+
+![The Gramlet home page on a phone, 18 May 2026: footer links tucked into a burger menu at the bottom](./home-09.png)
+_18 May 2026 · Footer links tucked into a burger menu at the bottom_
+
+![The Gramlet home page on a phone, 20 August 2026: one big Play today’s game button for new visitors](./home-10.png)
+_20 August 2026 · One big Play today’s game button for new visitors_
+
+![The Gramlet home page on a phone, 23 August 2026: the menu moves up into the top bar, where it is today](./home-11.png)
+_23 August 2026 · The menu moves up into the top bar, where it is today_
+
+![The Gramlet home page on a phone, 31 October 2026 (preview): holiday skins: Halloween, as the home page will look on the day](./home-12.png)
+_31 October 2026 (preview) · Holiday skins: Halloween, as the home page will look on the day_
+
+</div>
+<script>
+(() => {
+  const root = document.querySelector('.evo');
+  if (!root) return;
+  const figs = [...root.querySelectorAll('figure')];
+  if (figs.length < 2) return;
+  const still = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  let i = 0, timer = null;
+  root.classList.add('is-live');
+  const bar = document.createElement('div');
+  bar.className = 'evo-bar';
+  const mk = (label, text) => { const b = document.createElement('button'); b.type = 'button'; b.setAttribute('aria-label', label); b.textContent = text; return b; };
+  const prev = mk('Previous version', '‹'), play = mk('Play', '▶'), next = mk('Next version', '›');
+  const range = document.createElement('input');
+  range.type = 'range'; range.min = 0; range.max = figs.length - 1; range.value = 0;
+  range.setAttribute('aria-label', 'Choose a version');
+  bar.append(prev, play, range, next);
+  root.after(bar);
+  const show = (n) => {
+    i = (n + figs.length) % figs.length;
+    figs.forEach((f, k) => f.classList.toggle('is-on', k === i));
+    range.value = i;
+  };
+  const stop = () => { clearInterval(timer); timer = null; play.textContent = '▶'; play.setAttribute('aria-label', 'Play'); };
+  const start = () => { timer = setInterval(() => { if (i === figs.length - 1) stop(); else show(i + 1); }, 2200); play.textContent = '❚❚'; play.setAttribute('aria-label', 'Pause'); };
+  prev.onclick = () => { stop(); show(i - 1); };
+  next.onclick = () => { stop(); show(i + 1); };
+  range.oninput = () => { stop(); show(+range.value); };
+  play.onclick = () => { if (timer) stop(); else { if (i === figs.length - 1) show(0); start(); } };
+  show(0);
+  // Start playing the first time the phone scrolls into view, unless motion is reduced.
+  if (!still && 'IntersectionObserver' in window) {
+    const io = new IntersectionObserver((es) => { if (es.some((e) => e.isIntersecting)) { io.disconnect(); start(); } }, { threshold: 0.6 });
+    io.observe(root);
+  }
+})();
+</script>
+
 ### Asking the robot about the robot
 
 Here’s how I went about this. I asked Claude to analyse every single Claude Code session I’ve had on Gramlet, the whole git history and the GitHub pull requests, and to tell me honestly what I’d contributed. I am aware that AI has a taste for sycophancy, so I asked it to back every claim with evidence from the data.
