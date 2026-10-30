@@ -108,10 +108,10 @@ _31 October 2026 (preview) · Holiday skins: Halloween, as the home page will lo
 })();
 </script>
 
-And here’s what was going on under the bonnet: every line of code in the project, week by week, split into the game itself, the server, the tests and the scripts that hold it all together. Each tick marks the first code for something new. Note the cliff edge in September. That’s 9 September, when 64,000 lines of comments – mostly Claude explaining itself to itself – were cut in one go. (It was a big day for cutting things – more on that later.)
+And here’s what I was actually working on, week by week. Each row is something you’d recognise as a player, and the darker the square, the more changes went in that week. You can watch the whole thing sprawl: the daily game ticking along the entire time, Volt turning up in April and promptly taking over my life, and August, when I apparently decided to work on everything at once. September is the quiet bit where I mostly tidied up.
 
-![A stacked area chart of lines of code in Gramlet from December 2025 to October 2026, split into tests, the game, the server, and scripts and setup. It climbs slowly to about 100,000 lines by April, steepens through the summer to a peak of about 363,000 at the end of August, drops by 64,000 on 9 September when comments were cut, and ends at about 340,000. Ticks mark the first code for Triplet, Volt, Grambots, Rarefied and Free Play, and holiday skins.](./codebase.svg)
-_Lines of code, week by week_
+![A grid with one row per part of Gramlet a player would recognise – the daily game, head-to-head, friends and leaderboards, scorecards and stats, Free Play, Triplet, Volt, the charity pot, Grambots, Gramlet Kids, Rarefied and holiday skins – plus a grey row for behind-the-scenes work, and one square per week from December 2025 to October 2026, darker when more changes were merged that week. New rows start one after another through the year, Volt is dark from May to August, nearly every row is busy in August, and September is sparse.](./features.svg)
+_What I was working on, week by week_
 
 ### Asking the robot about the robot
 
