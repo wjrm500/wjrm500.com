@@ -108,10 +108,10 @@ _31 October 2026 (preview) · Holiday skins: Halloween, as the home page will lo
 })();
 </script>
 
-And here’s what I was actually working on, week by week. Each row is something you’d recognise as a player, and the darker the square, the more changes went in that week. You can watch the whole thing sprawl: the daily game ticking along the entire time, Volt turning up in April and promptly taking over my life, and August, when I apparently decided to work on everything at once. September is the quiet bit where I mostly tidied up.
+And here’s everything that’s gone live since I picked it back up. That’s roughly one new thing every three weeks, apart from June, when I got a bit carried away.
 
-![A grid with one row per part of Gramlet a player would recognise – the daily game, head-to-head, friends and leaderboards, scorecards and stats, Free Play, Triplet, Volt, the charity pot, Grambots, Gramlet Kids, Rarefied and holiday skins – plus a grey row for behind-the-scenes work, and one square per week from December 2025 to October 2026, darker when more changes were merged that week. New rows start one after another through the year, Volt is dark from May to August, nearly every row is busy in August, and September is sparse.](./features.svg)
-_What I was working on, week by week_
+![A vertical timeline of everything that went live in Gramlet: the restart on 26 December 2025, Daily Challenge on 5 January, the rename to Gramlet on 21 January, Fog of War on 25 January, Free Play on 13 February, Triplet on 27 February, scorecards on 14 March, friends on 5 April, Volt on 13 April, the charity pot on 10 May, VoltArena on 6 June, Grambots on 18 June, Gramlet Kids on 25 June, Rarefied on 22 July, Training on 28 August, and the first holiday skin, Halloween, on 31 October.](./launches.svg)
+_Everything that’s gone live since the restart, dated from the update log_
 
 ### Asking the robot about the robot
 
