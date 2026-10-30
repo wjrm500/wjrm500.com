@@ -14,7 +14,7 @@ Well, it turns out I have now forgotten what code looks like.
 
 Between February and October this year I typed **115 lines of code** for the word game I’ve been working on. Not 115 a day, or 115 a week – 115, total. And before you get too impressed, most of those were me nudging a margin a few pixels to the left or fixing a typo in the update log. Over the same period the codebase grew to around **334,000 lines**.
 
-The game is called **[Gramlet](https://gramlet.co.uk)**, and if you’ve been reading this blog for a while (hello, both of you) you might remember its ancestor, [Anagramageddon](/2022/12/08/anagramageddon-fight-for-territory-and-find-anagrams-as-you-battle-against-the-clock): a scrappy little two-player game I built by hand back in 2022, powered by a single 200-line JavaScript file that I described at the time as “something of an abomination”. It then sat gathering dust for the best part of three years, until Claude Code on the web came along and I picked it back up on Boxing Day, as you do. Ten months, 1,626 conversations and one full-blown Claude addiction later, here we are.
+The game is called **[Gramlet](https://gramlet.co.uk)**, and if you’ve been reading this blog for a while (hello, both of you) you might remember its ancestor, [Anagramageddon](/2022/12/08/anagramageddon-fight-for-territory-and-find-anagrams-as-you-battle-against-the-clock): a ramshackle little two-player game I built by hand back in 2022, powered by a single 200-line JavaScript file that I described at the time as “something of an abomination”. It then sat gathering dust for the best part of three years, until Claude Code on the web came along and I picked it back up on Boxing Day, as you do. Ten months, 1,626 conversations and one full-blown Claude addiction later, here we are.
 
 So this article is my attempt to work out what, if anything, I can still take credit for. Spoiler: more than you’d think, but less than my ego would like.
 
@@ -27,9 +27,9 @@ Everything else has grown around it since, mostly by me asking “what if?”. W
 ![Three phone screenshots of Gramlet. The first shows the Timeless grid, with a cluster of claimed letters in the top-left corner and the rest hidden under padlocks. The second shows the letter bank, where you spell a word from your claimed letters. The third shows Volt, with the surge bar running down the left-hand side of the grid.](./gramlet-screens.png)
 _Timeless mid-game, spelling a word from the letter bank, and Volt with its surge bar_
 
-Give it a go at [gramlet.co.uk](https://gramlet.co.uk) – no account needed. My wife has been chief tester since January, a role she did not apply for. As the only one of us testing on an iPhone, she gets all the bugs that only show up on an iPhone, and she reports them with what I can only describe as a little too much glee. Lately, though, I suspect she’s been sitting on a few, because she knows that the moment she tells me, I’ll disappear upstairs for half an hour to fix it.
+Give it a go at [gramlet.co.uk](https://gramlet.co.uk) – no account needed. My wife has been chief tester since January, a role she did not apply for. As the only one of us testing on an iPhone, she gets all the bugs that only show up on an iPhone, and she reports them with unseemly glee. Lately, though, I suspect she’s been sitting on a few, because she knows that the moment she tells me, I’ll disappear upstairs for half an hour to fix it.
 
-Here’s how its home page changed along the way.
+She’s seen a fair few home pages come and go. Here are all twelve.
 
 <div class="evo" aria-label="The Gramlet home page, from 2023 to today">
 
@@ -108,225 +108,18 @@ _31 October 2026 (preview) · Holiday skins: Halloween, as the home page will lo
 })();
 </script>
 
-And here’s the whole app as it grew. Every screen is a bubble showing what it looked like at the time. Bubbles swell while a screen is being worked on and settle when it isn’t, new screens bloom in when they’re built and shrink away when they’re retired, and the ones you can reach from the home page are brightest. It’s quite hypnotic, if you’re into that sort of thing.
+And here’s what was going on under the bonnet: every line of code in the project, week by week, split into the game itself, the server, the tests and the scripts that hold it all together. Each tick marks the first code for something new. Note the cliff edge in September. That’s 9 September, when 64,000 lines of comments – mostly Claude explaining itself to itself – were cut in one go. (It was a big day for cutting things – more on that later.)
 
-<div class="sv">
-
-![Every screen of Gramlet at the end of January 2026, 16 in all, as small phone screenshots in a grid](./screens-2026-01.jpg)
-_Every screen at the end of January 2026: 16 of them_
-
-![Every screen of Gramlet at the end of February 2026, 21 in all, as small phone screenshots in a grid](./screens-2026-02.jpg)
-_Every screen at the end of February 2026: 21 of them_
-
-![Every screen of Gramlet at the end of March 2026, 25 in all, as small phone screenshots in a grid](./screens-2026-03.jpg)
-_Every screen at the end of March 2026: 25 of them_
-
-![Every screen of Gramlet at the end of April 2026, 25 in all, as small phone screenshots in a grid](./screens-2026-04.jpg)
-_Every screen at the end of April 2026: 25 of them_
-
-![Every screen of Gramlet at the end of May 2026, 28 in all, as small phone screenshots in a grid](./screens-2026-05.jpg)
-_Every screen at the end of May 2026: 28 of them_
-
-![Every screen of Gramlet at the end of June 2026, 43 in all, as small phone screenshots in a grid](./screens-2026-06.jpg)
-_Every screen at the end of June 2026: 43 of them_
-
-![Every screen of Gramlet at the end of July 2026, 47 in all, as small phone screenshots in a grid](./screens-2026-07.jpg)
-_Every screen at the end of July 2026: 47 of them_
-
-![Every screen of Gramlet at the end of August 2026, 48 in all, as small phone screenshots in a grid](./screens-2026-08.jpg)
-_Every screen at the end of August 2026: 48 of them_
-
-![Every screen of Gramlet at the end of September 2026, 49 in all, as small phone screenshots in a grid](./screens-2026-09.jpg)
-_Every screen at the end of September 2026: 49 of them_
-
-![Every screen of Gramlet at the end of October 2026, 50 in all, as small phone screenshots in a grid](./screens-2026-10.jpg)
-_Every screen at the end of October 2026: 50 of them_
-
-</div>
-<script type="application/json" class="sv-data">{"start":"2026-01-01","end":"2026-10-15","weeks":42,"screens":{"home":{"e":[4.3,4.9,5.3,4.2,13.9,20.3,17.2,14.5,13.1,11.9,9.4,6.7,53.8,75.8,57.9,42.2,35.8,32.9,49.0,116.5,228.0,229.1,178.9,148.0,120.9,212.5,274.7,324.6,472.4,456.4,365.2,479.3,487.4,391.0,373.8,313.1,309.4,274.3,195.4,139.1,603.9,745.7],"a":-5,"b":null},"welcome":{"e":[0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,639.1,906.2,716.9,561.4,419.9,372.2,356.5,318.9,248.3,353.5,362.0,298.2,237.5,167.9,118.7],"a":190,"b":null},"help":{"e":[36.8,51.9,52.8,38.6,30.5,41.3,46.9,37.1,26.8,19.3,13.6,9.6,9.0,7.7,5.4,3.9,9.7,11.3,22.5,35.7,33.0,24.0,26.0,24.0,26.3,26.3,20.1,14.6,11.2,46.4,57.9,42.5,31.0,68.3,79.4,57.4,40.9,29.2,22.1,16.5,11.7,8.3],"a":-5,"b":null},"about":{"e":[0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,28.0,37.5,28.3,21.1,17.8,14.8,10.7,7.5,5.3,4.1,3.1,2.2,1.6,17.5,22.7,16.0,11.3,8.0,6.0,4.5,3.2,2.2],"a":137,"b":null},"update-log":{"e":[0.0,0.0,0.0,0.0,0.0,40.6,70.7,62.8,53.2,47.7,46.4,50.3,45.4,39.4,33.9,36.5,65.4,75.7,73.2,87.9,86.0,65.0,53.5,47.4,46.7,220.4,270.0,192.9,137.6,97.3,68.8,48.7,34.4,45.4,45.3,32.0,22.7,16.0,12.2,9.2,6.5,4.6],"a":32,"b":null},"contact":{"e":[0.0,0.0,0.0,0.0,7.9,105.4,140.4,106.4,82.8,98.9,102.0,79.8,57.8,57.6,85.9,87.8,70.2,52.7,37.8,27.1,27.6,24.8,17.6,12.4,9.1,6.7,4.7,3.3,2.4,1.7,1.2,0.8,0.6,27.5,36.6,25.9,18.3,12.9,9.1,6.5,4.6,3.2],"a":32,"b":null},"privacy":{"e":[0.0,0.0,0.0,0.0,0.0,0.0,33.2,44.5,32.3,29.9,25.2,17.8,12.6,8.9,6.3,4.5,3.2,2.2,1.6,1.1,0.8,0.6,0.4,0.3,0.2,5.7,7.5,5.3,3.8,2.7,2.8,2.5,1.8,26.8,35.0,24.8,17.5,12.4,8.8,6.2,4.4,3.1],"a":45,"b":null},"terms":{"e":[0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,11.1,14.9,10.5,7.4,5.3,3.7,3.0,4.0,3.8,2.7,1.9,1.4,1.0,0.7,0.5,0.3,0.2,0.2,0.1,0.1,0.8,16.8,24.9,19.5,13.8,9.8,7.3,5.4,4.7,3.9],"a":81,"b":null},"not-found":{"e":[0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,13.1,17.5,12.4,8.8,6.2,4.4,3.1,2.2,1.6,1.1,0.8,0.5,0.4,0.3,0.2,0.1,0.1,0.1,0.0,0.0,0.0,12.1,16.1,11.4,8.1,5.7,4.4,3.3,2.4,1.7],"a":81,"b":null},"other-modes":{"e":[0.0,0.0,0.0,0.0,0.0,79.2,153.4,255.1,370.1,358.9,301.5,235.8,168.1,131.1,114.4,112.7,97.4,71.3,59.4,49.7,36.5,25.8,24.2,22.5,18.7,38.6,42.6,43.8,39.7,28.2,19.9,14.1,10.0,20.2,22.5,15.9,11.3,8.0,5.6,4.0,2.8,2.0],"a":48,"b":null},"giving":{"e":[0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,193.1,299.1,237.2,167.7,150.6,131.7,104.3,81.0,58.7,42.6,30.8,21.8,17.4,15.3,12.0,14.7,14.4,10.2,13.1,13.0,10.6,8.4,6.0,4.2],"a":129,"b":null},"word-detail":{"e":[0.0,0.0,0.0,0.0,0.0,71.9,104.0,100.8,85.3,64.1,66.4,66.8,52.3,38.8,28.6,20.6,22.3,20.5,20.8,21.7,19.3,16.8,14.8,13.8,24.2,31.5,36.9,33.8,28.9,23.9,87.2,125.1,116.9,96.8,97.5,88.1,101.5,95.5,74.7,57.4,40.6,29.4],"a":32,"b":null},"settings":{"e":[0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.4,43.1,57.3,91.4,123.2,113.6,110.0,92.6,75.4,60.1,46.8,35.6],"a":218,"b":null},"training":{"e":[0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,2014.6,2703.5,2318.4,1892.0,1414.7,1048.8,741.6,540.4],"a":235,"b":null},"sign-in":{"e":[0.0,0.0,0.0,0.0,57.3,78.1,57.4,41.4,29.2,20.7,14.6,10.3,8.4,10.4,11.2,8.8,6.2,4.4,4.5,25.9,32.2,22.9,16.3,12.0,13.6,12.7,10.2,13.8,25.4,25.7,22.1,20.5,16.1,52.5,69.0,52.7,43.7,34.8,25.5,18.6,13.5,9.8],"a":28,"b":null},"password-reset":{"e":[0.0,0.0,0.0,0.0,44.4,59.3,43.2,31.4,22.2,15.7,11.1,7.8,5.5,3.9,2.8,2.0,1.4,1.0,0.7,1.6,1.8,1.3,0.9,2.1,2.4,1.7,1.2,0.8,0.6,0.4,0.3,0.2,0.1,43.8,58.5,41.3,29.2,20.7,15.9,12.0,9.2,7.0],"a":29,"b":null},"oauth-registration":{"e":[0.0,0.0,0.0,0.0,4.7,8.2,8.7,7.2,5.1,3.6,2.5,1.8,2.2,5.5,7.5,6.2,4.4,3.1,2.4,2.9,2.7,1.9,1.4,1.0,3.6,4.3,3.2,6.0,7.0,5.3,5.7,6.0,4.7,32.1,43.3,32.2,23.1,16.6,14.4,11.9,8.8,6.4],"a":29,"b":null},"account-benefits":{"e":[0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,23.4,103.3,119.5,85.2,68.7,55.7,40.5,46.1,43.6,31.5,22.7,16.1,11.4],"a":203,"b":null},"profile":{"e":[0.0,0.0,0.0,0.0,116.1,214.3,213.4,168.6,136.7,190.8,202.5,158.4,119.2,252.8,392.1,377.3,363.6,309.0,444.1,519.6,414.5,297.0,260.0,243.9,297.2,410.9,428.4,412.4,383.7,338.6,517.4,876.6,865.7,890.4,816.6,594.3,513.1,420.0,344.4,295.7,240.8,181.3],"a":28,"b":null},"profile-games":{"e":[0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,45.5,61.3,48.0,36.7,25.9,20.0,16.2,33.7,37.4,33.8,47.1,44.9,31.8,23.5,18.2,16.7,13.8,11.4,12.5,34.7,39.5,28.5,21.2,15.4,33.9,38.5,27.2,19.6,14.1,10.7,8.0,5.7,4.0],"a":60,"b":null},"gramdex":{"e":[0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,47.1,278.2,349.1,346.7,328.9,249.9,176.7,207.2,205.9,153.6,116.8,86.4,61.8,45.6,33.2,23.4],"a":185,"b":null},"gramboard":{"e":[0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,144.6,193.4,136.8],"a":276,"b":null},"friend-invite":{"e":[0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,46.9,62.7,44.3,31.4],"a":264,"b":null},"solo-hub":{"e":[0.0,114.6,181.0,198.9,227.6,207.2,198.2,187.4,242.5,248.1,678.5,957.7,812.0,922.9,1002.7,1158.8,1101.6,1907.7,2245.9,1963.2,1542.4,1099.5,854.0,732.5,1307.5,1756.3,1563.2,1397.8,1205.0,1227.4,2334.1,6517.9,7411.6,6730.7,5894.3,4565.4,5893.3,5762.6,4423.8,3382.7,3834.4,3923.3],"a":5,"b":null},"solo-play":{"e":[0.0,101.2,194.0,223.3,205.0,273.0,303.2,259.0,394.2,437.0,351.6,280.1,220.0,314.8,353.3,952.5,1311.8,1390.5,1349.5,1127.7,844.2,598.9,465.2,413.1,615.0,725.9,646.0,814.8,977.7,917.3,1251.6,1639.0,1673.9,1944.8,2139.5,2289.8,2719.8,2404.9,1807.4,1345.4,1091.1,863.2],"a":5,"b":null},"solo-end":{"e":[0.0,37.5,145.6,176.7,199.5,186.2,135.9,100.4,106.0,96.1,68.9,49.2,40.2,31.8,22.5,15.9,11.6,8.8,11.8,14.1,11.6,8.3,6.6,5.5,15.2,19.1,15.7,13.8,12.0,10.0,34.1,68.1,65.5,49.3,48.9,42.5,65.2,68.2,58.6,48.0,34.0,28.7],"a":5,"b":null},"solo-replay":{"e":[0.0,53.5,94.2,99.9,90.2,95.0,103.2,95.1,86.2,89.1,143.4,147.5,114.9,166.3,167.9,341.0,384.4,282.3,246.6,240.9,195.7,140.4,123.5,102.9,101.1,95.0,78.4,60.5,46.0,53.9,97.0,107.2,83.6,79.6,107.5,102.9,139.0,139.1,102.0,83.5,67.5,53.2],"a":8,"b":null},"near-miss-options":{"e":[0.0,0.7,15.0,19.6,15.9,35.7,41.8,33.3,25.3,18.7,13.7,9.7,6.9,26.9,33.0,24.4,17.9,12.7,10.9,9.5,7.1,5.0,4.1,3.9,6.7,8.8,9.8,8.6,6.7,5.3,7.6,12.4,12.5,10.9,10.0,7.8,8.6,8.0,7.1,8.3,7.3,5.4],"a":11,"b":null},"best-line":{"e":[0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,81.2,108.6,76.8,57.7,43.0,32.5,42.3,41.3,29.5,21.1,14.9,10.6],"a":210,"b":null},"all-challenges":{"e":[0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,69.0,92.3,65.8,48.1,46.1,47.1,38.3,27.3,19.3,15.8,14.3,11.3,8.0,6.2,4.7,50.9,71.4,53.9,38.1,27.3,19.5,14.5,14.3,12.4,26.7,30.2,21.4,15.1,10.7,7.6,5.3,3.8,2.7],"a":61,"b":null},"hall-of-fame":{"e":[0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,43.5,77.7,67.5,47.8,36.5,28.8,21.7,15.7,13.1,13.4,14.7,16.5,60.3,71.7,50.7,35.9,25.4,17.9,12.7,9.0,6.3,4.5,3.2,2.2],"a":127,"b":213},"voltarena-setup":{"e":[58.0,41.3,57.0,60.4,44.5,33.2,24.5,17.3,13.5,11.2,8.5,6.0,4.6,3.5,2.5,1.7,1.2,0.9,2.6,16.4,20.0,55.4,65.2,46.1,32.6,23.1,16.3,11.5,8.2,5.8,4.1,2.9,2.0,1.4,1.0,0.7,0.5,0.4,0.3,0.2,0.1,0.1],"a":-5,"b":144},"voltarena-lobby":{"e":[128.8,131.9,106.2,83.3,59.2,42.1,29.8,22.9,20.2,17.0,12.6,8.9,6.3,4.4,3.1,2.2,1.6,1.1,0.8,4.3,5.4,57.7,74.8,52.9,37.4,26.4,18.7,13.2,9.4,6.6,4.7,3.3,2.3,1.7,1.2,0.8,0.6,0.4,0.3,0.2,0.1,0.1],"a":-5,"b":148},"voltarena-select":{"e":[44.6,62.8,46.5,33.6,24.2,17.1,12.1,8.6,6.9,5.5,3.9,2.7,1.9,1.4,1.0,0.7,0.5,0.3,0.2,5.9,7.8,16.3,40.6,47.2,41.8,33.8,24.9,19.4,14.6,16.4,15.5,16.3,19.1,42.3,46.5,34.6,54.7,57.0,45.7,35.7,25.3,17.9],"a":-3,"b":null},"voltarena-play":{"e":[344.7,303.8,273.9,209.8,148.8,105.6,74.9,53.0,68.3,67.8,47.9,34.3,25.2,18.3,12.9,12.0,23.8,28.4,22.3,20.2,16.9,471.3,747.7,719.5,609.2,480.0,358.5,265.0,212.6,174.6,136.3,250.0,322.7,605.7,663.6,488.1,507.4,458.0,365.5,284.7,201.3,142.4],"a":-5,"b":null},"voltarena-end":{"e":[297.7,327.2,231.4,163.6,116.2,83.4,59.6,45.3,39.5,31.7,22.6,16.4,12.5,9.3,6.6,5.0,3.8,2.7,1.9,3.8,4.3,397.0,560.1,429.3,335.5,267.1,198.4,141.7,101.1,81.4,63.8,52.6,42.0,29.7,21.0,14.8,70.9,88.2,63.6,45.8,32.4,22.9],"a":-5,"b":null},"voltarena-hub":{"e":[0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,391.0,742.0,728.2,679.2,606.5,459.6,325.0,232.7,251.1,235.7,177.9,131.0,110.4,95.2,71.1,111.5,117.5,86.1,62.8,44.4,31.4],"a":144,"b":null},"voltarena-match":{"e":[0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,5.9,291.3,395.7,314.1,251.0,184.8,130.7,135.9,135.0,102.7,72.6,51.4,43.3,40.4,32.0,97.5,116.2,83.2,59.5,42.1,29.8],"a":144,"b":null},"reflex":{"e":[0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,55.0,127.8,124.6,88.1,62.3,44.0,31.1,22.0,15.6,11.0,7.8,5.5,3.9,2.8,1.9,1.4,1.0,0.7,0.5,0.3],"a":153,"b":160},"grambots-landing":{"e":[0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,204.5,275.0,195.5,138.2,98.8,123.4,121.3,86.2,60.9,43.1,30.5,21.5,22.4,20.4,14.8,10.7,7.5,5.3],"a":166,"b":null},"grambots-info":{"e":[0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,19.0,27.3,20.4,14.4,15.2,28.0,28.6,21.3,15.7,18.3,17.5,12.4,10.2,8.1,6.1,4.5,3.2,2.3],"a":166,"b":null},"grambots-home":{"e":[0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,73.1,115.6,94.2,67.4,49.5,41.1,32.3,23.2,16.6,11.7,8.3,7.5,12.2,12.4,9.8,7.6,5.4,3.8],"a":168,"b":null},"grambots-career":{"e":[0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,210.9,310.6,237.7,168.1,122.1,93.6,69.4,49.1,34.7,29.0,23.4,19.4,20.6,17.7,21.0,20.1,14.2,10.1],"a":166,"b":null},"grambots-bot":{"e":[0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,137.6,195.7,145.8,103.1,74.3,54.5,39.6,28.2,20.0,17.2,14.1,12.8,12.9,10.3,8.7,7.1,5.0,3.5],"a":166,"b":null},"kids-hub":{"e":[0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,285.1,381.3,273.4,196.1,138.9,98.2,70.0,49.8,37.7,61.5,65.7,67.9,61.0,108.2,117.5,83.8,62.4],"a":173,"b":null},"kids-play":{"e":[0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,48.9,68.0,50.7,36.4,25.8,18.2,13.1,9.3,21.0,32.2,39.1,45.1,38.4,28.6,21.1,15.1,10.8],"a":173,"b":null},"kids-end":{"e":[0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,109.6,146.6,104.4,74.2,52.5,38.0,27.6,19.7,14.3,16.8,16.1,20.3,19.9,15.5,11.9,8.6,6.9],"a":173,"b":null},"kids-history":{"e":[0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,31.4,42.0,30.1,21.5,15.2,10.8,7.6,5.4,4.0,6.5,7.1,5.6,4.3,4.1,3.6,2.5,1.8],"a":175,"b":null},"kids-teacher":{"e":[0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,47.8,63.9,45.7,32.7,23.1,16.3,11.6,8.2,6.1,9.1,9.4,7.5,5.7,6.9,6.7,4.8,3.4],"a":173,"b":null},"kids-about":{"e":[0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,18.9,25.2,17.8,14.4,11.3,8.0,5.7,4.0,22.6,28.4,20.1,14.2,10.1,7.5,5.5,3.9,2.8],"a":173,"b":null},"kids-privacy":{"e":[0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,18.0,24.0,17.0,14.9,12.3,8.7,6.2,4.4,26.1,32.9,23.3,17.5,13.1,11.2,9.2,6.5,4.6],"a":173,"b":null},"kids-class-join":{"e":[0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,40.4,59.1,45.1,32.0,22.6,16.9,12.5,8.9,6.3,5.5,4.6,5.0,4.7,3.9,3.1,2.2,1.5],"a":173,"b":null},"kids-dashboard":{"e":[0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,178.9,239.3,171.2,122.3,86.5,61.1,43.6,31.1,40.1,58.1,53.4,48.8,41.2,33.4,26.4,19.0,13.7],"a":173,"b":null},"kids-control-panel":{"e":[0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,69.9,93.5,66.6,47.5,33.6,23.7,16.8,11.9,9.3,11.3,10.7,9.5,7.9,7.0,5.9,4.1,2.9],"a":173,"b":null}},"months":[{"cols":10,"rows":2,"c":{"home":0,"help":1,"sign-in":2,"password-reset":3,"oauth-registration":-1,"profile":4,"solo-hub":5,"solo-play":6,"solo-end":7,"solo-replay":8,"near-miss-options":-1,"voltarena-setup":9,"voltarena-lobby":10,"voltarena-select":11,"voltarena-play":12,"voltarena-end":13},"p":{"home":3,"help":3,"sign-in":3,"password-reset":1,"oauth-registration":1,"profile":3,"solo-hub":3,"solo-play":3,"solo-end":3,"solo-replay":2,"near-miss-options":1,"voltarena-setup":3,"voltarena-lobby":3,"voltarena-select":3,"voltarena-play":3,"voltarena-end":3}},{"cols":10,"rows":2,"c":{"home":0,"help":1,"update-log":2,"contact":3,"privacy":4,"other-modes":5,"word-detail":6,"sign-in":7,"password-reset":8,"oauth-registration":-1,"profile":9,"solo-hub":10,"solo-play":11,"solo-end":12,"solo-replay":13,"near-miss-options":-1,"voltarena-setup":14,"voltarena-lobby":15,"voltarena-select":16,"voltarena-play":17,"voltarena-end":18},"p":{"home":3,"help":3,"update-log":2,"contact":2,"privacy":2,"other-modes":2,"word-detail":1,"sign-in":3,"password-reset":1,"oauth-registration":1,"profile":3,"solo-hub":3,"solo-play":3,"solo-end":3,"solo-replay":2,"near-miss-options":1,"voltarena-setup":3,"voltarena-lobby":3,"voltarena-select":3,"voltarena-play":3,"voltarena-end":3}},{"cols":10,"rows":2,"c":{"home":0,"help":1,"update-log":2,"contact":3,"privacy":4,"terms":5,"not-found":6,"other-modes":7,"word-detail":8,"sign-in":9,"password-reset":10,"oauth-registration":-1,"profile":11,"profile-games":12,"solo-hub":13,"solo-play":14,"solo-end":15,"solo-replay":16,"near-miss-options":-1,"all-challenges":17,"voltarena-setup":18,"voltarena-lobby":-1,"voltarena-select":-1,"voltarena-play":-1,"voltarena-end":-1},"p":{"home":3,"help":3,"update-log":2,"contact":2,"privacy":2,"terms":2,"not-found":1,"other-modes":2,"word-detail":1,"sign-in":3,"password-reset":1,"oauth-registration":1,"profile":3,"profile-games":1,"solo-hub":3,"solo-play":3,"solo-end":3,"solo-replay":2,"near-miss-options":1,"all-challenges":2,"voltarena-setup":3,"voltarena-lobby":3,"voltarena-select":3,"voltarena-play":3,"voltarena-end":3}},{"cols":10,"rows":2,"c":{"home":0,"help":1,"update-log":2,"contact":3,"privacy":4,"terms":5,"not-found":6,"other-modes":7,"word-detail":8,"sign-in":9,"password-reset":10,"oauth-registration":-1,"profile":11,"profile-games":12,"solo-hub":13,"solo-play":14,"solo-end":15,"solo-replay":16,"near-miss-options":-1,"all-challenges":17,"voltarena-setup":18,"voltarena-lobby":-1,"voltarena-select":-1,"voltarena-play":-1,"voltarena-end":-1},"p":{"home":3,"help":3,"update-log":2,"contact":2,"privacy":2,"terms":2,"not-found":1,"other-modes":2,"word-detail":1,"sign-in":3,"password-reset":1,"oauth-registration":1,"profile":3,"profile-games":1,"solo-hub":3,"solo-play":3,"solo-end":3,"solo-replay":2,"near-miss-options":1,"all-challenges":2,"voltarena-setup":3,"voltarena-lobby":3,"voltarena-select":3,"voltarena-play":3,"voltarena-end":3}},{"cols":10,"rows":3,"c":{"home":0,"help":1,"about":2,"update-log":3,"contact":4,"privacy":5,"terms":6,"not-found":7,"other-modes":8,"giving":9,"word-detail":10,"sign-in":11,"password-reset":12,"oauth-registration":-1,"profile":13,"profile-games":14,"solo-hub":15,"solo-play":16,"solo-end":17,"solo-replay":18,"near-miss-options":-1,"all-challenges":19,"hall-of-fame":20,"voltarena-select":21,"voltarena-play":22,"voltarena-end":23,"voltarena-hub":24,"voltarena-match":25},"p":{"home":3,"help":2,"about":2,"update-log":2,"contact":2,"privacy":2,"terms":2,"not-found":1,"other-modes":2,"giving":3,"word-detail":1,"sign-in":2,"password-reset":1,"oauth-registration":1,"profile":2,"profile-games":1,"solo-hub":3,"solo-play":3,"solo-end":3,"solo-replay":2,"near-miss-options":1,"all-challenges":2,"hall-of-fame":2,"voltarena-select":3,"voltarena-play":3,"voltarena-end":3,"voltarena-hub":3,"voltarena-match":2}},{"cols":10,"rows":4,"c":{"home":0,"help":1,"about":2,"update-log":3,"contact":4,"privacy":5,"terms":6,"not-found":7,"other-modes":8,"giving":9,"word-detail":10,"sign-in":11,"password-reset":12,"oauth-registration":-1,"profile":13,"profile-games":14,"solo-hub":15,"solo-play":16,"solo-end":17,"solo-replay":18,"near-miss-options":-1,"all-challenges":19,"hall-of-fame":20,"voltarena-select":21,"voltarena-play":22,"voltarena-end":23,"voltarena-hub":24,"voltarena-match":25,"grambots-landing":26,"grambots-info":27,"grambots-home":28,"grambots-career":29,"grambots-bot":30,"kids-hub":31,"kids-play":32,"kids-end":-1,"kids-history":33,"kids-teacher":34,"kids-about":35,"kids-privacy":36,"kids-class-join":37,"kids-dashboard":38,"kids-control-panel":39},"p":{"home":3,"help":2,"about":3,"update-log":2,"contact":2,"privacy":2,"terms":2,"not-found":1,"other-modes":2,"giving":3,"word-detail":1,"sign-in":2,"password-reset":1,"oauth-registration":1,"profile":2,"profile-games":1,"solo-hub":3,"solo-play":3,"solo-end":3,"solo-replay":2,"near-miss-options":1,"all-challenges":2,"hall-of-fame":2,"voltarena-select":3,"voltarena-play":3,"voltarena-end":3,"voltarena-hub":3,"voltarena-match":2,"grambots-landing":2,"grambots-info":1,"grambots-home":1,"grambots-career":1,"grambots-bot":1,"kids-hub":2,"kids-play":2,"kids-end":2,"kids-history":1,"kids-teacher":1,"kids-about":1,"kids-privacy":1,"kids-class-join":1,"kids-dashboard":1,"kids-control-panel":1}},{"cols":10,"rows":5,"c":{"home":0,"welcome":1,"help":2,"about":3,"update-log":4,"contact":5,"privacy":6,"terms":7,"not-found":8,"other-modes":9,"giving":10,"word-detail":11,"sign-in":12,"password-reset":13,"oauth-registration":-1,"account-benefits":14,"profile":15,"profile-games":16,"gramdex":17,"solo-hub":18,"solo-play":19,"solo-end":20,"solo-replay":21,"near-miss-options":-1,"best-line":22,"all-challenges":23,"hall-of-fame":24,"voltarena-select":25,"voltarena-play":26,"voltarena-end":27,"voltarena-hub":28,"voltarena-match":29,"grambots-landing":30,"grambots-info":31,"grambots-home":32,"grambots-career":33,"grambots-bot":34,"kids-hub":35,"kids-play":36,"kids-end":-1,"kids-history":37,"kids-teacher":38,"kids-about":39,"kids-privacy":40,"kids-class-join":41,"kids-dashboard":42,"kids-control-panel":43},"p":{"home":3,"welcome":2,"help":2,"about":3,"update-log":2,"contact":2,"privacy":2,"terms":2,"not-found":1,"other-modes":2,"giving":3,"word-detail":1,"sign-in":2,"password-reset":1,"oauth-registration":1,"account-benefits":1,"profile":2,"profile-games":1,"gramdex":1,"solo-hub":3,"solo-play":3,"solo-end":3,"solo-replay":2,"near-miss-options":1,"best-line":2,"all-challenges":2,"hall-of-fame":2,"voltarena-select":3,"voltarena-play":3,"voltarena-end":3,"voltarena-hub":3,"voltarena-match":2,"grambots-landing":1,"grambots-info":1,"grambots-home":1,"grambots-career":1,"grambots-bot":1,"kids-hub":2,"kids-play":2,"kids-end":2,"kids-history":1,"kids-teacher":1,"kids-about":1,"kids-privacy":1,"kids-class-join":1,"kids-dashboard":1,"kids-control-panel":1}},{"cols":10,"rows":5,"c":{"home":0,"welcome":1,"help":2,"about":3,"update-log":4,"contact":5,"privacy":6,"terms":7,"not-found":8,"other-modes":9,"giving":10,"word-detail":11,"settings":12,"training":13,"sign-in":14,"password-reset":15,"oauth-registration":-1,"account-benefits":16,"profile":17,"profile-games":18,"gramdex":19,"solo-hub":20,"solo-play":21,"solo-end":22,"solo-replay":23,"near-miss-options":-1,"best-line":24,"all-challenges":25,"voltarena-select":26,"voltarena-play":27,"voltarena-end":28,"voltarena-hub":29,"voltarena-match":30,"grambots-landing":31,"grambots-info":32,"grambots-home":33,"grambots-career":34,"grambots-bot":35,"kids-hub":36,"kids-play":37,"kids-end":-1,"kids-history":38,"kids-teacher":39,"kids-about":40,"kids-privacy":41,"kids-class-join":42,"kids-dashboard":43,"kids-control-panel":44},"p":{"home":3,"welcome":2,"help":2,"about":3,"update-log":2,"contact":2,"privacy":2,"terms":2,"not-found":1,"other-modes":2,"giving":3,"word-detail":1,"settings":2,"training":2,"sign-in":2,"password-reset":1,"oauth-registration":1,"account-benefits":1,"profile":2,"profile-games":1,"gramdex":1,"solo-hub":3,"solo-play":3,"solo-end":3,"solo-replay":2,"near-miss-options":1,"best-line":2,"all-challenges":2,"voltarena-select":3,"voltarena-play":3,"voltarena-end":3,"voltarena-hub":3,"voltarena-match":2,"grambots-landing":1,"grambots-info":1,"grambots-home":1,"grambots-career":1,"grambots-bot":1,"kids-hub":2,"kids-play":2,"kids-end":2,"kids-history":1,"kids-teacher":1,"kids-about":1,"kids-privacy":1,"kids-class-join":1,"kids-dashboard":1,"kids-control-panel":1}},{"cols":10,"rows":5,"c":{"home":0,"welcome":1,"help":2,"about":3,"update-log":4,"contact":5,"privacy":6,"terms":7,"not-found":8,"other-modes":9,"giving":10,"word-detail":11,"settings":12,"training":13,"sign-in":14,"password-reset":15,"oauth-registration":-1,"account-benefits":16,"profile":17,"profile-games":18,"gramdex":19,"friend-invite":20,"solo-hub":21,"solo-play":22,"solo-end":23,"solo-replay":24,"near-miss-options":-1,"best-line":25,"all-challenges":26,"voltarena-select":27,"voltarena-play":28,"voltarena-end":29,"voltarena-hub":30,"voltarena-match":31,"grambots-landing":32,"grambots-info":33,"grambots-home":34,"grambots-career":35,"grambots-bot":36,"kids-hub":37,"kids-play":38,"kids-end":-1,"kids-history":39,"kids-teacher":40,"kids-about":41,"kids-privacy":42,"kids-class-join":43,"kids-dashboard":44,"kids-control-panel":45},"p":{"home":3,"welcome":2,"help":2,"about":3,"update-log":2,"contact":2,"privacy":2,"terms":2,"not-found":1,"other-modes":2,"giving":3,"word-detail":1,"settings":2,"training":2,"sign-in":2,"password-reset":1,"oauth-registration":1,"account-benefits":1,"profile":2,"profile-games":1,"gramdex":1,"friend-invite":1,"solo-hub":3,"solo-play":3,"solo-end":3,"solo-replay":2,"near-miss-options":1,"best-line":2,"all-challenges":2,"voltarena-select":3,"voltarena-play":3,"voltarena-end":3,"voltarena-hub":3,"voltarena-match":2,"grambots-landing":1,"grambots-info":1,"grambots-home":1,"grambots-career":1,"grambots-bot":1,"kids-hub":2,"kids-play":2,"kids-end":2,"kids-history":1,"kids-teacher":1,"kids-about":1,"kids-privacy":1,"kids-class-join":1,"kids-dashboard":1,"kids-control-panel":1}},{"cols":10,"rows":5,"c":{"home":0,"welcome":1,"help":2,"about":3,"update-log":4,"contact":5,"privacy":6,"terms":7,"not-found":8,"other-modes":9,"giving":10,"word-detail":11,"settings":12,"training":13,"sign-in":14,"password-reset":15,"oauth-registration":-1,"account-benefits":16,"profile":17,"profile-games":18,"gramdex":19,"gramboard":20,"friend-invite":21,"solo-hub":22,"solo-play":23,"solo-end":24,"solo-replay":25,"near-miss-options":-1,"best-line":26,"all-challenges":27,"voltarena-select":28,"voltarena-play":29,"voltarena-end":30,"voltarena-hub":31,"voltarena-match":32,"grambots-landing":33,"grambots-info":34,"grambots-home":35,"grambots-career":36,"grambots-bot":37,"kids-hub":38,"kids-play":39,"kids-end":-1,"kids-history":40,"kids-teacher":41,"kids-about":42,"kids-privacy":43,"kids-class-join":44,"kids-dashboard":45,"kids-control-panel":46},"p":{"home":3,"welcome":2,"help":2,"about":3,"update-log":2,"contact":2,"privacy":2,"terms":2,"not-found":1,"other-modes":2,"giving":3,"word-detail":1,"settings":2,"training":2,"sign-in":2,"password-reset":1,"oauth-registration":1,"account-benefits":1,"profile":2,"profile-games":1,"gramdex":1,"gramboard":1,"friend-invite":1,"solo-hub":3,"solo-play":3,"solo-end":3,"solo-replay":2,"near-miss-options":1,"best-line":2,"all-challenges":2,"voltarena-select":3,"voltarena-play":3,"voltarena-end":3,"voltarena-hub":3,"voltarena-match":2,"grambots-landing":1,"grambots-info":1,"grambots-home":1,"grambots-career":1,"grambots-bot":1,"kids-hub":2,"kids-play":2,"kids-end":2,"kids-history":1,"kids-teacher":1,"kids-about":1,"kids-privacy":1,"kids-class-join":1,"kids-dashboard":1,"kids-control-panel":1}}],"names":{"home":"Home","welcome":"Welcome (onboarding)","help":"How to play","about":"About Gramlet","update-log":"Update log","contact":"Contact us","privacy":"Privacy policy","terms":"Terms of service","not-found":"Not found (404)","other-modes":"Other game modes (Beta)","giving":"Giving","word-detail":"Word detail","settings":"Settings","training":"Training","sign-in":"Sign in / sign up","password-reset":"Forgot / reset password","oauth-registration":"Complete OAuth registration","account-benefits":"Account benefits","profile":"Profile","profile-games":"Profile: games","gramdex":"Gramdex (word collection)","gramboard":"Gramboard","friend-invite":"Friend invite","solo-hub":"Mode hub (solo modes)","solo-play":"Play screen (solo modes)","solo-end":"Scorecard / end (solo modes)","solo-replay":"Game replay","near-miss-options":"Near-miss options","best-line":"Best line","all-challenges":"All challenges (Triplet)","hall-of-fame":"Hall of Fame page","voltarena-setup":"VoltArena: game setup","voltarena-lobby":"VoltArena: lobby","voltarena-select":"VoltArena: starting-box selection","voltarena-play":"VoltArena: battle","voltarena-end":"VoltArena: end screen","voltarena-hub":"VoltArena hub","voltarena-match":"VoltArena: match view","reflex":"Reflex (beta)","grambots-landing":"Grambots landing","grambots-info":"Grambots info","grambots-home":"Grambots career home","grambots-career":"Grambots career history","grambots-bot":"Grambots bot profile","kids-hub":"Kids hub","kids-play":"Kids play screen","kids-end":"Kids end screen","kids-history":"Kids history","kids-teacher":"Kids teacher","kids-about":"Kids about","kids-privacy":"Kids privacy","kids-class-join":"Kids class join","kids-dashboard":"Kids class dashboard","kids-control-panel":"Kids class control panel"},"groups":{"home":"Front door and info","welcome":"Front door and info","help":"Front door and info","about":"Front door and info","update-log":"Front door and info","contact":"Front door and info","privacy":"Front door and info","terms":"Front door and info","not-found":"Front door and info","other-modes":"Solo game","giving":"Front door and info","word-detail":"Solo game","settings":"Account and friends","training":"Solo game","sign-in":"Account and friends","password-reset":"Account and friends","oauth-registration":"Account and friends","account-benefits":"Account and friends","profile":"Account and friends","profile-games":"Account and friends","gramdex":"Account and friends","gramboard":"Account and friends","friend-invite":"Account and friends","solo-hub":"Solo game","solo-play":"Solo game","solo-end":"Solo game","solo-replay":"Solo game","near-miss-options":"Solo game","best-line":"Solo game","all-challenges":"Solo game","hall-of-fame":"Solo game","voltarena-setup":"Head-to-head","voltarena-lobby":"Head-to-head","voltarena-select":"Head-to-head","voltarena-play":"Head-to-head","voltarena-end":"Head-to-head","voltarena-hub":"Head-to-head","voltarena-match":"Head-to-head","reflex":"Head-to-head","grambots-landing":"Head-to-head","grambots-info":"Head-to-head","grambots-home":"Head-to-head","grambots-career":"Head-to-head","grambots-bot":"Head-to-head","kids-hub":"Gramlet Kids","kids-play":"Gramlet Kids","kids-end":"Gramlet Kids","kids-history":"Gramlet Kids","kids-teacher":"Gramlet Kids","kids-about":"Gramlet Kids","kids-privacy":"Gramlet Kids","kids-class-join":"Gramlet Kids","kids-dashboard":"Gramlet Kids","kids-control-panel":"Gramlet Kids"},"order":["Front door and info","Solo game","Head-to-head","Account and friends","Gramlet Kids"]}</script>
-<script>
-(() => {
-  const root = document.querySelector('.sv');
-  const raw = document.querySelector('.sv-data');
-  if (!root || !raw) return;
-  const D = JSON.parse(raw.textContent);
-  const imgs = [...root.querySelectorAll('img')];
-  if (imgs.length !== D.months.length) return;
-  // Astro gives each month's sheet a srcset; take its widest candidate for crisp bubbles.
-  const urls = imgs.map((im) => {
-    const set = (im.getAttribute('srcset') || '').split(',').map((s) => s.trim().split(/\s+/)).filter((p) => p[0]);
-    set.sort((a, b) => parseInt(b[1]) - parseInt(a[1]));
-    return set.length ? set[0][0] : im.getAttribute('src');
-  });
-  const MON = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
-  const still = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-  const DAY = 864e5;
-  const t0 = Date.parse(D.start), t1 = Date.parse(D.end);
-  const days = Math.round((t1 - t0) / DAY);
-  root.classList.add('is-live');
-  const stage = document.createElement('div');
-  stage.className = 'sv-stage';
-  const bar = document.createElement('div');
-  bar.className = 'evo-bar sv-bar';
-  const play = document.createElement('button');
-  play.type = 'button'; play.textContent = '▶'; play.setAttribute('aria-label', 'Play');
-  const range = document.createElement('input');
-  range.type = 'range'; range.min = 0; range.max = days; range.step = 1; range.value = 0;
-  range.setAttribute('aria-label', 'Choose a date');
-  const label = document.createElement('span');
-  label.className = 'sv-month';
-  bar.append(play, range, label);
-  const tip = document.createElement('p');
-  tip.className = 'sv-tip';
-  tip.textContent = 'Tap or hover a bubble to see which screen it is.';
-  root.prepend(stage);
-  stage.after(bar, tip);
-  const groupEls = D.order.map((g) => { const e = document.createElement('span'); e.className = 'sv-group'; e.textContent = g; stage.append(e); return e; });
-  const nodes = Object.keys(D.screens).map((id) => {
-    const s = D.screens[id];
-    const el = document.createElement('button');
-    el.type = 'button';
-    el.className = 'sv-tile';
-    el.innerHTML = '<span class="sv-shot"></span>';
-    el.setAttribute('aria-label', D.names[id]);
-    const n = { id, s, el, x: 0, y: 0, r: 0, vx: 0, vy: 0, g: D.order.indexOf(D.groups[id]), on: false };
-    const hint = () => { const w = weightAt(n, day); tip.textContent = `${D.names[id]} · ${D.groups[id]} · about ${Math.round(w).toLocaleString()} lines of code changed a week around now`; };
-    el.addEventListener('pointerenter', hint); el.addEventListener('focus', hint); el.addEventListener('click', hint);
-    stage.append(el);
-    return n;
-  });
-  let day = 0, playing = false, last = 0, W = 0, H = 0, anchors = [];
-  const layout = () => {
-    W = stage.clientWidth; H = stage.clientHeight;
-    // Group homes sit on an ellipse, so clusters keep their places while they grow and shrink.
-    anchors = D.order.map((_, i) => {
-      const a = -Math.PI / 2 + (i * 2 * Math.PI) / D.order.length;
-      return [W / 2 + Math.cos(a) * W * 0.3, H / 2 + Math.sin(a) * H * 0.3];
-    });
-  };
-  const weightAt = (n, d) => {
-    const w = d / 7, i = Math.min(Math.floor(w), D.weeks - 2), f = Math.min(1, w - i);
-    const e = n.s.e;
-    return e[i] * (1 - f) + e[i + 1] * f;
-  };
-  const life = (n, d) => {
-    const a = n.s.a == null ? -1e9 : n.s.a, b = n.s.b == null ? 1e9 : n.s.b;
-    return Math.max(0, Math.min(1, (d - a) / 6, (b - d) / 6));
-  };
-  const monthOf = (d) => { const dt = new Date(t0 + d * DAY); return Math.min(D.months.length - 1, Math.max(0, (dt.getUTCFullYear() - 2026) * 12 + dt.getUTCMonth())); };
-  const paintShots = (mi) => {
-    const M = D.months[mi];
-    for (const n of nodes) {
-      const c = M.c[n.id], sh = n.el.firstChild;
-      n.el.dataset.p = M.p[n.id] || 1;
-      if (c == null || c < 0) { n.el.classList.add('is-blank'); sh.style.backgroundImage = ''; continue; }
-      n.el.classList.remove('is-blank');
-      const col = c % M.cols, row = Math.floor(c / M.cols);
-      sh.style.backgroundImage = `url("${urls[mi]}")`;
-      sh.style.backgroundSize = `${M.cols * 100}% ${M.rows * 100}%`;
-      sh.style.backgroundPosition = `${M.cols > 1 ? (col / (M.cols - 1)) * 100 : 0}% ${M.rows > 1 ? (row / (M.rows - 1)) * 100 : 0}%`;
-    }
-    if (urls[mi + 1]) new Image().src = urls[mi + 1];
-  };
-  let shownMonth = -1;
-  // One step of a small force simulation: pull each bubble to its group's home, keep it on
-  // stage, and push overlapping bubbles apart. Sizes ease towards their targets, so growth is gradual.
-  const step = (d, ease) => {
-    const live = nodes.filter((n) => life(n, d) > 0);
-    let area = 0;
-    const raw = new Map();
-    for (const n of live) { const v = Math.pow(weightAt(n, d) + 40, 0.42) * life(n, d); raw.set(n, v); area += v * v; }
-    const k = area ? Math.sqrt((W * H * 0.5) / (Math.PI * area)) : 1;
-    for (const n of nodes) {
-      const target = raw.has(n) ? raw.get(n) * k : 0;
-      if (!n.on && target > 0) { n.on = true; const [ax, ay] = anchors[n.g]; n.x = ax + (Math.random() - 0.5) * 20; n.y = ay + (Math.random() - 0.5) * 20; n.r = 0; }
-      n.r += (target - n.r) * ease;
-      if (n.on && target === 0 && n.r < 0.5) { n.on = false; n.r = 0; }
-    }
-    const act = nodes.filter((n) => n.on);
-    for (const n of act) {
-      const [ax, ay] = anchors[n.g];
-      n.vx += (ax - n.x) * 0.012; n.vy += (ay - n.y) * 0.012;
-    }
-    for (let i = 0; i < act.length; i++) for (let j = i + 1; j < act.length; j++) {
-      const a = act[i], b = act[j];
-      let dx = b.x - a.x, dy = b.y - a.y, dist = Math.hypot(dx, dy) || 0.01;
-      const min = a.r + b.r + 2;
-      if (dist < min) {
-        const push = (min - dist) / dist * 0.5;
-        dx *= push; dy *= push;
-        a.x -= dx * 0.5; a.y -= dy * 0.5; b.x += dx * 0.5; b.y += dy * 0.5;
-      }
-    }
-    for (const n of act) {
-      n.vx *= 0.82; n.vy *= 0.82;
-      n.x += n.vx; n.y += n.vy;
-      n.x = Math.max(n.r, Math.min(W - n.r, n.x)); n.y = Math.max(n.r, Math.min(H - n.r, n.y));
-    }
-  };
-  const render = () => {
-    for (const n of nodes) {
-      if (!n.on || n.r < 0.5) { n.el.style.display = 'none'; continue; }
-      n.el.style.display = '';
-      n.el.style.width = n.el.style.height = 2 * n.r + 'px';
-      n.el.style.transform = `translate(${n.x - n.r}px, ${n.y - n.r}px)`;
-      n.el.classList.toggle('is-big', n.r > 42);
-    }
-    // Each area's label floats just above its cluster, wherever the cluster has drifted.
-    groupEls.forEach((e, gi) => {
-      const ns = nodes.filter((n) => n.on && n.g === gi && n.r > 1);
-      if (!ns.length) { e.style.opacity = 0; return; }
-      const top = Math.min(...ns.map((n) => n.y - n.r));
-      const cx = ns.reduce((s, n) => s + n.x * n.r, 0) / ns.reduce((s, n) => s + n.r, 0);
-      e.style.opacity = 1;
-      e.style.left = Math.max(60, Math.min(W - 60, cx)) + 'px';
-      e.style.top = Math.max(24, top - 2) + 'px';
-    });
-    const dt = new Date(t0 + day * DAY);
-    label.textContent = `${MON[dt.getUTCMonth()]} ${dt.getUTCFullYear()}`;
-    range.value = Math.round(day);
-    const mi = monthOf(day);
-    if (mi !== shownMonth) { shownMonth = mi; paintShots(mi); }
-  };
-  const settle = () => { for (let i = 0; i < 160; i++) step(day, 0.25); render(); };
-  const frame = (ts) => {
-    if (playing) {
-      const dtm = last ? Math.min(64, ts - last) : 16;
-      day = Math.min(days, day + dtm * 0.009);
-      if (day >= days) stop();
-    }
-    last = ts;
-    step(day, 0.08);
-    step(day, 0.08);
-    render();
-    if (!still) requestAnimationFrame(frame);
-  };
-  const stop = () => { playing = false; play.textContent = '▶'; play.setAttribute('aria-label', 'Play'); };
-  const start = () => { if (day >= days) day = 0; playing = true; play.textContent = '❚❚'; play.setAttribute('aria-label', 'Pause'); if (still) { const tick = () => { if (!playing) return; day = Math.min(days, day + 7); settle(); if (day >= days) stop(); else setTimeout(tick, 700); }; tick(); } };
-  play.onclick = () => (playing ? stop() : start());
-  range.oninput = () => { stop(); day = +range.value; if (still) settle(); };
-  window.addEventListener('resize', () => { layout(); if (still) settle(); });
-  layout();
-  settle();
-  if (!still) {
-    requestAnimationFrame(frame);
-    if ('IntersectionObserver' in window) {
-      const io = new IntersectionObserver((es) => { if (es.some((e) => e.isIntersecting)) { io.disconnect(); start(); } }, { threshold: 0.5 });
-      io.observe(stage);
-    }
-  }
-})();
-</script>
+![A stacked area chart of lines of code in Gramlet from December 2025 to October 2026, split into tests, the game, the server, and scripts and setup. It climbs slowly to about 100,000 lines by April, steepens through the summer to a peak of about 363,000 at the end of August, drops by 64,000 on 9 September when comments were cut, and ends at about 340,000. Ticks mark the first code for Triplet, Volt, Grambots, Rarefied and Free Play, and holiday skins.](./codebase.svg)
+_Lines of code, week by week_
 
 ### Asking the robot about the robot
 
-Here’s how I went about this. I asked Claude to go through every single Claude Code session I’ve had on Gramlet, plus the whole git history and all the GitHub pull requests, and tell me honestly what I’d contributed. Now, I’m well aware that AI has a bit of a taste for sycophancy (more on that later), so I made it back up every claim with evidence from the data. No “great question, Will”.
+Here’s how I went about this. I asked Claude to go through every single Claude Code session I’ve had on Gramlet, plus the whole git history and all the GitHub pull requests, and tell me honestly what I’d contributed. Now, I’m well aware that AI has a bit of a taste for sycophancy (more on that later), so I made it back up every claim with evidence from the data. No “That’s a genuinely sharp insight”.
 
-Getting hold of the data was, shall we say, a faff. My sessions live on Anthropic’s servers, and the only way Claude could read them from inside its sandbox was a hundred events at a time, through a tool only the model itself could call. So every page meant another trip through the model. It estimated a full extraction would cost around a billion tokens, and kept gently suggesting that it might eat my entire weekly usage allowance, as though that were a perfectly reasonable thing to suggest. By the next morning I’d had enough:
+Getting hold of the data was, shall we say, a faff. My sessions live on Anthropic’s servers, and the only way Claude could read them from inside its sandbox was a hundred events at a time, through a tool only the model itself could call. So every page meant another trip through the model. It estimated a full extraction would cost around a billion tokens, and kept threatening to eat my entire weekly usage allowance. I had to ask it, more than once, to stop.
 
-> definitely not, please stop threatening to use all of my usage, that is never going to be an option
-
-In the end I sat down at my laptop, opened Claude Desktop, and it wrote a script that ran in my Chrome tab and pulled down the lot: **1,626 sessions, around 7.2 GB of transcripts**, and the download itself didn’t use a single token. Which does raise the question of why we didn’t just do that in the first place, but let’s not dwell on it.
+In the end I sat down at my laptop, opened Claude Desktop, and it wrote a script that ran in my Chrome tab and pulled down the lot: **1,626 sessions, around 7.2 GB of transcripts**, and the download itself didn’t use a single token. Turns out the cheapest way to use Claude is to get it to write something that doesn’t need Claude.
 
 ### The numbers
 
@@ -360,7 +153,7 @@ I stopped committing code around the middle of February and, honestly, didn’t 
 
 (In my defence, we had about five users.)
 
-It was also when I started making it review its own work. On the last day of January I informed it, with all the gravitas of a man in his pyjamas: “as of this moment, right now, you are no longer the code author, you are the code interrogator”. By May that prompt had become a permanent “engineering lead” skill, and by August a hook that physically blocked Claude from finishing a pull request until it had interrogated itself. So a little bit of me lives on in that hook, which is a nice thought. Sort of.
+It was also when I started making it review its own work. On the last day of January I informed it, from bed, with all the gravitas of a man who’d been building up to this moment for weeks: “as of this moment, right now, you are no longer the code author, you are the code interrogator”. By May that prompt had become a permanent “engineering lead” skill, and by August a hook that physically blocked Claude from finishing a pull request until it had interrogated itself. So a little bit of me lives on in that hook, which is a nice thought. Sort of.
 
 **3. Reviewer on a phone (May to July)**
 
@@ -370,7 +163,7 @@ My prompts also got… stranger. Here’s a real message, from 16 June:
 
 > be agentic, octopus intelligence, set up agents, subagents, agents within agents, mastermind this sh\*t - I don’t need to tell you what to do, you are a genius
 
-I don’t know what octopus intelligence is either.
+Claude, to its credit, didn’t ask what I meant. It just went off and did eight things at once, which I suppose was the right answer.
 
 ![A line chart of the running total of times I typed “merge if you’re happy” or “merge when you’re happy”, from the first on 6 June to 465 by the end of October. It climbs steeply through June, July and August, then flattens in September.](./merge-if-happy.svg)
 _“Merge if you’re happy”, a running total_
@@ -381,7 +174,7 @@ August was absurd: 2,818 commits in a single month. I let sessions fix and merge
 
 > fix broken sh\*t
 
-At one point I had twelve sessions running at once on a Saturday afternoon. Last year I said that watching Claude’s orange splats whir round made you feel like a king presiding over his domain. This was more like being a king whose domain was slightly on fire. I also had a three-day fling with OpenAI’s Codex, having twice threatened Claude with it in the spring.
+At one point I had twelve sessions running at once on a Saturday afternoon. Last year I said that watching Claude’s orange splats whir round made you feel like a king presiding over his domain. Twelve at once was less king presiding over his domain, more David Brent presiding over Wernham Hogg. I also had a three-day fling with OpenAI’s Codex, having twice threatened Claude with it in the spring.
 
 **5. Editor (September to now)**
 
@@ -412,9 +205,9 @@ So Claude coined Gramlet – number 41 in a list of 50 – and told me it was th
 
 #### Every change, traced
 
-The name came out of one chat over two days. The rest of the game arrived in smaller pieces over ten months, which needed a different approach.
+The name came out of one chat over two days. That’s one idea. Gramlet has had a few hundred more.
 
-Gramlet’s update log lists every change players have been told about: 220 of them, from January to 12 October. My first thought was to just ask who had each idea first, but that turned out to be far too blunt, because most ideas went back and forth between us a few times before they shipped. So for the 113 bigger changes, I traced the whole conversation behind each one – every message that shaped what shipped, 828 of them in total – and had two separate Claude instances rate how much each message mattered, from a minor detail all the way up to the move that defined the change. (They weren’t told who’d said what, before you ask. I’m not daft.) Each change’s credit is then split according to those ratings.
+Gramlet’s update log lists every change players have been told about: 220 of them, from January to 12 October. My first thought was to just ask who had each idea first, but that turned out to be far too blunt, because most ideas went back and forth between us a few times before they shipped. So for the 113 bigger changes, I traced the whole conversation behind each one – every message that shaped what shipped, 828 of them in total – and had two separate Claude instances rate how much each message mattered, from a minor detail all the way up to the move that defined the change. Each change’s credit is then split according to those ratings.
 
 The 107 minor changes go whole to whoever raised them, and a friend, a player or my wife counts as “someone else”. A few ideas predate the log altogether: claiming a letter and then spelling a word was already the turn in my 2022 code, the letter bank came out of a Claude chat on 23 December, and Gemini drew the logo to my brief.
 
@@ -555,7 +348,7 @@ And the verdict is…
 
 74% me! Get in.
 
-A few more numbers from inside it. **75%** of the threads were opened by me, and I made **76%** of the defining moves and **63%** of the detail ones. Claude’s proposals shipped as proposed **57%** of the time (257); mine **87%** (317). Which either means I have excellent judgement, or that I’m the one who gets to decide what ships. Probably the latter. And in case you’re wondering whether the two raters were just making it up as they went along: they gave the same score to **86%** of moves, and were never more than one point apart.
+A few more numbers from inside it. **75%** of the threads were opened by me, and I made **76%** of the defining moves and **63%** of the detail ones. When Claude suggested something, it shipped as suggested **57%** of the time – and since I was the one deciding, that says as much about me as it does about Claude.
 
 ### I trained it, and it trained me
 
@@ -567,19 +360,19 @@ The first was the AI’s personality. Back in January I was already begging it t
 
 Did it listen? Did it heck. By June and July its replies were averaging 260 to 280 words, about 20 words of Claude for every word of mine. So on 31 July I added a section on how to talk to me to the project’s instructions file, `CLAUDE.md`, including the line: “The maintainer has ADHD. A dense reply gets abandoned, not skimmed.” Within three weeks its replies had halved, and by September they were down to around 95 words. Meanwhile the “You’re right!”s dropped from 7% of its replies to under 2%, and it started disagreeing with me more often. When it did push back, I accepted its argument about two times in three. When I didn’t, I wasn’t exactly subtle about it:
 
-> surge doesn’t “build” - please go away and actually learn how the game works before you try to write content
+> that sounds rubbish - like it just doesn’t sound like the numbers at all, it’s not clear. it’s not dramatic.. it’s rubbish
 
 Again: lovely stuff.
 
 ![A line chart of median words per message from December to October. Claude’s replies climb from about 120 words to 279 in July, then fall to about 95 after the 31 July rule. My messages fall steadily from 57 words to 11.](./words.svg)
 _Median words per message: mine, and Claude’s replies_
 
-The second was the instructions file itself. `CLAUDE.md` is where you tell Claude how to behave in your project, and I kept adding to it every time it did something annoying, which was often. By 12 August it was **42,000 words long**, which is nearly as long as _The Great Gatsby_, and a good deal less fun to read. It contained rules about rules. The next day I had it cut to 16,000 words, and within four weeks it had grown back to 34,000, like some sort of bureaucratic hydra. There was even a whole separate file, `DECISIONS.md`, because AI review passes kept re-raising questions I’d already settled; one issue was re-filed nineteen hours after I’d closed it. On 9 September we cut `CLAUDE.md` down to about 3,500 words, and this time it more or less stayed cut. The instructions now live in a file called `AGENTS.md`, which is about 4,300 words.
+The second was the instructions file itself. `CLAUDE.md` is where you tell Claude how to behave in your project, and I kept adding to it every time it did something annoying, which was often. By 12 August it was **42,000 words long**, which is nearly as long as _The Great Gatsby_. Gatsby, at least, had the decency to end. It contained rules about rules. The next day I had it cut to 16,000 words, and within four weeks it had grown back to 34,000, like some sort of bureaucratic hydra. There was even a whole separate file, `DECISIONS.md`, because AI review passes kept re-raising questions I’d already settled; one issue was re-filed nineteen hours after I’d closed it. On 9 September we cut `CLAUDE.md` down to about 3,500 words, and this time it more or less stayed cut. The instructions now live in a file called `AGENTS.md`, which is about 4,300 words.
 
 ![A line chart of the word count of CLAUDE.md from February to October. It creeps up to about 8,000 words by late July, shoots up to 42,477 on 12 August, drops to 15,970 the next day, climbs back to 33,861 by 8 September, then falls to 3,508 on 9 September.](./claude-md.svg)
 _Words in `CLAUDE.md`, with Gatsby for scale_
 
-What didn’t change was who decided. Month after month, Claude’s share of the credit in the census above sat at about a fifth, with April’s 31% the one bump, even as my messages shrank to a dozen words. What did change was how well its suggestions landed: in January, 13 of the 32 it made shipped as it proposed them; from June to August, 80 of 130 did. Only in September and October, with just 11 changes between them, does its share start to climb.
+What didn’t change was who decided. Month after month, Claude’s share of the credit in the census above sat at about a fifth, with April’s 31% the one bump, even as my messages shrank to a dozen words. What did change was how well its suggestions landed: in January about two in five shipped as it proposed them, and by the summer it was closer to two in three. Only in September and October, with just 11 changes between them, does its share start to climb.
 
 ![A stacked column chart of who gets the credit for the changes shipped each month. My share sits between 69% and 79% from January to August, and Claude’s between 16% and 31%. September and October, drawn paler because they hold only 3 and 8 changes, show Claude at 35% and 47%.](./credit-by-month.svg)
 _Who gets the credit for each month’s changes_
@@ -595,13 +388,7 @@ There’s a complication I’ve been conveniently ignoring. I didn’t talk to o
 ![A chart with one row per Claude model, from Sonnet 4.5 in December to Opus 5.5 in October, and one small line for every session I ran on it. Beside each model are my median words per message, falling from 34 to 12, how often I said I was confused, per 100 messages, highest for Opus 5 at 2.1, Claude’s share of the credit in that model’s sessions, from 22% for Opus 4.7 to 42% for Fable 5, and how often its suggestions shipped as it proposed them, highest for Opus 4.8 at 70%.](./models.svg)
 _Every session, by the model it ran on_
 
-My messages shrank with almost every new model: a median of 34 words with Sonnet 4.5, 26 with Opus 4.6, 20 with 4.7, 15 with 4.8 and 12 with Opus 5.5. How often I told it to merge went from about 3% of my messages with Opus 4.5 to 16% with 4.8 and 26% with Sonnet 5. And the flattery faded: Sonnet 4.5 told me I was right in one reply in ten, while Opus 5.5 has managed it in about one in 65. Which is either the sign of a more honest model, or of a user who’s stopped being right.
-
-The last two columns come from the census. Claude’s share of the credit moved around more than my words did, from 22% in Opus 4.7’s sessions to 42% in Fable 5’s, and Opus 4.8’s suggestions were the ones I kept most often, seven times in ten. Opus 5.5 is on 51%, but from only two changes, so I wouldn’t read too much into that.
-
-My memory is that Opus 5, which arrived on 24 July, was the one that drove me up the wall. The data disagrees, sort of. I swore at it less than at any other big model, but told it I was confused more often than any other. It wasn’t even verbose: its median reply was 158 words, against 254 for Opus 4.8. It just used those words to say things I didn’t understand. We’ve all had colleagues like that.
-
-So did I trust it more because it got better, or did it get better because I wrote 42,000 words of rules at it? Honestly, probably both, and they’re pretty hard to pull apart. The ADHD rule went in on 31 July, a week after Opus 5 arrived, and in an Opus 5 session at that. What I can say is that each new model got a slightly lazier version of me, and coped absolutely fine.
+My messages shrank with almost every new model, from a median of 34 words with Sonnet 4.5 to 12 with Opus 5.5. My memory is that Opus 5, which arrived on 24 July, was the one that drove me up the wall, and the data sort of agrees: I told it I was confused more often than any other model. It wasn’t even verbose. It just used its words to say things I didn’t understand. We’ve all had colleagues like that. Either way, each new model got a slightly lazier version of me, and coped absolutely fine.
 
 ### So can I call myself the creator?
 
@@ -613,9 +400,9 @@ Gramlet is a Will May game. I’m going to need that on a mug.
 
 ### Final thoughts
 
-Last December I wrote that I no longer knew where I ended and the AI began. Having now been through ten months of data with a fine-tooth comb, I think I actually do know, and the answer is weirdly comforting.
+Last December I wrote that I no longer knew where I ended and the AI began. Having now been through ten months of data with a fine-tooth comb, I think I actually do know, and the identity crisis has been downgraded to a mild wobble.
 
-The AI made building almost free. A feature that would once have taken me a month of evenings now takes one message from my phone and a “merge if you’re happy”. And when building is that cheap, what’s left is the stuff the building was always in service of: having ideas, choosing between them, and knowing when something isn’t right yet. That bit, it turns out, is still me. Mostly at about eleven o’clock at night, if my wife is to be believed.
+The AI made building almost free. A feature that would once have taken me a month of evenings now takes one message from my phone and a “merge if you’re happy”. And when building is that cheap, what’s left is the stuff the building was always in service of: having ideas, choosing between them, and knowing when something isn’t right yet. That bit, it turns out, is still me – usually in bed, on my phone, while my wife listens to the Harry Potter audiobooks for the umpteenth time.
 
 Anyway, go and play [Gramlet](https://gramlet.co.uk). The surge bar was my idea, and I will be bringing that up at every opportunity. 🟨⚡
 
