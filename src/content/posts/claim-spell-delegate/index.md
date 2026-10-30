@@ -108,10 +108,10 @@ _31 October 2026 (preview) · Holiday skins: Halloween, as the home page will lo
 })();
 </script>
 
-And here’s everything that’s gone live since I picked it back up. That’s roughly one new thing every three weeks, apart from June, when I got a bit carried away.
+And that’s just the front door. Behind it, Gramlet now has 50 screens, and here are 16 of them.
 
-![A vertical timeline of everything that went live in Gramlet: the restart on 26 December 2025, Daily Challenge on 5 January, the rename to Gramlet on 21 January, Fog of War on 25 January, Free Play on 13 February, Triplet on 27 February, scorecards on 14 March, friends on 5 April, Volt on 13 April, the charity pot on 10 May, VoltArena on 6 June, Grambots on 18 June, Gramlet Kids on 25 June, Rarefied on 22 July, Training on 28 August, and the first holiday skin, Halloween, on 31 October.](./launches.svg)
-_Everything that’s gone live since the restart, dated from the update log_
+![Sixteen Gramlet phone screens in four groups. Play on your own: Volt, Triplet, a scorecard and Training. Play someone else: a live head-to-head match, challenging a friend, the Grambots league table and a lost game against a bot. Everything around it: the home page, a profile, the gramboard and the charity pot. Gramlet Kids: today’s dive, a kids’ game, the class board and the teacher’s controls.](./gramlet-map.png)
+_Gramlet, as of October_
 
 ### Asking the robot about the robot
 
