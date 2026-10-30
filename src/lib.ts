@@ -24,8 +24,12 @@ export const slugify = (s: string) =>
 export const formatDate = (d: Date) =>
   d.toLocaleDateString('en-GB', { day: 'numeric', month: 'long', year: 'numeric', timeZone: 'UTC' });
 
-/** Minutes to read at about 230 words a minute, ignoring Markdown image and link targets. */
+/** Minutes to read at about 230 words a minute, ignoring Markdown image and link targets, scripts and HTML tags. */
 export function readingTime(post: Post): number {
-  const words = (post.body ?? '').replace(/\]\([^)]*\)/g, ']').split(/\s+/).filter(Boolean).length;
+  const words = (post.body ?? '')
+    .replace(/<script[\s\S]*?<\/script>/g, ' ')
+    .replace(/<[^>]+>/g, ' ')
+    .replace(/\]\([^)]*\)/g, ']')
+    .split(/\s+/).filter(Boolean).length;
   return Math.max(1, Math.round(words / 230));
 }

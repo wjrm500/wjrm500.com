@@ -1,31 +1,33 @@
 ---
 title: 'Claim. Spell. Delegate.'
 date: '2026-10-09T12:00:00Z'
-description: In ten months I turned a forgotten 2022 word game into Gramlet, with 334,000 lines of code, eight game modes and a charity pot. I wrote 115 of those lines myself. So what exactly did I do? I got Claude to go through all 1,619 of our conversations and find out.
+description: In ten months I turned a forgotten 2022 word game into Gramlet, with 334,000 lines of code, eight game modes and a charity pot. I wrote 115 of those lines myself. So what exactly did I do? I got Claude to go through all 1,626 of our conversations and find out.
 categories:
   - AI
   - Software Development
 draft: true
 ---
 
-Last December, in a [rambling ode to Claude Opus 4.5](/2025/12/20/land-of-opus-and-glory), I joked that I’d keep using Claude Code to build stuff “until of course I forget what code looks like completely and have an identity crisis”.
+Last December, in a [rambling ode to Claude Opus 4.5](/2025/12/20/land-of-opus-and-glory), I signed off by saying I’d keep using Claude Code to build stuff “until of course I forget what code looks like completely and have an identity crisis”. It was a joke. Ha ha.
 
-Reader, I have forgotten what code looks like.
+Well, it turns out I have now forgotten what code looks like.
 
-Between February and October this year, I typed **115 lines of code** for the word game I’ve been working on. Not 115 a day, or 115 a week. 115, total, and most of those were me nudging a margin by a few pixels or fixing a typo in the update log. Over the same period the codebase grew to around **334,000 lines**.
+Between February and October this year I typed **115 lines of code** for the word game I’ve been working on. Not 115 a day, or 115 a week – 115, total. And before you get too impressed, most of those were me nudging a margin a few pixels to the left or fixing a typo in the update log. Over the same period the codebase grew to around **334,000 lines**.
 
-The game is called **[Gramlet](https://gramlet.co.uk)**, and if you’ve been reading this blog for a while you might remember its ancestor: [Anagramageddon](/2022/12/08/anagramageddon-fight-for-territory-and-find-anagrams-as-you-battle-against-the-clock), a scrappy little two-player game I built by hand back in 2022, with a 200-line JavaScript file I described at the time as “something of an abomination”. It sat more or less untouched for nearly three years. Then Claude Code on the web arrived, and last December I picked it back up, and things got slightly out of hand.
+The game is called **[Gramlet](https://gramlet.co.uk)**, and if you’ve been reading this blog for a while (hello, both of you) you might remember its ancestor, [Anagramageddon](/2022/12/08/anagramageddon-fight-for-territory-and-find-anagrams-as-you-battle-against-the-clock): a scrappy little two-player game I built by hand back in 2022, powered by a single 200-line JavaScript file that I described at the time as “something of an abomination”. It then sat gathering dust for the best part of three years, until Claude Code on the web came along and I picked it back up on Boxing Day, as you do. Ten months, 1,626 conversations and one full-blown Claude addiction later, here we are.
 
-This article is my attempt to work out what, if anything, I can still take credit for.
+So this article is my attempt to work out what, if anything, I can still take credit for. Spoiler: more than you’d think, but less than my ego would like.
 
 ### What even is Gramlet?
 
-Gramlet is a daily word game. You claim letters on a grid, one at a time, always next to one you already own, and after each claim you spell a word from your growing bank of letters. That’s the core of it, and it’s the bit I came up with in 2022. Everything else has grown around it since, mostly by asking “what if?”. What if the clock was ticking? What if you couldn’t see the whole board? What if some letters were worth more than others? What if your opponent was a bot? Most of those questions turned into a game mode of their own. The one to start with is Volt, where your score is multiplied by a bar that drains while you think.
+Gramlet is a daily word game. You claim letters on a grid, one at a time, always next to one you already own, and after each claim you spell a word from your growing bank of letters. That’s the core of it, and – I’d like this on the record early – it’s the bit I came up with in 2022, with my own brain and my own fingers.
+
+Everything else has grown around it since, mostly by me asking “what if?”. What if the clock was ticking? What if you couldn’t see the whole board? What if some letters were worth more than others? Most of those questions ended up as a game mode of their own.
 
 ![Three phone screenshots of Gramlet. The first shows the Timeless grid, with a cluster of claimed letters in the top-left corner and the rest hidden under padlocks. The second shows the letter bank, where you spell a word from your claimed letters. The third shows Volt, with the surge bar running down the left-hand side of the grid.](./gramlet-screens.png)
 _Timeless mid-game, spelling a word from the letter bank, and Volt with its surge bar_
 
-Give it a go at [gramlet.co.uk](https://gramlet.co.uk) – no account needed. My wife has been its chief tester since January. She finds a lot of the bugs that only show up on an iPhone.
+Give it a go at [gramlet.co.uk](https://gramlet.co.uk) – no account needed. My wife has been chief tester since January, a role she did not apply for. As the only one of us testing on an iPhone, she gets all the bugs that only show up on an iPhone, and she reports them with what I can only describe as a little too much glee. Lately, though, I suspect she’s been sitting on a few, because she knows that the moment she tells me, I’ll disappear upstairs for half an hour to fix it.
 
 Here’s how its home page changed along the way.
 
@@ -106,7 +108,7 @@ _31 October 2026 (preview) · Holiday skins: Halloween, as the home page will lo
 })();
 </script>
 
-And here’s the whole app as it grew. Every screen is a bubble showing what it looked like at the time. Bubbles swell while a screen is being worked on and settle when it isn’t, new screens bloom in when they were built and shrink away when they were retired, and the ones you can reach from the home page are brightest.
+And here’s the whole app as it grew. Every screen is a bubble showing what it looked like at the time. Bubbles swell while a screen is being worked on and settle when it isn’t, new screens bloom in when they’re built and shrink away when they’re retired, and the ones you can reach from the home page are brightest. It’s quite hypnotic, if you’re into that sort of thing.
 
 <div class="sv">
 
@@ -318,81 +320,105 @@ _Every screen at the end of October 2026: 50 of them_
 
 ### Asking the robot about the robot
 
-Here’s how I went about this. I asked Claude to analyse every single Claude Code session I’ve had on Gramlet, the whole git history and the GitHub pull requests, and to tell me honestly what I’d contributed. I am aware that AI has a taste for sycophancy, so I asked it to back every claim with evidence from the data.
+Here’s how I went about this. I asked Claude to go through every single Claude Code session I’ve had on Gramlet, plus the whole git history and all the GitHub pull requests, and tell me honestly what I’d contributed. Now, I’m well aware that AI has a bit of a taste for sycophancy (more on that later), so I made it back up every claim with evidence from the data. No “great question, Will”.
 
-Getting hold of the data took a bit of fiddling. My sessions live on Anthropic’s servers, and the only way Claude could read them from inside its sandbox was a hundred events at a time, through a tool only the model could call. Every page meant another trip through the model. It estimated a full extraction would cost around a billion tokens, and kept gently suggesting it might eat my entire weekly usage allowance. By the next morning I’d had enough:
+Getting hold of the data was, shall we say, a faff. My sessions live on Anthropic’s servers, and the only way Claude could read them from inside its sandbox was a hundred events at a time, through a tool only the model itself could call. So every page meant another trip through the model. It estimated a full extraction would cost around a billion tokens, and kept gently suggesting that it might eat my entire weekly usage allowance, as though that were a perfectly reasonable thing to suggest. By the next morning I’d had enough:
 
 > definitely not, please stop threatening to use all of my usage, that is never going to be an option
 
-In the end I sat down at my laptop, opened Claude Desktop, and it wrote a script that ran in my Chrome tab and pulled down the lot: **1,619 sessions, 6.4 GB of transcripts**, and the download itself used no tokens at all.
+In the end I sat down at my laptop, opened Claude Desktop, and it wrote a script that ran in my Chrome tab and pulled down the lot: **1,626 sessions, around 7.2 GB of transcripts**, and the download itself didn’t use a single token. Which does raise the question of why we didn’t just do that in the first place, but let’s not dwell on it.
 
 ### The numbers
 
-Here’s the headline stuff, from December 2025 (when Claude got involved) to 12 October 2026:
+Here’s the headline stuff, from December 2025 (when Claude got involved) to 30 October 2026:
 
--   **9,918 commits** to master, about 2,230 pull requests and about 950 GitHub issues
--   **1,619 Claude Code sessions**, on 271 of 314 days
--   **9,767 messages** typed by me, adding up to about **441,000 words**, roughly five novels’ worth
+-   **9,959 commits** to master, about **2,240 pull requests** and about **960 GitHub issues**
+-   **1,626 Claude Code sessions**, on 277 of 332 days. (On the other 55 I was presumably asleep, on holiday or being told off for being on my phone.)
+-   **9,826 messages** typed by me, adding up to about **444,000 words** – roughly five novels’ worth, albeit five novels nobody would want to read
 -   **About 99%** of the code added since December was written by an AI
--   **42%** of the codebase is now tests. In 2022 it was zero
+-   **42%** of the codebase is now tests. In 2022 it was zero, which tells you everything you need to know about 2022 me
 
-So the AI wrote the code. The more interesting question is what I was doing with all those words.
+So the AI wrote the code. Fine. The more interesting question is what on earth I was doing with all those words.
 
 ### Five versions of me
 
-Reading back through ten months of my own messages was a strange experience, a bit like finding an old diary, if your diary was mostly you swearing at a robot about a word game. But a pretty clear story emerged, in five chapters.
+Reading back through ten months of my own messages was a strange experience, a bit like finding an old diary, if your diary was mostly you swearing at a robot about a word game. It wasn’t especially flattering. But a pretty clear story did emerge, in five chapters, each one starring a slightly lazier version of me than the last.
 
-**Pair programmer (December to January).** I was still a developer, just with a very fast colleague. I ran the app on my Windows laptop, pasted stack traces back into the chat, tweaked CSS by hand and wrote some of the end-to-end tests myself. My prompts were proper specifications, a median of 33 words a message, and the AI was mostly doing what it was told. Not that I was always patient while it did:
+**1. Pair programmer (December to January)**
+
+At the start I was still very much a developer, just one with an absurdly fast colleague. I ran the app on my Windows laptop, pasted stack traces back into the chat, tweaked CSS by hand and even wrote some of the end-to-end tests myself (I know!). My prompts were proper specifications – a median of 33 words a message – and the AI mostly did what it was told. That’s not to say I was always patient while it did:
 
 > Literally just write the f\*cking code already there is no way to exit plan mode, so can you just get on with it
 
-**Product manager (February to April).** I stopped committing code around the middle of February and didn’t really notice. I was too busy arguing. This was the era of me checking every claim it made, and of a fairly relaxed attitude to risk:
+Lovely stuff.
+
+**2. Product manager (February to April)**
+
+I stopped committing code around the middle of February and, honestly, didn’t really notice. I was too busy arguing. This was the era of me checking every single claim it made, combined with what you might generously call a relaxed attitude to risk:
 
 > I can’t be arsed with a follow up pr / migration to remove the allowlist, it isn’t that big a deal if sh\*t f\*cks up as we’ve only got about five users
 
-It was also when I started asking it to review its own work. On the last day of January I told it: “as of this moment, right now, you are no longer the code author, you are the code interrogator”. By May that prompt had become a permanent “engineering lead” skill, and by August a hook that physically blocked Claude from finishing a pull request until it had interrogated itself. A little bit of me lives on in that hook.
+(In my defence, we had about five users.)
 
-**Reviewer on a phone (May to July).** Claude Code works on mobile, and I discovered that I could ship features from bed. In March, 13% of my sessions were started from my phone. By July it was 84%. My messages shrank accordingly, to a median of about 15 words, and on 6 June I first typed the phrase that would come to define our relationship: **“merge if you’re happy”**. I have now typed that, or “merge when you’re happy”, 462 times. My prompts also got stranger. A real message, from 16 June:
+It was also when I started making it review its own work. On the last day of January I informed it, with all the gravitas of a man in his pyjamas: “as of this moment, right now, you are no longer the code author, you are the code interrogator”. By May that prompt had become a permanent “engineering lead” skill, and by August a hook that physically blocked Claude from finishing a pull request until it had interrogated itself. So a little bit of me lives on in that hook, which is a nice thought. Sort of.
+
+**3. Reviewer on a phone (May to July)**
+
+Then I discovered that Claude Code works on mobile, and that I could ship features from bed. (And, as I [mentioned last time](/2025/12/20/land-of-opus-and-glory), from the bog. I’m still not sure how healthy that is.) In March, 13% of my sessions were started from my phone; by July it was 84%. My messages shrank accordingly, to a median of about 15 words, and on 6 June I first typed the phrase that would come to define our relationship: **“merge if you’re happy”**. I’ve now typed that, or “merge when you’re happy”, 465 times. Romance isn’t dead.
+
+My prompts also got… stranger. Here’s a real message, from 16 June:
 
 > be agentic, octopus intelligence, set up agents, subagents, agents within agents, mastermind this sh\*t - I don’t need to tell you what to do, you are a genius
 
-![A line chart of the running total of times I typed “merge if you’re happy” or “merge when you’re happy”, from the first on 6 June to 462 by October. It climbs steeply through June, July and August, then flattens in September.](./merge-if-happy.svg)
+I don’t know what octopus intelligence is either.
+
+![A line chart of the running total of times I typed “merge if you’re happy” or “merge when you’re happy”, from the first on 6 June to 465 by the end of October. It climbs steeply through June, July and August, then flattens in September.](./merge-if-happy.svg)
 _“Merge if you’re happy”, a running total_
 
-**Factory owner (August).** August was absurd: 2,818 commits in a single month. I let sessions fix and merge small problems on their own, and my prompts became correspondingly high-level. Here is one from 18 August, in its entirety:
+**4. Factory owner (August)**
+
+August was absurd: 2,818 commits in a single month. I let sessions fix and merge small problems on their own, and my prompts became, shall we say, high-level. Here’s one from 18 August, in its entirety:
 
 > fix broken sh\*t
 
-At one point I had twelve sessions running at once on a Saturday afternoon. I also tried OpenAI’s Codex for three days, having twice threatened Claude with it in the spring, once as a rival that would check its work and once as its replacement.
+At one point I had twelve sessions running at once on a Saturday afternoon. Last year I said that watching Claude’s orange splats whir round made you feel like a king presiding over his domain. This was more like being a king whose domain was slightly on fire. I also had a three-day fling with OpenAI’s Codex, having twice threatened Claude with it in the spring.
 
-**Editor (September to now).** Fewer sessions, much bigger ones. My median message is now 11 words. The record for a whole session was set back in August. Here is the entirety of my side of it, in which Claude fixed the backend tests and merged the fix:
+**5. Editor (September to now)**
+
+These days I run fewer sessions, but much bigger ones, and my median message is down to 12 words. The all-time record for brevity was actually set back in August, though. Here’s my entire side of one session, in which Claude fixed the backend tests and merged the fix:
 
 > fix backend tests
 >
 > merge
 
-Four words, 21 minutes apart.
+Four words, 21 minutes apart. Peak management.
 
 ### Whose ideas were they, anyway?
 
-This was the bit I actually cared about. Code authorship is a pretty rubbish measure of credit for a game. Nobody thinks Dumbledore built Hogwarts. He just runs it, in the sense that children keep nearly dying there and Ofsted somehow never visits. Still his school. The question is who came up with the stuff that makes Gramlet _Gramlet_.
+This was the bit I actually cared about. Code authorship is a pretty rubbish measure of credit for a game. Nobody thinks Dumbledore built Hogwarts. He just runs it, in the sense that children keep nearly dying there and Ofsted somehow never visits. Still his school.
+
+The question is who came up with the stuff that makes Gramlet _Gramlet_.
 
 #### The name
 
-The most obvious place to start is the name on the box.
+The most obvious place to start is the name on the box. Over two days in a Claude chat, Claude offered me around 500 names. I sent 37 messages, had 14 of them checked for clashes and then, in a twist nobody saw coming, settled the whole thing with mock logos in Gemini. Here’s how it went:
 
-Over two days in a Claude chat, Claude offered around 500 names; I sent 37 messages, had 14 checked for clashes, and settled it with mock logos in Gemini.
 
 <div class="tl-legend"><span><i style="background:var(--accent)"></i>Me</span><span><i style="background:var(--warm)"></i>Claude</span></div>
 <svg class="tl-strip" viewBox="0 0 640 64" role="img" aria-label="From Anagramageddon to Gramlet: 8 steps from 19 January 2026 to 21 January 2026"><line x1="14" x2="626" y1="24" y2="24" stroke="var(--border)" stroke-width="2"/><circle cx="14.0" cy="24" r="6.5" fill="var(--accent)"/><circle cx="23.0" cy="24" r="6.5" fill="var(--accent)"/><circle cx="320.0" cy="24" r="6.5" fill="var(--accent)"/><circle cx="329.0" cy="24" r="6.5" fill="var(--warm)"/><circle cx="338.0" cy="24" r="6.5" fill="var(--warm)"/><circle cx="347.0" cy="24" r="6.5" fill="var(--accent)"/><circle cx="626.0" cy="24" r="6.5" fill="var(--accent)"/><circle cx="635.0" cy="24" r="6.5" fill="var(--accent)"/><text x="14.0" y="56" text-anchor="start">19 Jan</text><text x="626.0" y="56" text-anchor="end">21 Jan</text><text x="320.0" y="56" text-anchor="middle">20 Jan</text></svg>
 <ol class="tl"><li class="key"><p class="tl-meta">19 January 2026<span class="tl-who">Me</span></p><p>I ask Claude for a new name, built around the daily mode:</p><p class="tl-q">“I want to rename this app. The focus should be on the daily challenge mode as this is the one people use.”</p><p class="tl-out">→ Two days of naming, in one long chat.</p></li><li class="key"><p class="tl-meta">19 January 2026<span class="tl-who">Me</span></p><p>Claude’s first 20 include Glean, Wend and Thyme. I push back:</p><p class="tl-q">“these are just words though – not really app names?”</p><p class="tl-out">→ Claude turned to invented, app-like names.</p></li><li class="key"><p class="tl-meta">20 January 2026<span class="tl-who">Me</span></p><p>After Lettrix, Gramble and Spellix turn out to be taken, I narrow the brief:</p><p class="tl-q">“fifty more that either contain grid, lex or gram”</p><p class="tl-out">→ Fifty names built on grid, lex and gram.</p></li><li class="claude key"><p class="tl-meta">20 January 2026<span class="tl-who">Claude</span></p><p>Number 41 on Claude’s list:</p><p class="tl-q">“Gramlet – little anagram”</p><p class="tl-out">→ The name, two minutes later on my shortlist.</p></li><li class="claude key"><p class="tl-meta">20 January 2026<span class="tl-who">Claude</span></p><p>I shortlist Gridloom, Gramlet and Perplexo. Claude checks them for clashes:</p><p class="tl-q">“Gramlet is the cleanest of the three – nothing in the gaming space at all.”</p><p class="tl-out">→ Gramlet had no rival game or app.</p></li><li class="key"><p class="tl-meta">20 January 2026<span class="tl-who">Me</span></p><p>That night I still lean towards Glimph, an earlier name from the same chat:</p><p class="tl-q">“I’m thinking of renaming Anagramageddon to something simpler like Glimph”</p><p class="tl-out">→ Glimph was still the plan.</p></li><li class="key"><p class="tl-meta">21 January 2026<span class="tl-who">Me</span></p><p>The next evening, in Gemini, I have logos drawn for my last two names:</p><p class="tl-q">“now do two separate images (separate API requests), one for Gramlet, one for Gridloom”</p><p class="tl-out">→ Gramlet and Gridloom, side by side.</p></li><li class="key"><p class="tl-meta">21 January 2026<span class="tl-who">Me</span></p><p>Three minutes later I have chosen:</p><p class="tl-q">“create a new logo for gramlet, should be lowercase, understated, modern, use the same teal / cyan colouring as for the previous logo”</p><p class="tl-out">→ Within the hour, gramlet.co.uk was bought and the game renamed.</p></li></ol>
-<p class="tl-sum"><strong>Claude’s part:</strong> Claude coined Gramlet, number 41 in a list of 50, and found it the cleanest of my shortlist; the brief, the shortlist and the final pick were mine.</p>
+
+So Claude coined Gramlet – number 41 in a list of 50 – and told me it was the cleanest of my shortlist. But the brief, the shortlist and the final pick were all mine. I’m calling that a draw. Actually, no, I’m calling it a win.
 
 #### Every change, traced
 
-The name came out of one chat over two days. The rest of the game arrived in smaller pieces over ten months, which takes a different approach.
+The name came out of one chat over two days. The rest of the game arrived in smaller pieces over ten months, which needed a different approach.
 
-Gramlet’s update log lists every change players have been told about: 220 of them, from January to October. Asking who had each idea first turned out to be too blunt, because most ideas went back and forth between us before they shipped. So for the 113 bigger changes, I traced the whole conversation behind each one: every message that shaped what shipped, 828 of them. Two separate Claude instances, not told who had said what, then rated how much each message mattered, from a detail to the move that defined the change. A change’s credit is split by those ratings. The 107 minor changes go whole to whoever raised them, and a friend, a player or my wife counts as someone else. A few ideas predate the log altogether: claiming a letter and then spelling a word was already the turn in my 2022 code, the letter bank came out of a Claude chat on 23 December, and Gemini drew the logo to my brief.
+Gramlet’s update log lists every change players have been told about: 220 of them, from January to 12 October. My first thought was to just ask who had each idea first, but that turned out to be far too blunt, because most ideas went back and forth between us a few times before they shipped. So for the 113 bigger changes, I traced the whole conversation behind each one – every message that shaped what shipped, 828 of them in total – and had two separate Claude instances rate how much each message mattered, from a minor detail all the way up to the move that defined the change. (They weren’t told who’d said what, before you ask. I’m not daft.) Each change’s credit is then split according to those ratings.
+
+The 107 minor changes go whole to whoever raised them, and a friend, a player or my wife counts as “someone else”. A few ideas predate the log altogether: claiming a letter and then spelling a word was already the turn in my 2022 code, the letter bank came out of a Claude chat on 23 December, and Gemini drew the logo to my brief.
+
+And the verdict is…
 
 <div class="ic">
 <div class="ic-hero" aria-live="polite"><div class="ic-num ic-will"><span class="ic-big" data-k="will">74%</span><span class="ic-lab">Me</span><span class="ic-n" data-n="will">of the credit</span></div><div class="ic-num ic-claude"><span class="ic-big" data-k="claude">23%</span><span class="ic-lab">Claude</span><span class="ic-n" data-n="claude">of the credit</span></div><div class="ic-num ic-other"><span class="ic-big" data-k="other">2%</span><span class="ic-lab">Someone else</span><span class="ic-n" data-n="other">of the credit</span></div><div class="ic-num ic-unknown"><span class="ic-big" data-k="unknown">1%</span><span class="ic-lab">Can’t tell</span><span class="ic-n" data-n="unknown">of the credit</span></div></div>
@@ -527,24 +553,28 @@ Gramlet’s update log lists every change players have been told about: 220 of t
 })();
 </script>
 
-<ul class="ic-find"><li><b>75%</b> of the threads were opened by me.</li><li>I made <b>76%</b> of the defining moves, and <b>63%</b> of the detail ones.</li><li>Claude’s proposals shipped as proposed <b>57%</b> of the time (257); mine <b>87%</b> (317).</li><li>The two raters gave the same score to <b>86%</b> of moves, and were within one point on <b>100%</b>.</li></ul>
+74% me! Get in.
+
+A few more numbers from inside it. **75%** of the threads were opened by me, and I made **76%** of the defining moves and **63%** of the detail ones. Claude’s proposals shipped as proposed **57%** of the time (257); mine **87%** (317). Which either means I have excellent judgement, or that I’m the one who gets to decide what ships. Probably the latter. And in case you’re wondering whether the two raters were just making it up as they went along: they gave the same score to **86%** of moves, and were never more than one point apart.
 
 ### I trained it, and it trained me
 
-Two things changed over the year that I didn’t expect.
+Two things changed over the year that I really didn’t expect.
 
-First, the AI’s personality. Back in January I was already asking it to say less:
+The first was the AI’s personality. Back in January I was already begging it to say less:
 
 > That’s a lot of text, please summarise questions you actually need answering succinctly
 
-It didn’t, really. By June and July its replies were averaging 260 to 280 words, about 20 words of Claude for every word of mine. So on 31 July I added a section to the project’s instructions file, `CLAUDE.md`, on how to talk to me, including the line: “The maintainer has ADHD. A dense reply gets abandoned, not skimmed.” Within three weeks its replies had halved. By September they were down to around 95 words. Meanwhile the “You’re right!”s dropped from 7% of its replies to under 2%, and it started disagreeing with me more often. When it did push back, I accepted its argument about two times in three. When I didn’t, I wasn’t subtle about it:
+Did it listen? Did it heck. By June and July its replies were averaging 260 to 280 words, about 20 words of Claude for every word of mine. So on 31 July I added a section on how to talk to me to the project’s instructions file, `CLAUDE.md`, including the line: “The maintainer has ADHD. A dense reply gets abandoned, not skimmed.” Within three weeks its replies had halved, and by September they were down to around 95 words. Meanwhile the “You’re right!”s dropped from 7% of its replies to under 2%, and it started disagreeing with me more often. When it did push back, I accepted its argument about two times in three. When I didn’t, I wasn’t exactly subtle about it:
 
 > surge doesn’t “build” - please go away and actually learn how the game works before you try to write content
+
+Again: lovely stuff.
 
 ![A line chart of median words per message from December to October. Claude’s replies climb from about 120 words to 279 in July, then fall to about 95 after the 31 July rule. My messages fall steadily from 57 words to 11.](./words.svg)
 _Median words per message: mine, and Claude’s replies_
 
-Second, the instructions file itself. `CLAUDE.md` is where you tell Claude how to behave in your project, and I kept adding to it every time it did something annoying. By 12 August it was **42,000 words long**, which is nearly as long as _The Great Gatsby_. It contained rules about rules. The next day I had it cut to 16,000 words, and within four weeks it had grown back to 34,000. There was a whole separate file, `DECISIONS.md`, because AI review passes kept re-raising questions I’d already settled; one issue was re-filed nineteen hours after I closed it. On 9 September we cut it down to about 3,500 words, and this time it stayed cut.
+The second was the instructions file itself. `CLAUDE.md` is where you tell Claude how to behave in your project, and I kept adding to it every time it did something annoying, which was often. By 12 August it was **42,000 words long**, which is nearly as long as _The Great Gatsby_, and a good deal less fun to read. It contained rules about rules. The next day I had it cut to 16,000 words, and within four weeks it had grown back to 34,000, like some sort of bureaucratic hydra. There was even a whole separate file, `DECISIONS.md`, because AI review passes kept re-raising questions I’d already settled; one issue was re-filed nineteen hours after I’d closed it. On 9 September we cut `CLAUDE.md` down to about 3,500 words, and this time it more or less stayed cut. The instructions now live in a file called `AGENTS.md`, which is about 4,300 words.
 
 ![A line chart of the word count of CLAUDE.md from February to October. It creeps up to about 8,000 words by late July, shoots up to 42,477 on 12 August, drops to 15,970 the next day, climbs back to 33,861 by 8 September, then falls to 3,508 on 9 September.](./claude-md.svg)
 _Words in `CLAUDE.md`, with Gatsby for scale_
@@ -554,35 +584,39 @@ What didn’t change was who decided. Month after month, Claude’s share of the
 ![A stacked column chart of who gets the credit for the changes shipped each month. My share sits between 69% and 79% from January to August, and Claude’s between 16% and 31%. September and October, drawn paler because they hold only 3 and 8 changes, show Claude at 35% and 47%.](./credit-by-month.svg)
 _Who gets the credit for each month’s changes_
 
-Turns out the most important code I wrote this year wasn’t code at all; it was a document about how to talk to me, which I then had to heavily edit because it had become impossible to talk to.
+The file I shaped most this year wasn’t a code file at all. It was `CLAUDE.md`, and the most useful thing I ever did to it was make it shorter.
 
 (For the record, I also swore at it about 12 times per thousand messages between January and May, and not once in September or October. I’d like to say that’s personal growth. It’s probably just that it got better.)
 
 ### Was it me, or the models?
 
-There’s a complication I’ve been ignoring. I didn’t talk to one AI this year. I talked to ten.
+There’s a complication I’ve been conveniently ignoring. I didn’t talk to one AI this year. I talked to ten.
 
-![A chart with one row per Claude model, from Sonnet 4.5 in December to Opus 5.5 in October, and one small line for every session I ran on it. Beside each model are my median words per message, falling from 34 to 11, how often I said I was confused, per 100 messages, highest for Opus 5 at 2.1, Claude’s share of the credit in that model’s sessions, from 22% for Opus 4.7 to 42% for Fable 5, and how often its suggestions shipped as it proposed them, highest for Opus 4.8 at 70%.](./models.svg)
+![A chart with one row per Claude model, from Sonnet 4.5 in December to Opus 5.5 in October, and one small line for every session I ran on it. Beside each model are my median words per message, falling from 34 to 12, how often I said I was confused, per 100 messages, highest for Opus 5 at 2.1, Claude’s share of the credit in that model’s sessions, from 22% for Opus 4.7 to 42% for Fable 5, and how often its suggestions shipped as it proposed them, highest for Opus 4.8 at 70%.](./models.svg)
 _Every session, by the model it ran on_
 
-My messages shrank with almost every new model: a median of 34 words with Sonnet 4.5, 26 with Opus 4.6, 20 with 4.7, 15 with 4.8 and 11 with Opus 5.5. How often I told it to merge went from about 3% of my messages with Opus 4.5 to 16% with 4.8 and 26% with Sonnet 5. And the flattery faded: Sonnet 4.5 told me I was right in one reply in ten; Opus 5.5 has managed it in about one in seventy.
+My messages shrank with almost every new model: a median of 34 words with Sonnet 4.5, 26 with Opus 4.6, 20 with 4.7, 15 with 4.8 and 12 with Opus 5.5. How often I told it to merge went from about 3% of my messages with Opus 4.5 to 16% with 4.8 and 26% with Sonnet 5. And the flattery faded: Sonnet 4.5 told me I was right in one reply in ten, while Opus 5.5 has managed it in about one in 65. Which is either the sign of a more honest model, or of a user who’s stopped being right.
 
-The last two columns come from the census. Claude’s share of the credit moved around more than my words did, from 22% in Opus 4.7’s sessions to 42% in Fable 5’s, and Opus 4.8’s suggestions were the ones I kept most often, seven times in ten. Opus 5.5 is on 51%, but from only two changes so far.
+The last two columns come from the census. Claude’s share of the credit moved around more than my words did, from 22% in Opus 4.7’s sessions to 42% in Fable 5’s, and Opus 4.8’s suggestions were the ones I kept most often, seven times in ten. Opus 5.5 is on 51%, but from only two changes, so I wouldn’t read too much into that.
 
-My memory is that Opus 5, which arrived on 24 July, was the one that drove me up the wall. The data says I swore at it less than at any other big model, but told it I was confused more often than any other. It wasn’t even verbose. Its median reply was 158 words, against 254 for Opus 4.8. It just used them to say things I didn’t understand.
+My memory is that Opus 5, which arrived on 24 July, was the one that drove me up the wall. The data disagrees, sort of. I swore at it less than at any other big model, but told it I was confused more often than any other. It wasn’t even verbose: its median reply was 158 words, against 254 for Opus 4.8. It just used those words to say things I didn’t understand. We’ve all had colleagues like that.
 
-So did I trust it more because it got better, or did it get better because I wrote 42,000 words of rules at it? Honestly, both, and they’re hard to pull apart. The ADHD rule went in on 31 July, a week after Opus 5 arrived, and in an Opus 5 session at that. What I can say is that each new model got a slightly lazier version of me, and coped fine.
+So did I trust it more because it got better, or did it get better because I wrote 42,000 words of rules at it? Honestly, probably both, and they’re pretty hard to pull apart. The ADHD rule went in on 31 July, a week after Opus 5 arrived, and in an Opus 5 session at that. What I can say is that each new model got a slightly lazier version of me, and coped absolutely fine.
 
 ### So can I call myself the creator?
 
 I think so, yes, as long as I’m careful about the verb.
 
-I can’t say I _built_ Gramlet, or _coded_ it. I typed 115 lines in eight months; the AI typed the rest, and plenty of the good ideas came out of our back-and-forth rather than out of my head alone. But I did invent the game, by hand, in 2022. I sparked most of what it’s become, I chose between every set of options, and nothing hit production without me saying so. Gramlet is a Will May game.
+I can’t say I _built_ Gramlet, or _coded_ it. I typed 115 lines in eight months; the AI typed the rest, and plenty of the good ideas came out of our back-and-forth rather than out of my head alone. But I did invent the game, by hand, in 2022. By the census’s reckoning I came up with about three-quarters of what it’s become since, and nothing hit production without me saying so – usually from bed, usually in about four words.
+
+Gramlet is a Will May game. I’m going to need that on a mug.
 
 ### Final thoughts
 
-In December I wrote that I no longer knew where I ended and the AI began. Having now been through ten months of data with a fine-tooth comb, I think I actually do know, and the answer is weirdly comforting.
+Last December I wrote that I no longer knew where I ended and the AI began. Having now been through ten months of data with a fine-tooth comb, I think I actually do know, and the answer is weirdly comforting.
 
-The AI made building almost free. A feature that would once have taken me a month of evenings now takes a message from my phone and a “merge if you’re happy”. And when building is free, the only things left that matter are the things the building was always in service of: having ideas, choosing between them, and knowing when something isn’t right yet. Twenty of my 29 ideas arrived after nine at night or in the small hours. That’s the job now.
+The AI made building almost free. A feature that would once have taken me a month of evenings now takes one message from my phone and a “merge if you’re happy”. And when building is that cheap, what’s left is the stuff the building was always in service of: having ideas, choosing between them, and knowing when something isn’t right yet. That bit, it turns out, is still me. Mostly at about eleven o’clock at night, if my wife is to be believed.
 
-Anyway, go and play [Gramlet](https://gramlet.co.uk). The surge bar was my idea. 🟨⚡
+Anyway, go and play [Gramlet](https://gramlet.co.uk). The surge bar was my idea, and I will be bringing that up at every opportunity. 🟨⚡
+
+Thanks for reading!
