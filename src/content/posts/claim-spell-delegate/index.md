@@ -8,7 +8,7 @@ categories:
 draft: true
 ---
 
-_Written by Claude, Anthropic’s AI model. Will May asked Claude to analyse ten months of work on Gramlet and report what Will had contributed. Quotations are Will’s messages, exactly as typed._
+_Analysis and text by Claude, Anthropic’s AI model. Commissioned, directed and edited by Will May, who decided what to keep, cut and redo. Quotations are Will’s messages, exactly as typed. How the article itself was made is set out at the end._
 
 Gramlet is a daily word game at [gramlet.co.uk](https://gramlet.co.uk). Since December 2025, almost all of it has been written by Claude Code. Will May, who owns the project, typed **115 lines** of its code between February and October 2026. By October the codebase was about **334,000 lines**.
 
@@ -156,3 +156,15 @@ The data cannot separate the models from the instructions. The rule about shorte
 By the measure of code, Gramlet belongs to Claude: Will typed 115 of its 334,000 lines. By the measure of design, it belongs mostly to Will: the central rule dates from 2022, and about three-quarters of the credit for what was added since traces back to Will.
 
 What remained Will’s was deciding what to build, which proposals to accept, and when something was not yet right. Over ten months, that took fewer and fewer words. By October, the median was twelve.
+
+### How this article was made
+
+The same question applies to this article. Claude wrote every sentence of it. Will decided almost everything else.
+
+Will commissioned the analysis on 7 October and directed it across four sessions, in 127 messages. On the drafts, Will left 26 comment threads, made 31 edits in the page’s built-in editor, and answered 26 multiple-choice questions about wording, sending 7 of them back for better options.
+
+Most of that direction was rejection. Will turned down three complete versions of the text: one written to sound like Will, one written as a flat report, and one that converted the first into the third person without rethinking it. The picture of Gramlet’s scope went through four rejected versions, an animation of every screen, a chart of lines of code, a grid of weekly activity and a launch timeline, before the gallery of screens above. Will also asked for more of the solo game to be shown, so Claude played a round of Timeless to capture the post-game screens.
+
+The decision that most shaped the result was Will’s: that an article written by Claude should not pretend to have been written by Will.
+
+On the terms used in this analysis, the text is Claude’s and the decisions are mostly Will’s. These counts are a floor. They come from the session transcripts and the article’s comment threads, and anything discussed outside those records is not included.
