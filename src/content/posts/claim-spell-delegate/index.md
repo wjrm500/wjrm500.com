@@ -108,9 +108,9 @@ _31 October 2026 (preview) · Holiday skins: Halloween, as the home page will lo
 })();
 </script>
 
-And that’s just the front door. Behind it, Gramlet now has 50 screens, and here are 16 of them.
+And that’s just the front door. Behind it, Gramlet now has 50 screens, and here are 20 of them.
 
-![Sixteen Gramlet phone screens in four groups. Play on your own: Volt, Triplet, a scorecard and Training. Play someone else: a live head-to-head match, challenging a friend, the Grambots league table and a lost game against a bot. Everything around it: the home page, a profile, the gramboard and the charity pot. Gramlet Kids: today’s dive, a kids’ game, the class board and the teacher’s controls.](./gramlet-map.png)
+![Twenty Gramlet phone screens in four groups. Play on your own: Volt, spelling a word, the Training coach's hint, Triplet, the board after a game with a near-miss nudge, a slideshow slide, the scorecard and a word's own page. Play someone else: a live head-to-head match, challenging a friend, the Grambots league table and a lost game against a bot. Everything around it: the home page, a profile, the gramboard and the charity pot. Gramlet Kids: today’s dive, a kids’ game, the class board and the teacher’s controls.](./gramlet-map.png)
 _Gramlet, as of October_
 
 ### Asking the robot about the robot
